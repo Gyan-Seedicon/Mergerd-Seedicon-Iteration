@@ -3071,23 +3071,47 @@ button {
   backdrop-filter: blur(2px);
 }
 
-/* Active top card glow */
+/* Active top card glow and breathing pulse */
 .deck-card.stack-0 {
-  border-color: rgba(37, 99, 235, 0.2);
+  border-color: rgba(37, 99, 235, 0.25);
   box-shadow:
     0 30px 80px -15px rgba(0, 0, 0, 0.7),
-    0 0 0 1px rgba(37, 99, 235, 0.08),
-    0 0 40px -10px rgba(37, 99, 235, 0.12),
+    0 0 25px rgba(37, 99, 235, 0.12),
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  animation: active-card-pulse 4s ease-in-out infinite;
 }
 
-.deck-card:hover {
-  border-color: rgba(37, 99, 235, 0.35);
+@keyframes active-card-pulse {
+  0% {
+    border-color: rgba(37, 99, 235, 0.25);
+    box-shadow:
+      0 30px 80px -15px rgba(0, 0, 0, 0.7),
+      0 0 20px rgba(37, 99, 235, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+  50% {
+    border-color: rgba(139, 92, 246, 0.4);
+    box-shadow:
+      0 30px 80px -15px rgba(0, 0, 0, 0.7),
+      0 0 35px rgba(139, 92, 246, 0.35),
+      inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  }
+  100% {
+    border-color: rgba(37, 99, 235, 0.25);
+    box-shadow:
+      0 30px 80px -15px rgba(0, 0, 0, 0.7),
+      0 0 20px rgba(37, 99, 235, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+}
+
+.deck-card.stack-0:hover {
+  transform: translateY(-6px) scale(1.015) !important;
+  border-color: rgba(139, 92, 246, 0.5) !important;
   box-shadow:
-    0 35px 90px -15px rgba(0, 0, 0, 0.8),
-    0 0 0 1px rgba(37, 99, 235, 0.12),
-    0 0 50px -8px rgba(37, 99, 235, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    0 40px 100px -15px rgba(0, 0, 0, 0.8),
+    0 0 45px rgba(139, 92, 246, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
 }
 
 /* Stack Position Classes (Controlled by Javascript) */
@@ -3272,6 +3296,19 @@ button {
   background-color: var(--primary-blue);
   transform: scale(1.25);
   box-shadow: 0 0 12px rgba(37, 99, 235, 0.6);
+  animation: active-dot-pulse 2s infinite ease-in-out;
+}
+
+@keyframes active-dot-pulse {
+  0% {
+    box-shadow: 0 0 8px rgba(37, 99, 235, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(139, 92, 246, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 8px rgba(37, 99, 235, 0.6);
+  }
 }
 
 .pagination-dot.active::after {
