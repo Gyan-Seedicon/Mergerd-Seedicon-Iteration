@@ -3127,16 +3127,24 @@ button {
 /* Second Card */
 .deck-card.stack-1 {
   z-index: 9;
-  opacity: 0.75;
-  transform: translateY(-20px) scale(0.96);
+  opacity: 0.9; /* Increased opacity for clear visibility */
+  transform: translateY(-24px) scale(0.95); /* Larger gap and scale diff */
+  border-color: rgba(255, 255, 255, 0.18) !important; /* Brighter border */
+  box-shadow: 
+    0 -4px 20px rgba(139, 92, 246, 0.18), 
+    0 20px 50px rgba(0, 0, 0, 0.6);
   pointer-events: none;
 }
 
 /* Third Card */
 .deck-card.stack-2 {
   z-index: 8;
-  opacity: 0.45;
-  transform: translateY(-40px) scale(0.92);
+  opacity: 0.75; /* Increased opacity */
+  transform: translateY(-48px) scale(0.90); /* Larger gap and scale diff */
+  border-color: rgba(255, 255, 255, 0.12) !important; /* Brighter border */
+  box-shadow: 
+    0 -4px 15px rgba(37, 99, 235, 0.12), 
+    0 20px 40px rgba(0, 0, 0, 0.5);
   pointer-events: none;
 }
 
