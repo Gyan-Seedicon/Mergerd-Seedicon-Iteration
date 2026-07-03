@@ -1,0 +1,3479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seedicon - Fueling startup growth and global trade</title>
+  <!-- Google Fonts - DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+  <!-- Google Font - DM Mono -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Local overrides and styles for Iteration 4 Hero Section */
+    #iteration-1 .hero-section-iteration4 {
+      background-color: #fcfbfa; /* Warm light mode canvas background */
+      color: var(--slate-800);
+      padding: 36px 24px 48px 24px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      min-height: auto;
+      border-bottom: 1px solid var(--slate-100);
+    }
+    
+    #iteration-1 .hero-section-iteration4 .hero-container-i4 {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: left;
+      position: relative;
+      z-index: 5;
+    }
+
+    @media (max-width: 1000px) {
+      #iteration-1 .hero-section-iteration4 .hero-container-i4 {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    /* Variables mapped to style.css tokens - Blue Theme */
+    #iteration-1 .hero-section-iteration4 {
+      --paper-2: #FFFFFF;
+      --ink-soft: var(--slate-600);
+      --ink-faint: var(--slate-400);
+      --theme-color: var(--primary-blue);
+      --theme-color-hover: var(--primary-blue-hover);
+      --theme-color-light: var(--primary-blue-light);
+      --line: var(--slate-200);
+      --radius: 16px;
+    }
+
+    #iteration-1 .hero-section-iteration4 .eyebrow-i4 {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--theme-color);
+      letter-spacing: 0.03em;
+      margin-bottom: 22px;
+      text-transform: uppercase;
+    }
+
+    #iteration-1 .hero-section-iteration4 .eyebrow-i4::before {
+      content: '';
+      width: 16px;
+      height: 2px;
+      background: var(--theme-color);
+    }
+
+    /* Toggle button design - Blue Accent */
+    #iteration-1 .hero-section-iteration4 .toggle-i4 {
+      display: inline-flex;
+      background: var(--slate-100);
+      border-radius: 999px;
+      padding: 4px;
+      margin-bottom: 28px;
+      gap: 2px;
+      border: 1px solid var(--slate-200);
+    }
+
+    #iteration-1 .hero-section-iteration4 .toggle-i4 button {
+      border: none;
+      background: transparent;
+      padding: 10px 22px;
+      border-radius: 999px;
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--slate-600);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    #iteration-1 .hero-section-iteration4 .toggle-i4 button:hover {
+      color: #ea580c;
+    }
+
+    #iteration-1 .hero-section-iteration4 .toggle-i4 button.active {
+      background: #ea580c;
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(234, 88, 12, 0.2);
+    }
+
+    #iteration-1 .hero-section-iteration4 h1.headline-i4 {
+      font-size: 52px;
+      line-height: 1.15;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin: 0 0 24px;
+      max-width: 640px;
+      color: var(--slate-900);
+    }
+
+    #iteration-1 .hero-section-iteration4 h1.headline-i4 .accent-i4 {
+      color: var(--theme-color);
+      background-color: var(--theme-color-light);
+      padding: 2px 10px;
+      border-radius: 6px;
+      border: 1px solid rgba(37, 99, 235, 0.15);
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    #iteration-1 .hero-section-iteration4 .sub-i4 {
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--slate-600);
+      max-width: 520px;
+      margin: 0 0 36px;
+      font-weight: 400;
+    }
+
+    /* Search Input with Blue border */
+    #iteration-1 .hero-section-iteration4 .search-i4 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #ffffff;
+      border: 1px solid var(--slate-200);
+      border-radius: 14px;
+      padding: 6px 8px 6px 18px;
+      max-width: 520px;
+      margin-bottom: 28px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+      transition: all 0.2s ease;
+      display: none;
+    }
+
+    #iteration-1 .hero-section-iteration4 .search-i4.show {
+      display: flex;
+    }
+
+    #iteration-1 .hero-section-iteration4 .search-i4:focus-within {
+      border-color: var(--theme-color);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+    }
+
+    #iteration-1 .hero-section-iteration4 .search-i4 input {
+      border: none;
+      outline: none;
+      flex: 1;
+      font-family: inherit;
+      font-size: 15px;
+      padding: 10px 0;
+      background: transparent;
+      color: var(--slate-800);
+    }
+
+    #iteration-1 .hero-section-iteration4 .search-i4 input::placeholder {
+      color: var(--slate-400);
+    }
+
+    #iteration-1 .hero-section-iteration4 .search-i4 button {
+      background: var(--theme-color);
+      color: #ffffff;
+      border: none;
+      border-radius: 10px;
+      padding: 11px 20px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    #iteration-1 .hero-section-iteration4 .search-i4 button:hover {
+      background: var(--theme-color-hover);
+    }
+
+    /* CTAs - Matches styling.css design system */
+    #iteration-1 .hero-section-iteration4 .cta-row-i4 {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    #iteration-1 .hero-section-iteration4 .btn-primary-i4,
+    #iteration-1 .hero-section-iteration4 .btn-secondary-i4 {
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-size: 15.5px;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s ease;
+      display: inline-block;
+    }
+
+    #iteration-1 .hero-section-iteration4 .btn-primary-i4 {
+      background: var(--theme-color);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.15);
+    }
+
+    #iteration-1 .hero-section-iteration4 .btn-primary-i4:hover {
+      background: var(--theme-color-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.22);
+    }
+
+    #iteration-1 .hero-section-iteration4 .btn-secondary-i4 {
+      background: transparent;
+      color: var(--slate-700);
+      border: 1px solid var(--slate-200);
+    }
+
+    #iteration-1 .hero-section-iteration4 .btn-secondary-i4:hover {
+      border-color: var(--theme-color);
+      color: var(--theme-color);
+      transform: translateY(-2px);
+    }
+
+    #iteration-1 .hero-section-iteration4 .grant-text-shimmer-i4 {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13.5px;
+      font-weight: 700;
+      margin-left: 12px;
+      vertical-align: middle;
+    }
+
+    #iteration-1 .hero-section-iteration4 .shimmer-span-i4 {
+      background: linear-gradient(90deg, #475569 0%, var(--theme-color) 25%, #475569 50%, var(--theme-color) 75%, #475569 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer-i4 3s linear infinite;
+    }
+
+    #iteration-1 .hero-section-iteration4 .gemini-star-icon {
+      width: 15px;
+      height: 15px;
+      fill: var(--theme-color);
+      animation: pulse-star-i4 2s infinite ease-in-out;
+      flex-shrink: 0;
+    }
+
+    @keyframes pulse-star-i4 {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.15); opacity: 0.8; }
+    }
+
+    @keyframes shimmer-i4 {
+      to {
+        background-position: 200% center;
+      }
+    }
+
+    /* Stats */
+    #iteration-1 .hero-section-iteration4 .stats-i4 {
+      display: flex;
+      gap: 40px;
+      padding-top: 28px;
+      border-top: 1px solid var(--slate-200);
+      max-width: 560px;
+      margin-bottom: 28px;
+      width: 100%;
+    }
+
+    #iteration-1 .hero-section-iteration4 .stat-num-i4 {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--theme-color);
+      display: block;
+      letter-spacing: -0.01em;
+    }
+
+    #iteration-1 .hero-section-iteration4 .stat-label-i4 {
+      font-size: 13px;
+      color: var(--slate-500);
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
+    /* Ecosystem strip */
+    #iteration-1 .hero-section-iteration4 .ecosystem-i4 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: var(--slate-400);
+      font-weight: 500;
+    }
+
+    #iteration-1 .hero-section-iteration4 .ecosystem-i4 span.sep-i4 {
+      color: var(--slate-200);
+    }
+
+    #iteration-1 .hero-section-iteration4 .ecosystem-i4 span.label-i4 {
+      color: var(--slate-700);
+      font-weight: 700;
+      margin-right: 4px;
+    }
+
+    /* LEDGER / TICKER - Custom blue theme sidebar card */
+    #iteration-1 .hero-section-iteration4 .ledger-i4 {
+      background: #ffffff;
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+      width: 100%;
+    }
+
+    #iteration-1 .hero-section-iteration4 .ledger-head-i4 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--slate-200);
+      background: var(--slate-50);
+    }
+
+    #iteration-1 .hero-section-iteration4 .ledger-head-i4 .title-i4 {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: var(--slate-800);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    #iteration-1 .hero-section-iteration4 .live-dot-i4 {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+      animation: pulse-i4 1.8s infinite ease-in-out;
+    }
+
+    @keyframes pulse-i4 {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .4; }
+    }
+
+    #iteration-1 .hero-section-iteration4 .ledger-head-i4 .count-i4 {
+      font-size: 12px;
+      color: var(--slate-500);
+      font-weight: 600;
+    }
+
+    #iteration-1 .hero-section-iteration4 .ledger-viewport-i4 {
+      height: 480px;
+      overflow: hidden;
+      position: relative;
+      mask-image: linear-gradient(to bottom, transparent 0, black 32px, black calc(100% - 32px), transparent 100%);
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0, black 32px, black calc(100% - 32px), transparent 100%);
+    }
+
+    #iteration-1 .hero-section-iteration4 .ledger-track-i4 {
+      display: flex;
+      flex-direction: column;
+      animation: scrollUp-i4 25s linear infinite;
+    }
+
+    #iteration-1 .hero-section-iteration4 .ledger-viewport-i4:hover .ledger-track-i4 {
+      animation-play-state: paused;
+    }
+
+    @keyframes scrollUp-i4 {
+      from { transform: translateY(0); }
+      to { transform: translateY(-50%); }
+    }
+
+    /* Target standard company-row styling when inside ledger track for narrower/smarter fit */
+    #iteration-1 .hero-section-iteration4 .ledger-viewport-i4 .company-row {
+      background-color: transparent !important;
+      border: none !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      margin: 0 !important;
+      padding: 16px 24px !important;
+      border-bottom: 1px solid var(--slate-100) !important;
+      transition: background-color 0.2s ease;
+    }
+
+    #iteration-1 .hero-section-iteration4 .ledger-viewport-i4 .company-row:hover {
+      background-color: rgba(37, 99, 235, 0.02) !important;
+      transform: none !important;
+    }
+
+    #iteration-1 .hero-section-iteration4 .ledger-viewport-i4 .company-row .company-socials {
+      display: none; /* Hide socials in marquee for spacing/cleanliness */
+    }
+
+    #iteration-1 .hero-section-iteration4 .ledger-viewport-i4 .company-row .company-logo-box {
+      width: 44px;
+      height: 44px;
+      padding: 6px;
+      margin-right: 16px;
+    }
+
+    #iteration-1 .hero-section-iteration4 .ledger-viewport-i4 .company-row .company-name {
+      font-size: 15px;
+    }
+
+    #iteration-1 .hero-section-iteration4 .ledger-viewport-i4 .company-row .company-founders {
+      font-size: 11.5px;
+    }
+
+    #iteration-1 .hero-section-iteration4 .ledger-viewport-i4 .company-row .company-desc {
+      font-size: 12.5px;
+      margin-bottom: 6px;
+    }
+
+    #iteration-1 .hero-section-iteration4 .ledger-viewport-i4 .company-row .company-meta-bottom {
+      font-size: 11px;
+    }
+
+    #iteration-1 .hero-section-iteration4 .ledger-foot-i4 {
+      padding: 16px 20px;
+      font-size: 12.5px;
+      color: var(--slate-400);
+      text-align: center;
+      border-top: 1px solid var(--slate-200);
+      background: var(--slate-50);
+      font-weight: 500;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #iteration-1 .hero-section-iteration4 .ledger-track-i4 { animation: none; }
+      #iteration-1 .hero-section-iteration4 .live-dot-i4 { animation: none; }
+    }
+
+    @media (max-width: 1000px) {
+      #iteration-1 .hero-section-iteration4 h1.headline-i4 { font-size: 38px; }
+      #iteration-1 .hero-section-iteration4 .stats-i4 { gap: 24px; }
+    }
+  </style>
+</head>
+
+<body class="page-iteration-1">
+
+  <!-- =========================================================================
+       ITERATION 1: CLASSIC WARM (Light Mode Landing Page)
+       ========================================================================= -->
+  <div class="iteration-wrapper" id="iteration-1">
+    
+    <!-- Top CTA Announcement Banner — Thin Amber/Orange Layout -->
+    <div class="top-cta-banner" id="topBanner">
+      <div class="banner-container">
+        <p class="banner-text">
+          Increase the visibility of your startup and get investors. <a href="#" class="banner-link">List your Startup →</a>
+        </p>
+        <button class="banner-close-btn" id="closeTopBannerBtn" aria-label="Close Announcement Bar">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Sticky White Header Navigation -->
+    <header class="main-header">
+      <div class="header-container">
+        <!-- Logo -->
+        <a href="#" class="logo">
+          <img src="Assets/wordmark.webp" alt="Seedicon Logo" class="logo-image">
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+          <a href="#" class="nav-link">Capital</a>
+          <a href="#" class="nav-link">Trade</a>
+
+          <!-- Dropdown Products -->
+          <div class="nav-dropdown">
+            <button class="nav-link dropdown-toggle">
+              Products
+              <svg class="chevron-icon" width="10" height="6" viewBox="0 0 10 6" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div class="dropdown-menu mega-menu">
+              <div class="mega-menu-inner">
+                <!-- Left Sidebar -->
+                <div class="mega-menu-sidebar">
+                  <!-- Tab 1 -->
+                  <div class="mega-sidebar-item active" data-tab="mega-capital">
+                    <span class="mega-sidebar-title">Seedicon Capital</span>
+                    <span class="mega-sidebar-subtitle">Investment advisory & discovery</span>
+                  </div>
+                  <!-- Tab 2 -->
+                  <div class="mega-sidebar-item" data-tab="mega-deckwale">
+                    <span class="mega-sidebar-title">Deckwale</span>
+                    <span class="mega-sidebar-subtitle">AI pitch deck & doc builder</span>
+                  </div>
+                  <!-- Tab 3 -->
+                  <div class="mega-sidebar-item" data-tab="mega-watch">
+                    <span class="mega-sidebar-title">Seedicon Watch</span>
+                    <span class="mega-sidebar-subtitle">Secure VDR due diligence</span>
+                  </div>
+                  <!-- Tab 4 -->
+                  <div class="mega-sidebar-item" data-tab="mega-events">
+                    <span class="mega-sidebar-title">Seedicon Events</span>
+                    <span class="mega-sidebar-subtitle">Hosting, booking & CRM</span>
+                  </div>
+                </div>
+
+                <!-- Right Content Area -->
+                <div class="mega-menu-content-wrap">
+                  
+                  <!-- Tab 1 content: Seedicon Capital -->
+                  <div class="mega-tab-content active" id="mega-capital">
+                    <div class="mega-tab-header">
+                      <span class="mega-header-left">Investment advisory, startup fundraising, and investor discovery platform.</span>
+                      <a href="#" class="mega-header-right-link">
+                        <span>Explore Capital Suite</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                          <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                      </a>
+                    </div>
+                    
+                    <div class="mega-tab-body">
+                      <div class="mega-links-grid">
+                        <div class="mega-links-col">
+                          <a href="#" class="mega-link-item">
+                            <span class="mega-link-title">Raise Fund</span>
+                            <span class="mega-link-desc">Connect your startup with investors and funding opportunities.</span>
+                          </a>
+                          <a href="#" class="mega-link-item">
+                            <span class="mega-link-title">Invest in Startups</span>
+                            <span class="mega-link-desc">Discover startups and explore curated investment opportunities.</span>
+                          </a>
+                        </div>
+                        <div class="mega-links-col">
+                          <a href="#" class="mega-link-item">
+                            <span class="mega-link-title">List Startup</span>
+                            <span class="mega-link-desc">Showcase your startup for investor visibility.</span>
+                          </a>
+                          <a href="#" class="mega-link-item">
+                            <span class="mega-link-title">Government Grants</span>
+                            <span class="mega-link-desc">Explore startup grants, schemes, and funding support.</span>
+                          </a>
+                        </div>
+                      </div>
+                      
+                      <div class="mega-promo-box">
+                        <div class="promo-image-container">
+                          <img src="Assets/resource_featured.png" alt="Promo graphic" class="promo-img">
+                        </div>
+                        <div class="promo-text-container">
+                          <div class="promo-title-row">
+                            <span class="promo-title">Capital Discovery</span>
+                            <span class="promo-badge">Live</span>
+                          </div>
+                          <p class="promo-desc">Ready to meet global venture capitals? Access the platform.</p>
+                          <a href="#" class="promo-action-btn">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                              <line x1="5" y1="12" x2="19" y2="12"></line>
+                              <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Tab 2 content: Deckwale -->
+                  <div class="mega-tab-content" id="mega-deckwale">
+                    <div class="mega-tab-header">
+                      <span class="mega-header-left">AI-powered pitch deck, presentation, and document builder.</span>
+                      <a href="#" class="mega-header-right-link">
+                        <span>Explore AI Deckwale</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                          <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                      </a>
+                    </div>
+                    
+                    <div class="mega-tab-body">
+                      <div class="mega-links-grid">
+                        <div class="mega-links-col">
+                          <a href="#" class="mega-link-item">
+                            <span class="mega-link-title">Generate Presentation</span>
+                            <span class="mega-link-desc">Create polished presentations from prompts or ideas.</span>
+                          </a>
+                          <a href="#" class="mega-link-item">
+                            <span class="mega-link-title">Document</span>
+                            <span class="mega-link-desc">Generate business documents, proposals, and reports faster.</span>
+                          </a>
+                          <a href="#" class="mega-link-item">
+                            <span class="mega-link-title">Pitch Deck</span>
+                            <span class="mega-link-desc">Build investor-ready pitch decks with AI guidance.</span>
+                          </a>
+                        </div>
+                        <div class="mega-links-col">
+                          <a href="#" class="mega-link-item">
+                            <span class="mega-link-title">Pricing</span>
+                            <span class="mega-link-desc">Choose the right plan for your workflow.</span>
+                          </a>
+                          <a href="#" class="mega-link-item">
+                            <span class="mega-link-title">Resources</span>
+                            <span class="mega-link-desc">Explore templates, guides, and deck-building tips.</span>
+                          </a>
+                        </div>
+                      </div>
+                      
+                      <div class="mega-promo-box">
+                        <div class="promo-image-container">
+                          <img src="Assets/resource_1.png" alt="Promo graphic" class="promo-img">
+                        </div>
+                        <div class="promo-text-container">
+                          <div class="promo-title-row">
+                            <span class="promo-title">Deck AI V2</span>
+                            <span class="promo-badge">PRO</span>
+                          </div>
+                          <p class="promo-desc">Design slides in 60 seconds with new AI multi-language engine.</p>
+                          <a href="#" class="promo-action-btn">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                              <line x1="5" y1="12" x2="19" y2="12"></line>
+                              <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Tab 3 content: Seedicon Watch -->
+                  <div class="mega-tab-content" id="mega-watch">
+                    <div class="mega-tab-header">
+                      <span class="mega-header-left">Secure virtual data room for due diligence sharing.</span>
+                      <a href="#" class="mega-header-right-link">
+                        <span>Explore Watch VDR</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                          <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                      </a>
+                    </div>
+                    
+                    <div class="mega-tab-body">
+                      <div class="mega-links-grid">
+                        <div class="mega-links-col">
+                          <a href="#" class="mega-link-item">
+                            <span class="mega-link-title">Founder</span>
+                            <span class="mega-link-desc">Share confidential startup documents securely with investors.</span>
+                          </a>
+                        </div>
+                        <div class="mega-links-col">
+                          <a href="#" class="mega-link-item">
+                            <span class="mega-link-title">Investor</span>
+                            <span class="mega-link-desc">Review company documents with controlled access and tracking.</span>
+                          </a>
+                        </div>
+                      </div>
+                      
+                      <div class="mega-promo-box">
+                        <div class="promo-image-container">
+                          <img src="Assets/ecosystem_watch.png" alt="Promo graphic" class="promo-img">
+                        </div>
+                        <div class="promo-text-container">
+                          <div class="promo-title-row">
+                            <span class="promo-title">Secure VDR</span>
+                            <span class="promo-badge">AES-256</span>
+                          </div>
+                          <p class="promo-desc">Enable screenshot block, watermarking, and dynamic tracking logs.</p>
+                          <a href="#" class="promo-action-btn">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                              <line x1="5" y1="12" x2="19" y2="12"></line>
+                              <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Tab 4 content: Seedicon Events -->
+                  <div class="mega-tab-content" id="mega-events">
+                    <div class="mega-tab-header">
+                      <span class="mega-header-left">Event hosting, booking, networking CRM, and contact follow-up tools.</span>
+                      <a href="#" class="mega-header-right-link">
+                        <span>Explore Events Suite</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                          <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                      </a>
+                    </div>
+                    
+                    <div class="mega-tab-body">
+                      <div class="mega-links-grid">
+                        <div class="mega-links-col">
+                          <a href="#" class="mega-link-item">
+                            <span class="mega-link-title">Host Events</span>
+                            <span class="mega-link-desc">Create and manage professional events for your community.</span>
+                          </a>
+                          <a href="#" class="mega-link-item">
+                            <span class="mega-link-title">Book Events</span>
+                            <span class="mega-link-desc">Discover and register for startup and business events.</span>
+                          </a>
+                        </div>
+                        <div class="mega-links-col">
+                          <a href="#" class="mega-link-item">
+                            <span class="mega-link-title">Networking CRM</span>
+                            <span class="mega-link-desc">Manage event contacts, meetings, and follow-ups in one place.</span>
+                          </a>
+                          <a href="#" class="mega-link-item">
+                            <span class="mega-link-title">Business Card Scanner</span>
+                            <span class="mega-link-desc">Scan business cards and save contacts instantly.</span>
+                          </a>
+                        </div>
+                      </div>
+                      
+                      <div class="mega-promo-box">
+                        <div class="promo-image-container">
+                          <img src="Assets/ecosystem_events.png" alt="Promo graphic" class="promo-img">
+                        </div>
+                        <div class="promo-text-container">
+                          <div class="promo-title-row">
+                            <span class="promo-title">Scanner App</span>
+                            <span class="promo-badge">Free</span>
+                          </div>
+                          <p class="promo-desc">Turn physical cards into organized digital contacts in real-time.</p>
+                          <a href="#" class="promo-action-btn">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                              <line x1="5" y1="12" x2="19" y2="12"></line>
+                              <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="#" class="nav-link">Partner with us</a>
+
+          <!-- Dropdown Resources -->
+          <div class="nav-dropdown">
+            <button class="nav-link dropdown-toggle">
+              Resources
+              <svg class="chevron-icon" width="10" height="6" viewBox="0 0 10 6" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div class="dropdown-menu mega-menu">
+              <div class="mega-menu-inner">
+                <!-- Left Sidebar -->
+                <div class="mega-menu-sidebar">
+                  <!-- Tab 1 -->
+                  <div class="mega-sidebar-item active" data-tab="mega-res-knowledge">
+                    <span class="mega-sidebar-title">Knowledge Hub</span>
+                    <span class="mega-sidebar-subtitle">Articles & growth guides</span>
+                  </div>
+                  <!-- Tab 2 -->
+                  <div class="mega-sidebar-item" data-tab="mega-res-investment">
+                    <span class="mega-sidebar-title">Investment Hub</span>
+                    <span class="mega-sidebar-subtitle">Equity, deck & pitch materials</span>
+                  </div>
+                  <!-- Tab 3 -->
+                  <div class="mega-sidebar-item" data-tab="mega-res-compliance">
+                    <span class="mega-sidebar-title">Compliance & Grants</span>
+                    <span class="mega-sidebar-subtitle">Secure VDR & state funding</span>
+                  </div>
+                </div>
+
+                <!-- Right Content Area -->
+                <div class="mega-menu-content-wrap">
+                  
+                  <!-- Tab 1 content: Knowledge Hub -->
+                  <div class="mega-tab-content active" id="mega-res-knowledge">
+                    <div class="mega-tab-header">
+                      <span class="mega-header-left">General guides, startup updates, and global growth strategies.</span>
+                      <a href="#" class="mega-header-right-link">
+                        <span>All Publications</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                          <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                      </a>
+                    </div>
+                    
+                    <div class="mega-tab-body">
+                      <div class="mega-links-grid">
+                        <div class="mega-links-col">
+                          <a href="#" class="mega-link-item">
+                            <span class="mega-link-title">Articles</span>
+                            <span class="mega-link-desc">Insights on funding, business, trade, and growth.</span>
+                          </a>
+                        </div>
+                        <div class="mega-links-col">
+                          <a href="#" class="mega-link-item">
+                            <span class="mega-link-title">Startups</span>
+                            <span class="mega-link-desc">Guides and insights for startup growth.</span>
+                          </a>
+                        </div>
+                      </div>
+                      
+                      <div class="mega-promo-box">
+                        <div class="promo-image-container">
+                          <img src="Assets/resource_featured.png" alt="Promo graphic" class="promo-img">
+                        </div>
+                        <div class="promo-text-container">
+                          <div class="promo-title-row">
+                            <span class="promo-title">Latest Report</span>
+                            <span class="promo-badge">PDF</span>
+                          </div>
+                          <p class="promo-desc">Funding Trends 2026: Mid-year Startup Investment landscape.</p>
+                          <a href="#" class="promo-action-btn">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                              <line x1="5" y1="12" x2="19" y2="12"></line>
+                              <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Tab 2 content: Investment Hub -->
+                  <div class="mega-tab-content" id="mega-res-investment">
+                    <div class="mega-tab-header">
+                      <span class="mega-header-left">Private capital networks, term sheets, and pitching frameworks.</span>
+                      <a href="#" class="mega-header-right-link">
+                        <span>Fundraising Tools</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                          <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                      </a>
+                    </div>
+                    
+                    <div class="mega-tab-body">
+                      <div class="mega-links-grid">
+                        <div class="mega-links-col">
+                          <a href="#" class="mega-link-item">
+                            <span class="mega-link-title">Private Equity</span>
+                            <span class="mega-link-desc">Resources around private capital and investment strategy.</span>
+                          </a>
+                        </div>
+                        <div class="mega-links-col">
+                          <a href="#" class="mega-link-item">
+                            <span class="mega-link-title">Pitch Deck</span>
+                            <span class="mega-link-desc">Resources to build better investor presentations.</span>
+                          </a>
+                        </div>
+                      </div>
+                      
+                      <div class="mega-promo-box">
+                        <div class="promo-image-container">
+                          <img src="Assets/resource_1.png" alt="Promo graphic" class="promo-img">
+                        </div>
+                        <div class="promo-text-container">
+                          <div class="promo-title-row">
+                            <span class="promo-title">Pitch Deck Checklist</span>
+                            <span class="promo-badge">NEW</span>
+                          </div>
+                          <p class="promo-desc">10 essential slides every VC expects to see in your deck.</p>
+                          <a href="#" class="promo-action-btn">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                              <line x1="5" y1="12" x2="19" y2="12"></line>
+                              <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Tab 3 content: Compliance & Grants -->
+                  <div class="mega-tab-content" id="mega-res-compliance">
+                    <div class="mega-tab-header">
+                      <span class="mega-header-left">Secure document protection frameworks and state-sponsored schemes.</span>
+                      <a href="#" class="mega-header-right-link">
+                        <span>Grants Database</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                          <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                      </a>
+                    </div>
+                    
+                    <div class="mega-tab-body">
+                      <div class="mega-links-grid">
+                        <div class="mega-links-col">
+                          <a href="#" class="mega-link-item">
+                            <span class="mega-link-title">VDR</span>
+                            <span class="mega-link-desc">Learn about secure virtual data rooms.</span>
+                          </a>
+                        </div>
+                        <div class="mega-links-col">
+                          <a href="#" class="mega-link-item">
+                            <span class="mega-link-title">Government Grants</span>
+                            <span class="mega-link-desc">Guides on startup schemes and grant opportunities.</span>
+                          </a>
+                        </div>
+                      </div>
+                      
+                      <div class="mega-promo-box">
+                        <div class="promo-image-container">
+                          <img src="Assets/resource_2.png" alt="Promo graphic" class="promo-img">
+                        </div>
+                        <div class="promo-text-container">
+                          <div class="promo-title-row">
+                            <span class="promo-title">Grants Finder</span>
+                            <span class="promo-badge">Interactive</span>
+                          </div>
+                          <p class="promo-desc">Check your startup's eligibility for local and global government grants.</p>
+                          <a href="#" class="promo-action-btn">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                              <line x1="5" y1="12" x2="19" y2="12"></line>
+                              <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- CTA Action Buttons -->
+        <div class="header-ctas">
+          <a href="#" class="login-link">Login</a>
+          <a href="#" class="btn btn-primary-nav">Sign up to Capital</a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle-btn" aria-label="Toggle Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div class="mobile-nav-drawer">
+        <nav class="mobile-nav">
+          <a href="#" class="mobile-nav-link">Capital</a>
+          <a href="#" class="mobile-nav-link">Trade</a>
+          <div class="mobile-dropdown-header">Products</div>
+          <a href="#" class="mobile-dropdown-sublink">Seedicon Capital</a>
+          <a href="#" class="mobile-dropdown-sublink">Seedicon Trade</a>
+          <a href="#" class="mobile-dropdown-sublink">Seedicon Insights</a>
+          <a href="#" class="mobile-nav-link">Partner with us</a>
+          <div class="mobile-dropdown-header">Resources</div>
+          <a href="#" class="mobile-dropdown-sublink">Documentation</a>
+          <a href="#" class="mobile-dropdown-sublink">Market Reports</a>
+          <a href="#" class="mobile-dropdown-sublink">Help Center</a>
+          <div class="mobile-drawer-footer">
+            <a href="#" class="login-link">Login</a>
+            <a href="#" class="btn btn-primary-nav w-full">Sign up to Capital</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Warm Light Hero Section (Back to classic Warm layout) -->
+    <main class="hero-section-iteration4">
+      <div class="hero-container-i4">
+        <!-- Hero Left Column: Controls, Headline, Subtext, search, stats, ecosystem -->
+        <div class="hero-left-i4">
+          <div class="toggle-i4" role="tablist" aria-label="Choose your path">
+            <button id="btn-founder" class="active" onclick="setMode('founder')" role="tab" aria-selected="true">For Founders</button>
+            <button id="btn-investor" onclick="setMode('investor')" role="tab" aria-selected="false">For Investors</button>
+          </div>
+
+          <h1 id="headline" class="headline-i4">Raise capital, the <span class="accent-i4">founder-first</span> way.</h1>
+          <p class="sub-i4" id="subtext">List your startup, build investor-ready pitch decks, and get shortlisted by the right investors — all from one place.</p>
+
+          <div class="search-i4" id="search-box">
+            <input type="text" placeholder="Search companies, founders, or sectors…" aria-label="Search companies, founders, or sectors">
+            <button>Search</button>
+          </div>
+
+          <div class="cta-row-i4">
+            <button class="btn-primary-i4" id="cta-primary">List Your Startup</button>
+            <button class="btn-secondary-i4" id="cta-secondary">See how it works</button>
+            <span class="grant-text-shimmer-i4">
+              <svg class="gemini-star-icon" viewBox="0 0 24 24">
+                <path d="M12 2L14.8 9.2L22 12L14.8 14.8L12 22L9.2 14.8L2 12L9.2 9.2L12 2Z" />
+              </svg>
+              <span class="shimmer-span-i4">Govt. grants &amp; schemes included</span>
+            </span>
+          </div>
+
+          <div class="stats-i4">
+            <div>
+              <span class="stat-num-i4">2,000+</span>
+              <span class="stat-label-i4">Startups listed</span>
+            </div>
+            <div>
+              <span class="stat-num-i4">50+</span>
+              <span class="stat-label-i4">DD conducted via VDR</span>
+            </div>
+            <div>
+              <span class="stat-num-i4">1,000+</span>
+              <span class="stat-label-i4">Pitch &amp; business decks built</span>
+            </div>
+          </div>
+
+          <div class="ecosystem-i4">
+            <span class="label-i4">One ecosystem</span>
+            <span>Capital</span><span class="sep-i4">·</span>
+            <span>Deckwale</span><span class="sep-i4">·</span>
+            <span>Watch</span><span class="sep-i4">·</span>
+            <span>Events</span><span class="sep-i4">·</span>
+            <span>Trade</span>
+          </div>
+        </div>
+
+        <!-- Hero Right Column: Ledger ticker list of startups -->
+        <div class="hero-right-i4">
+          <div class="ledger-i4">
+            <div class="ledger-head-i4">
+              <span class="title-i4"><span class="live-dot-i4"></span>Live on Seedicon</span>
+              <span class="count-i4">996 raising now</span>
+            </div>
+            <div class="ledger-viewport-i4">
+              <div class="ledger-track-i4" id="ledger-track">
+                <!-- rows injected by JS, duplicated for seamless loop -->
+              </div>
+            </div>
+            <div class="ledger-foot-i4">Real founders. Real rounds. Updated as deals move.</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Seedicon Products Tabbed Section -->
+    <section class="umbrella-section products-tabbed-section-i4">
+      <style>
+        .products-tabbed-section-i4 {
+          background-color: #ffffff;
+          padding: 80px 24px;
+          border-top: 1px solid var(--slate-100);
+          border-bottom: 1px solid var(--slate-100);
+        }
+        .products-tabbed-section-i4 .umbrella-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          width: 100%;
+        }
+        .products-tabbed-section-i4 .products-tab-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          margin-bottom: 32px;
+        }
+        .products-tabbed-section-i4 .products-tab-title {
+          font-size: 38px;
+          font-weight: 800;
+          line-height: 1.2;
+          color: var(--slate-900);
+          margin: 0;
+        }
+        .products-tabbed-section-i4 .tab-icon-dec {
+          color: var(--slate-300);
+          opacity: 0.5;
+          transition: color 0.3s ease, opacity 0.3s ease;
+        }
+        .products-tabbed-section-i4 .tab-icon-dec.active {
+          color: var(--primary-blue);
+          opacity: 1;
+        }
+        .products-tabbed-section-i4 .products-tab-menu {
+          display: flex;
+          gap: 32px;
+          border-bottom: 1px solid var(--slate-100);
+          padding-bottom: 12px;
+          margin-bottom: 40px;
+        }
+        .products-tabbed-section-i4 .products-tab-btn {
+          border: none;
+          background: transparent;
+          font-size: 15.5px;
+          font-weight: 700;
+          color: var(--slate-500);
+          cursor: pointer;
+          position: relative;
+          transition: color 0.2s ease;
+          padding-bottom: 12px;
+        }
+        .products-tabbed-section-i4 .products-tab-btn:hover {
+          color: var(--slate-800);
+        }
+        .products-tabbed-section-i4 .products-tab-btn.active {
+          color: var(--slate-900);
+        }
+        .products-tabbed-section-i4 .products-tab-btn.active::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: -13px;
+          height: 3px;
+          background-color: var(--primary-blue);
+          border-radius: 999px;
+        }
+        .products-tabbed-section-i4 .products-showcase-container {
+          position: relative;
+          background-color: #d6eaff;
+          border-radius: 20px;
+          border: 1px solid var(--slate-100);
+          overflow: hidden;
+        }
+        .products-tabbed-section-i4 .products-tab-panel {
+          display: none;
+          height: 560px;
+          position: relative;
+        }
+        .products-tabbed-section-i4 .products-tab-panel.active {
+          display: block;
+        }
+        .products-tabbed-section-i4 .products-tab-panel .panel-image-wrapper {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 62%;
+          height: 100%;
+          z-index: 1;
+        }
+        .products-tabbed-section-i4 .products-tab-panel .panel-image-wrapper img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center left;
+        }
+        .products-tabbed-section-i4 .products-tab-panel .panel-gradient-overlay {
+          position: absolute;
+          top: 0;
+          left: 35%; /* Start slightly left of the image wrapper to feather the edge completely */
+          width: 65%;
+          height: 100%;
+          background: linear-gradient(90deg, #d6eaff 0%, rgba(214, 234, 255, 0.95) 8%, rgba(214, 234, 255, 0) 38%);
+          z-index: 2;
+          pointer-events: none;
+        }
+        .products-tabbed-section-i4 .products-detail-card {
+          position: absolute;
+          left: 48px;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 440px;
+          background: #ffffff;
+          border-radius: 16px;
+          padding: 40px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+          z-index: 10;
+          border: 1px solid var(--slate-100);
+        }
+        .products-tabbed-section-i4 .product-badge-i4 {
+          font-size: 11.5px;
+          font-weight: 800;
+          color: var(--primary-blue);
+          text-transform: uppercase;
+          letter-spacing: 0.06em;
+          margin-bottom: 12px;
+          display: block;
+        }
+        .products-tabbed-section-i4 .product-heading-i4 {
+          font-size: 30px;
+          font-weight: 800;
+          color: var(--slate-900);
+          line-height: 1.25;
+          margin: 0 0 16px;
+        }
+        .products-tabbed-section-i4 .product-heading-i4 .active-highlight {
+          color: #10b981; /* Premium green highlight matching mockup */
+        }
+        .products-tabbed-section-i4 .product-description-i4 {
+          font-size: 14.5px;
+          line-height: 1.6;
+          color: var(--slate-600);
+          margin: 0 0 24px;
+        }
+        .products-tabbed-section-i4 .product-trust-i4 {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 28px;
+          border-top: 1px solid var(--slate-100);
+          padding-top: 20px;
+          flex-wrap: wrap;
+        }
+        .products-tabbed-section-i4 .product-badge-pill {
+          background-color: var(--slate-50);
+          color: var(--slate-600);
+          padding: 6px 12px;
+          border-radius: 6px;
+          font-size: 11.5px;
+          font-weight: 700;
+          border: 1px solid var(--slate-200);
+        }
+        .products-tabbed-section-i4 .product-cta-i4 {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 12px 24px;
+          background: var(--primary-blue);
+          color: #ffffff;
+          border-radius: 10px;
+          font-size: 14.5px;
+          font-weight: 700;
+          transition: all 0.2s ease;
+          cursor: pointer;
+          border: none;
+          text-decoration: none;
+        }
+        .products-tabbed-section-i4 .product-cta-i4:hover {
+          background: var(--primary-blue-hover);
+          transform: translateY(-1px);
+        }
+        .products-tabbed-section-i4 .section-eyebrow-i4 {
+          font-size: 13px;
+          font-weight: 800;
+          color: var(--primary-blue);
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          margin-bottom: 12px;
+          display: block;
+        }
+        .products-tabbed-section-i4 .section-subheading-i4 {
+          font-size: 16px;
+          line-height: 1.6;
+          color: var(--slate-650);
+          max-width: 800px;
+          margin: 16px 0 0 0;
+        }
+        @media (max-width: 900px) {
+          .products-tabbed-section-i4 {
+            padding: 48px 16px;
+          }
+          .products-tabbed-section-i4 .products-tab-header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 24px;
+          }
+          .products-tabbed-section-i4 .products-tab-title {
+            font-size: 30px;
+          }
+          .products-tabbed-section-i4 .products-tab-menu {
+            gap: 16px;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding-bottom: 8px;
+            margin-bottom: 28px;
+          }
+          .products-tabbed-section-i4 .products-tab-panel {
+            height: auto;
+            display: flex;
+            flex-direction: column;
+          }
+          .products-tabbed-section-i4 .products-tab-panel.active {
+            display: flex;
+          }
+          .products-tabbed-section-i4 .products-tab-panel .panel-image-wrapper {
+            position: relative;
+            height: 260px;
+            width: 100%;
+          }
+          .products-tabbed-section-i4 .products-tab-panel .products-detail-card {
+            position: relative;
+            left: 0;
+            top: 0;
+            transform: none;
+            width: 100%;
+            box-shadow: none;
+            padding: 24px;
+            border: 1px solid var(--slate-100);
+            border-radius: 0 0 16px 16px;
+          }
+        }
+      </style>
+
+      <div class="umbrella-container">
+        <div class="products-tab-header">
+          <div>
+            <span class="section-eyebrow-i4">OUR ECOSYSTEM</span>
+            <h2 class="products-tab-title">One business house.<br>Five products built to move you forward.</h2>
+            <p class="section-subheading-i4">From raising capital to closing the deal — Seedicon brings fundraising, AI documents, secure due diligence, event networking, and global trade under one roof.</p>
+          </div>
+        </div>
+
+        <div class="products-tab-menu">
+          <button class="products-tab-btn active" data-tab="0">Capital</button>
+          <button class="products-tab-btn" data-tab="1">Deckwale</button>
+          <button class="products-tab-btn" data-tab="2">Watch</button>
+          <button class="products-tab-btn" data-tab="3">Events</button>
+          <button class="products-tab-btn" data-tab="4">Trade</button>
+        </div>
+
+        <div class="products-showcase-container">
+          <!-- Panel 1: Capital -->
+          <div class="products-tab-panel active" data-panel-index="0">
+            <div class="panel-image-wrapper">
+              <img src="Assets/product_capital.png" alt="Seedicon Capital">
+            </div>
+            <div class="panel-gradient-overlay"></div>
+            <div class="products-detail-card">
+              <span class="product-badge-i4">SEEDICON CAPITAL</span>
+              <h3 class="product-heading-i4">Raise capital, the <span class="active-highlight">founder-first</span> way.</h3>
+              <p class="product-description-i4">Seedicon Capital connects startups with the right investors and helps investors discover promising businesses early. List your startup, build visibility, explore grants, and move from first pitch to term sheet — without chasing cold intros.</p>
+              <div class="product-trust-i4">
+                <span class="product-badge-pill">Investor Discovery</span>
+                <span class="product-badge-pill">Grant Access</span>
+                <span class="product-badge-pill">Fundraising Readiness</span>
+              </div>
+              <a href="#" class="product-cta-i4">Explore Capital &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Panel 2: Deckwale -->
+          <div class="products-tab-panel" data-panel-index="1">
+            <div class="panel-image-wrapper slideshow">
+              <img src="Assets/Deckwale/State=AI Research.png" alt="AI Research" class="slide active">
+              <img src="Assets/Deckwale/State=AI pitch prep.png" alt="AI pitch prep" class="slide">
+              <img src="Assets/Deckwale/State=Document.png" alt="Document" class="slide">
+              <img src="Assets/Deckwale/State=Presentation.png" alt="Presentation" class="slide">
+            </div>
+            <div class="panel-gradient-overlay"></div>
+            <div class="products-detail-card">
+              <span class="product-badge-i4">DECKWALE AI</span>
+              <h3 class="product-heading-i4">Build pitch decks that <span class="active-highlight">get you funded</span>.</h3>
+              <p class="product-description-i4">Deckwale uses AI to turn your ideas into investor-ready pitch decks, presentations, and business documents in minutes — not weeks. Spend less time formatting slides and more time building your business.</p>
+              <div class="product-trust-i4">
+                <span class="product-badge-pill">AI Deck Builder</span>
+                <span class="product-badge-pill">VC-Ready Templates</span>
+                <span class="product-badge-pill">Export to PPTX</span>
+              </div>
+              <a href="#" class="product-cta-i4">Generate Pitch Deck &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Panel 3: Watch -->
+          <div class="products-tab-panel" data-panel-index="2">
+            <div class="panel-image-wrapper slideshow">
+              <img src="Assets/Watch/Property 1=Analytics.png" alt="Analytics" class="slide active">
+              <img src="Assets/Watch/Property 1=Encrypted Vault.png" alt="Encrypted Vault" class="slide">
+              <img src="Assets/Watch/Property 1=NDA Investor.png" alt="NDA Investor" class="slide">
+              <img src="Assets/Watch/Property 1=Share to Investor.png" alt="Share to Investor" class="slide">
+            </div>
+            <div class="panel-gradient-overlay"></div>
+            <div class="products-detail-card">
+              <span class="product-badge-i4">SEEDICON WATCH</span>
+              <h3 class="product-heading-i4">Share due diligence, <span class="active-highlight">without the risk</span>.</h3>
+              <p class="product-description-i4">Seedicon Watch is a secure virtual data room for sharing confidential documents with investors — with encrypted access, permission controls, and analytics on who viewed what, and when.</p>
+              <div class="product-trust-i4">
+                <span class="product-badge-pill">Encrypted Data Room</span>
+                <span class="product-badge-pill">Access Tracking</span>
+                <span class="product-badge-pill">Investor Analytics</span>
+              </div>
+              <a href="#" class="product-cta-i4">Open Virtual Data Room &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Panel 4: Events -->
+          <div class="products-tab-panel" data-panel-index="3">
+            <div class="panel-image-wrapper slideshow">
+              <img src="Assets/Events/Property 1=CRM Integration.png" alt="CRM Integration" class="slide active">
+              <img src="Assets/Events/Property 1=Follow-up.png" alt="Follow-up" class="slide">
+              <img src="Assets/Events/Property 1=HostedEvent.png" alt="Hosted Event" class="slide">
+              <img src="Assets/Events/Property 1=ScanCard.png" alt="Scan Card" class="slide">
+            </div>
+            <div class="panel-gradient-overlay"></div>
+            <div class="products-detail-card">
+              <span class="product-badge-i4">SEEDICON EVENTS</span>
+              <h3 class="product-heading-i4">Turn every event into <span class="active-highlight">your next deal</span>.</h3>
+              <p class="product-description-i4">Host or book startup and business events, scan business cards on the spot, and keep every contact organized in one networking CRM — so warm introductions never go cold from a forgotten follow-up.</p>
+              <div class="product-trust-i4">
+                <span class="product-badge-pill">Business Card Scanner</span>
+                <span class="product-badge-pill">Networking CRM</span>
+                <span class="product-badge-pill">Automated Follow-ups</span>
+              </div>
+              <a href="#" class="product-cta-i4">Explore Events &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Panel 5: Trade -->
+          <div class="products-tab-panel" data-panel-index="4">
+            <div class="panel-image-wrapper">
+              <img src="Assets/product_trade.png" alt="Seedicon Trade">
+            </div>
+            <div class="panel-gradient-overlay"></div>
+            <div class="products-detail-card">
+              <span class="product-badge-i4">SEEDICON TRADE</span>
+              <h3 class="product-heading-i4">Premium Indian coffee, <span class="active-highlight">exported with trust</span>.</h3>
+              <p class="product-description-i4">Seedicon Trade sources naturally grown coffee from premium Indian regions and exports it to global buyers and importers — built on a reliable, quality-first trade model.</p>
+              <div class="product-trust-i4">
+                <span class="product-badge-pill">Export-Ready Sourcing</span>
+                <span class="product-badge-pill">Global Buyer Network</span>
+                <span class="product-badge-pill">Premium Grade Coffee</span>
+              </div>
+              <a href="#" class="product-cta-i4">Explore Coffee Trade &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who It's For Section (Light Mode) -->
+    <section class="who-section who-section-i4">
+      <style>
+        .who-section-i4 {
+          position: relative;
+          background-color: #f1f5fa; /* Off-white canvas */
+          padding: 80px 24px;
+          overflow: hidden;
+          border-bottom: 1px solid var(--slate-100);
+        }
+        
+        /* Decorative radial glow */
+        .who-section-i4::before {
+          content: '';
+          position: absolute;
+          width: 400px;
+          height: 400px;
+          background: radial-gradient(circle, rgba(37, 99, 235, 0.04) 0%, rgba(255,255,255,0) 70%);
+          top: -100px;
+          right: -100px;
+          z-index: 1;
+          pointer-events: none;
+        }
+
+        .who-section-i4 .who-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          width: 100%;
+          position: relative;
+          z-index: 5;
+        }
+
+        .who-section-i4 .who-header-row-i4 {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          margin-bottom: 48px;
+          gap: 32px;
+        }
+
+        .who-section-i4 .who-header {
+          text-align: left;
+          flex: 1;
+        }
+
+        .who-section-i4 .who-eyebrow-i4 {
+          font-size: 13px;
+          font-weight: 800;
+          color: var(--primary-blue);
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          margin-bottom: 12px;
+          display: block;
+        }
+
+        .who-section-i4 .who-title {
+          font-size: 38px;
+          font-weight: 800;
+          line-height: 1.25;
+          color: var(--slate-900);
+          margin: 0;
+        }
+
+        .who-section-i4 .who-subtitle {
+          font-size: 16px;
+          line-height: 1.6;
+          color: var(--slate-600);
+          max-width: 800px;
+          margin: 16px 0 0 0;
+        }
+
+        .who-section-i4 .secondary-nav-buttons-i4 {
+          display: flex;
+          gap: 12px;
+          margin-bottom: 8px;
+        }
+
+        .who-section-i4 .carousel-btn-i4 {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background: #ffffff;
+          border: 1px solid var(--slate-200);
+          color: var(--slate-600);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .who-section-i4 .carousel-btn-i4:hover {
+          border-color: var(--primary-blue);
+          color: var(--primary-blue);
+          background: #eff6ff;
+        }
+
+        .who-section-i4 .who-scroll-track-i4 {
+          display: flex;
+          gap: 24px;
+          overflow-x: auto;
+          scroll-behavior: smooth;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: none; /* Firefox */
+          padding: 16px 8px;
+          margin: -16px -8px;
+        }
+
+        .who-section-i4 .who-scroll-track-i4::-webkit-scrollbar {
+          display: none; /* Chrome/Safari */
+        }
+
+        .who-section-i4 .who-card-i4 {
+          background: #ffffff;
+          border-radius: 16px;
+          border: 1px solid var(--slate-150);
+          padding: 32px;
+          display: flex;
+          flex-direction: column;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+          transition: all 0.3s ease;
+          min-width: 282px;
+          width: 282px;
+          flex-shrink: 0;
+        }
+
+        .who-section-i4 .who-card-i4:hover {
+          border-color: var(--primary-blue);
+          box-shadow: 0 12px 30px rgba(37, 99, 235, 0.08);
+          transform: translateY(-4px);
+        }
+
+        .who-section-i4 .card-icon-box-i4 {
+          width: 44px;
+          height: 44px;
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 24px;
+          flex-shrink: 0;
+        }
+
+        .who-section-i4 .card-icon-box-i4.founder-box,
+        .who-section-i4 .card-icon-box-i4.ca-box {
+          background-color: #eff6ff;
+          color: #2563eb;
+        }
+
+        .who-section-i4 .card-icon-box-i4.investor-box,
+        .who-section-i4 .card-icon-box-i4.family-box {
+          background-color: #ecfdf5;
+          color: #059669;
+        }
+
+        .who-section-i4 .card-icon-box-i4.partner-box,
+        .who-section-i4 .card-icon-box-i4.event-box {
+          background-color: #fef3c7;
+          color: #d97706;
+        }
+
+        .who-section-i4 .card-icon-box-i4.ma-box,
+        .who-section-i4 .card-icon-box-i4.network-box {
+          background-color: #e0e7ff;
+          color: #4f46e5;
+        }
+
+        .who-section-i4 .card-title-i4 {
+          font-size: 20px;
+          font-weight: 800;
+          color: var(--slate-900);
+          margin: 0 0 6px;
+        }
+
+        .who-section-i4 .card-tag-i4 {
+          font-size: 11.5px;
+          font-weight: 800;
+          color: var(--slate-400);
+          text-transform: uppercase;
+          letter-spacing: 0.06em;
+          margin-bottom: 20px;
+          display: block;
+        }
+
+        .who-section-i4 .card-desc-i4 {
+          font-size: 13.5px;
+          line-height: 1.6;
+          color: var(--slate-600);
+          margin-bottom: 28px;
+          flex: 1;
+        }
+
+        .who-section-i4 .card-link-i4 {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          font-size: 14px;
+          font-weight: 700;
+          color: var(--primary-blue);
+          text-decoration: none;
+          transition: color 0.2s ease;
+          border-top: 1px solid var(--slate-100);
+          width: 100%;
+          padding-top: 18px;
+          margin-top: auto;
+        }
+
+        .who-section-i4 .card-link-i4:hover {
+          color: var(--primary-blue-hover);
+        }
+
+        .who-section-i4 .track-divider-card-i4 {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          min-width: 100px;
+          width: 100px;
+          flex-shrink: 0;
+          position: relative;
+        }
+
+        .who-section-i4 .track-divider-line-i4 {
+          height: 100%;
+          width: 1px;
+          background: var(--slate-200);
+          position: absolute;
+          left: 50%;
+          top: 0;
+          z-index: 1;
+        }
+
+        .who-section-i4 .track-divider-label-i4 {
+          background: #fcfbfa; /* Matches off-white background */
+          color: var(--slate-400);
+          font-size: 10.5px;
+          font-weight: 800;
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+          writing-mode: vertical-lr;
+          transform: rotate(180deg);
+          padding: 24px 0;
+          z-index: 5;
+        }
+
+        @media (max-width: 960px) {
+          .who-section-i4 .who-card-i4 {
+            min-width: 260px;
+            width: 260px;
+          }
+        }
+
+        @media (max-width: 600px) {
+          .who-section-i4 {
+            padding: 48px 16px;
+          }
+          .who-section-i4 .who-header-row-i4 {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 32px;
+          }
+          .who-section-i4 .who-title {
+            font-size: 30px;
+          }
+          .who-section-i4 .secondary-nav-buttons-i4 {
+            margin-bottom: 0;
+          }
+          .who-section-i4 .who-card-i4 {
+            min-width: 250px;
+            width: 250px;
+          }
+        }
+      </style>
+
+      <div class="who-container">
+        <div class="who-header-row-i4">
+          <div class="who-header">
+            <span class="who-eyebrow-i4">WHO IT'S FOR</span>
+            <h2 class="who-title">One platform. Every seat at the table.</h2>
+            <p class="who-subtitle">From the founder raising a first round to the team closing the deal — Seedicon supports everyone who touches a startup's journey.</p>
+          </div>
+          <div class="secondary-nav-buttons-i4">
+            <button class="carousel-btn-i4 prev" id="sec-prev-btn" aria-label="Scroll left">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button class="carousel-btn-i4 next" id="sec-next-btn" aria-label="Scroll right">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="who-scroll-track-i4" id="who-scroll-track">
+          <!-- Card 1: Founders -->
+          <div class="who-card-i4">
+            <div class="card-icon-box-i4 founder-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </div>
+            <h3 class="card-title-i4">Founders</h3>
+            <span class="card-tag-i4">RAISE & BUILD</span>
+            <p class="card-desc-i4">Raise capital, build investor-ready pitch decks, explore grants, and share your documents securely — everything a founder needs, in one place.</p>
+            <a href="#" class="card-link-i4">Start as a Founder &rarr;</a>
+          </div>
+
+          <!-- Card 2: Investors -->
+          <div class="who-card-i4">
+            <div class="card-icon-box-i4 investor-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </div>
+            <h3 class="card-title-i4">Investors</h3>
+            <span class="card-tag-i4">DEAL FLOW</span>
+            <p class="card-desc-i4">Discover vetted startups, review investment opportunities, and access due diligence documents before anyone else does.</p>
+            <a href="#" class="card-link-i4">Start as an Investor &rarr;</a>
+          </div>
+
+          <!-- Card 3: Partners -->
+          <div class="who-card-i4">
+            <div class="card-icon-box-i4 partner-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3 class="card-title-i4">Partners</h3>
+            <span class="card-tag-i4">STRATEGIC ALLIANCE</span>
+            <p class="card-desc-i4">Collaborate with Seedicon across funding, investment advisory, events, and business growth.</p>
+            <a href="#" class="card-link-i4">Partner With Us &rarr;</a>
+          </div>
+
+          <!-- Card 4: M&A Teams -->
+          <div class="who-card-i4">
+            <div class="card-icon-box-i4 ma-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            </div>
+            <h3 class="card-title-i4">M&A Teams</h3>
+            <span class="card-tag-i4">DEAL MANAGEMENT</span>
+            <p class="card-desc-i4">Manage confidential deal documents, due diligence files, and secure data room sharing for every transaction.</p>
+            <a href="#" class="card-link-i4">Talk to Us &rarr;</a>
+          </div>
+
+          <!-- Divider Column in scroll track -->
+          <div class="track-divider-card-i4">
+            <div class="track-divider-line-i4"></div>
+            <span class="track-divider-label-i4">ALSO BUILT FOR</span>
+          </div>
+
+          <!-- Card 5: CA Firms -->
+          <div class="who-card-i4 secondary-card-i4">
+            <div class="card-icon-box-i4 ca-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <h3 class="card-title-i4">CA Firms &amp; DD Auditors</h3>
+            <span class="card-tag-i4">COMPLIANCE &amp; AUDIT</span>
+            <p class="card-desc-i4">Support clients with fundraising documents, investment readiness, grant discovery, and secure compliance sharing.</p>
+            <a href="#" class="card-link-i4">Explore Auditing &rarr;</a>
+          </div>
+
+          <!-- Card 6: Family Offices -->
+          <div class="who-card-i4 secondary-card-i4">
+            <div class="card-icon-box-i4 family-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            </div>
+            <h3 class="card-title-i4">Family Offices &amp; Angel Networks</h3>
+            <span class="card-tag-i4">PORTFOLIO MANAGEMENT</span>
+            <p class="card-desc-i4">Explore startup investments and review companies through secure, structured workflows.</p>
+            <a href="#" class="card-link-i4">Explore Workflows &rarr;</a>
+          </div>
+
+          <!-- Card 7: Event Organizers -->
+          <div class="who-card-i4 secondary-card-i4">
+            <div class="card-icon-box-i4 event-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </div>
+            <h3 class="card-title-i4">Event Organizers</h3>
+            <span class="card-tag-i4">EVENT CRM</span>
+            <p class="card-desc-i4">Host events, manage attendees, and enable smarter post-event networking.</p>
+            <a href="#" class="card-link-i4">Explore Events &rarr;</a>
+          </div>
+
+          <!-- Card 8: Business Network -->
+          <div class="who-card-i4 secondary-card-i4">
+            <div class="card-icon-box-i4 network-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8" cy="7" r="4"></circle><line x1="23" y1="11" x2="17" y2="11"></line><line x1="23" y1="15" x2="17" y2="15"></line><line x1="23" y1="19" x2="17" y2="19"></line></svg>
+            </div>
+            <h3 class="card-title-i4">Business Network</h3>
+            <span class="card-tag-i4">NETWORKING</span>
+            <p class="card-desc-i4">Scan business cards, save contacts, manage relationships, and follow up on time.</p>
+            <a href="#" class="card-link-i4">Explore Networking &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What You Can Do Section (Light Mode Scroll Track) -->
+    <section class="do-section do-section-i4">
+      <style>
+        .do-section-i4 {
+          position: relative;
+          background-color: #ffffff; /* Pure white background */
+          padding: 80px 24px;
+          overflow: hidden;
+          border-bottom: 1px solid var(--slate-100);
+        }
+
+        /* Decorative top-center radial gradient matching the Ecosystem section */
+        .do-section-i4::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          background: radial-gradient(ellipse 85% 55% at 50% 0%, rgba(37, 99, 235, 0.06) 0%, transparent 60%);
+          z-index: 1;
+          pointer-events: none;
+        }
+
+        .do-section-i4 .do-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          width: 100%;
+          position: relative;
+          z-index: 5;
+        }
+
+        .do-section-i4 .do-header-row-i4 {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          margin-bottom: 48px;
+          gap: 32px;
+        }
+
+        .do-section-i4 .do-header-i4 {
+          text-align: left;
+          flex: 1;
+        }
+
+        .do-section-i4 .do-eyebrow-i4 {
+          font-size: 13px;
+          font-weight: 800;
+          color: var(--primary-blue);
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          margin-bottom: 12px;
+          display: block;
+        }
+
+        .do-section-i4 .do-title {
+          font-size: 38px;
+          font-weight: 800;
+          line-height: 1.25;
+          color: var(--slate-900);
+          background: none;
+          -webkit-background-clip: unset;
+          -webkit-text-fill-color: var(--slate-900);
+          background-clip: unset;
+          margin: 0;
+        }
+
+        .do-section-i4 .do-subtitle {
+          font-size: 16px;
+          line-height: 1.6;
+          color: var(--slate-600);
+          max-width: 800px;
+          margin: 16px 0 0 0;
+        }
+
+        .do-section-i4 .do-nav-buttons-i4 {
+          display: flex;
+          gap: 12px;
+          margin-bottom: 8px;
+        }
+
+        .do-section-i4 .carousel-btn-i4 {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background: #ffffff;
+          border: 1px solid var(--slate-200);
+          color: var(--slate-600);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .do-section-i4 .carousel-btn-i4:hover {
+          border-color: var(--primary-blue);
+          color: var(--primary-blue);
+          background: #eff6ff;
+        }
+
+        .do-section-i4 .do-scroll-track-i4 {
+          display: flex;
+          gap: 24px;
+          overflow-x: auto;
+          scroll-behavior: smooth;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: none; /* Firefox */
+          padding: 16px 8px;
+          margin: -16px -8px;
+        }
+
+        .do-section-i4 .do-scroll-track-i4::-webkit-scrollbar {
+          display: none; /* Chrome/Safari */
+        }
+
+        .do-section-i4 .do-card-i4 {
+          background: #ffffff;
+          border-radius: 16px;
+          border: 1px solid var(--slate-150);
+          display: flex;
+          flex-direction: column;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          min-width: 310px;
+          width: 310px;
+          flex-shrink: 0;
+          overflow: hidden;
+        }
+
+        .do-section-i4 .do-card-i4:hover {
+          border-color: var(--primary-blue);
+          box-shadow: 0 12px 30px rgba(37, 99, 235, 0.08);
+          transform: translateY(-6px);
+        }
+
+        .do-section-i4 .do-card-media-i4 {
+          height: 190px;
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        /* Mockup BG colors */
+        .do-section-i4 .bg-startup { background-color: #eff6ff; }
+        .do-section-i4 .bg-investments { background-color: #ecfdf5; }
+        .do-section-i4 .bg-deck { background-color: #fff7ed; }
+        .do-section-i4 .bg-room { background-color: #f5f3ff; }
+        .do-section-i4 .bg-grants { background-color: #f0fdfa; }
+        .do-section-i4 .bg-events { background-color: #fff1f2; }
+        .do-section-i4 .bg-network { background-color: #f8fafc; }
+
+        .do-section-i4 .do-card-body-i4 {
+          padding: 24px;
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+        }
+
+        .do-section-i4 .do-card-title-i4 {
+          font-size: 18px;
+          font-weight: 800;
+          color: var(--slate-900);
+          margin: 0 0 8px;
+        }
+
+        .do-section-i4 .do-card-desc-i4 {
+          font-size: 13.5px;
+          line-height: 1.5;
+          color: var(--slate-600);
+          margin-bottom: 24px;
+          flex: 1;
+        }
+
+        /* Mockup elements styling */
+        .do-section-i4 .mockup-element-i4 {
+          transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .do-section-i4 .do-card-i4:hover .mockup-element-i4 {
+          transform: scale(1.04);
+        }
+
+        /* Badge/Floating card styling inside graphic */
+        .do-section-i4 .floating-badge-i4 {
+          background: #ffffff;
+          border-radius: 8px;
+          padding: 6px 12px;
+          box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+          border: 1px solid #f1f5f9;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          position: absolute;
+          bottom: 16px;
+          right: 16px;
+          font-size: 11px;
+          font-weight: 800;
+          color: var(--slate-800);
+          transition: all 0.35s ease;
+        }
+
+        .do-section-i4 .do-card-i4:hover .floating-badge-i4 {
+          transform: translateY(-2px);
+          box-shadow: 0 8px 20px rgba(0,0,0,0.09);
+        }
+
+        /* HTML mini forms/screens */
+        .do-section-i4 .mini-laptop-i4 {
+          width: 170px;
+          height: 100px;
+          background: #ffffff;
+          border-radius: 6px;
+          box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+          border: 1px solid #e2e8f0;
+          padding: 10px;
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+        }
+        .do-section-i4 .mini-tablet-i4 {
+          width: 140px;
+          height: 100px;
+          background: #ffffff;
+          border-radius: 6px;
+          box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+          border: 3px solid #1e293b;
+          padding: 8px;
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+        }
+        .do-section-i4 .mini-phone-i4 {
+          width: 76px;
+          height: 120px;
+          background: #ffffff;
+          border-radius: 8px;
+          box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+          border: 3px solid #1e293b;
+          padding: 8px;
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+        }
+
+        /* Helper lines for layouts */
+        .do-section-i4 .line-bar-i4 {
+          height: 6px;
+          background: #f1f5f9;
+          border-radius: 3px;
+          width: 100%;
+        }
+        .do-section-i4 .line-bar-i4.short-i4 {
+          width: 60%;
+        }
+        .do-section-i4 .line-bar-i4.blue-i4 {
+          background: #bfdbfe;
+        }
+
+        /* Slider hover action buttons */
+        .do-section-i4 .do-card-cta-i4 {
+          position: relative;
+          display: inline-flex;
+          width: 100%;
+          height: 42px;
+          align-items: center;
+          justify-content: center;
+          border-radius: 8px;
+          font-size: 14px;
+          font-weight: 700;
+          background: #f8fafc;
+          border: 1px solid var(--slate-200);
+          color: var(--slate-700);
+          transition: all 0.25s ease;
+          overflow: hidden;
+          cursor: pointer;
+        }
+        
+        .do-section-i4 .do-card-cta-i4::after {
+          content: attr(data-hover-text);
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: var(--primary-blue);
+          color: #ffffff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          top: 100%; /* Hidden below */
+          left: 0;
+          transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .do-section-i4 .do-card-i4:hover .do-card-cta-i4 {
+          border-color: var(--primary-blue);
+          color: transparent;
+        }
+
+        .do-section-i4 .do-card-i4:hover .do-card-cta-i4::after {
+          top: 0; /* Slide up! */
+        }
+
+        @media (max-width: 960px) {
+          .do-section-i4 .do-card-i4 {
+            min-width: 290px;
+            width: 290px;
+          }
+        }
+
+        @media (max-width: 600px) {
+          .do-section-i4 {
+            padding: 48px 16px;
+          }
+          .do-section-i4 .do-header-row-i4 {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 32px;
+          }
+          .do-section-i4 .do-title {
+            font-size: 30px;
+          }
+          .do-section-i4 .do-card-i4 {
+            min-width: 270px;
+            width: 270px;
+          }
+        }
+      </style>
+
+      <div class="do-container">
+        <div class="do-header-row-i4">
+          <div class="do-header-i4">
+            <span class="do-eyebrow-i4">WHAT YOU CAN DO</span>
+            <h2 class="do-title">Everything a founder or investor needs, in one place.</h2>
+            <p class="do-subtitle">From listing your startup to closing the deal, Seedicon gives you every tool for every step of the journey.</p>
+          </div>
+          <div class="do-nav-buttons-i4">
+            <button class="carousel-btn-i4 prev" id="do-prev-btn" aria-label="Scroll left">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button class="carousel-btn-i4 next" id="do-next-btn" aria-label="Scroll right">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="do-scroll-track-i4" id="do-scroll-track">
+          <!-- Card 1: List Your Startup -->
+          <div class="do-card-i4">
+            <div class="do-card-media-i4 bg-startup">
+              <div class="mini-laptop-i4 mockup-element-i4">
+                <div class="line-bar-i4 blue-i4" style="height: 10px; width: 45%;"></div>
+                <div class="line-bar-i4" style="margin-top: 4px;"></div>
+                <div class="line-bar-i4 short-i4"></div>
+                <div style="display: flex; gap: 4px; margin-top: 6px;">
+                  <div class="line-bar-i4" style="height: 16px; width: 35%; background: #e2e8f0;"></div>
+                  <div class="line-bar-i4" style="height: 16px; width: 65%; background: #e2e8f0;"></div>
+                </div>
+              </div>
+              <div class="floating-badge-i4">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Profile Live</span>
+              </div>
+            </div>
+            <div class="do-card-body-i4">
+              <h3 class="do-card-title-i4">List Your Startup</h3>
+              <p class="do-card-desc-i4">Create your startup profile, share your traction and funding needs, and get discovered by the right investors.</p>
+              <div class="do-card-cta-i4" data-hover-text="List Now">
+                <span class="cta-normal-text-i4">Learn More</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Explore Startup Investments -->
+          <div class="do-card-i4">
+            <div class="do-card-media-i4 bg-investments">
+              <div class="mini-tablet-i4 mockup-element-i4">
+                <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f1f5f9; padding-bottom: 4px;">
+                  <span style="font-size: 8px; font-weight: 800; color: #64748b;">Investments</span>
+                  <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="3"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </div>
+                <div style="display: flex; gap: 4px; margin-top: 4px;">
+                  <div style="width: 50%; height: 50px; background: #ecfdf5; border-radius: 4px; border: 1px solid #a7f3d0; padding: 4px; display: flex; flex-direction: column; gap: 4px;">
+                    <div class="line-bar-i4" style="height: 4px; background: #34d399;"></div>
+                    <div class="line-bar-i4" style="height: 4px; background: #e2e8f0; width: 70%;"></div>
+                  </div>
+                  <div style="width: 50%; height: 50px; background: #eff6ff; border-radius: 4px; border: 1px solid #bfdbfe; padding: 4px; display: flex; flex-direction: column; gap: 4px;">
+                    <div class="line-bar-i4" style="height: 4px; background: #60a5fa;"></div>
+                    <div class="line-bar-i4" style="height: 4px; background: #e2e8f0; width: 60%;"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="floating-badge-i4">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <span>42 Matches</span>
+              </div>
+            </div>
+            <div class="do-card-body-i4">
+              <h3 class="do-card-title-i4">Explore Startup Investments</h3>
+              <p class="do-card-desc-i4">Browse vetted startups by sector and stage, and evaluate real opportunities before anyone else does.</p>
+              <div class="do-card-cta-i4" data-hover-text="Start Investing">
+                <span class="cta-normal-text-i4">Learn More</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Build Your Pitch Deck -->
+          <div class="do-card-i4">
+            <div class="do-card-media-i4 bg-deck">
+              <div style="display: flex; gap: 10px; align-items: center; justify-content: center;" class="mockup-element-i4">
+                <!-- Slide 1 -->
+                <div style="width: 90px; height: 70px; background: #ffffff; border-radius: 4px; border: 1px solid #e2e8f0; padding: 6px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); display: flex; flex-direction: column; gap: 4px;">
+                  <div class="line-bar-i4" style="height: 4px; width: 60%; background: #cbd5e1;"></div>
+                  <div style="display: flex; gap: 3px; align-items: flex-end; height: 35px; margin-top: 4px;">
+                    <div style="height: 40%; width: 5px; background: #94a3b8; border-radius: 1px;"></div>
+                    <div style="height: 70%; width: 5px; background: #94a3b8; border-radius: 1px;"></div>
+                    <div style="height: 90%; width: 5px; background: #2563eb; border-radius: 1px;"></div>
+                  </div>
+                </div>
+                <!-- Slide 2 -->
+                <div style="width: 90px; height: 70px; background: #2563eb; border-radius: 4px; padding: 6px; box-shadow: 0 4px 12px rgba(37,99,235,0.15); display: flex; flex-direction: column; gap: 4px;">
+                  <div class="line-bar-i4" style="height: 4px; width: 45%; background: #ffffff;"></div>
+                  <div class="line-bar-i4" style="height: 4px; width: 80%; background: rgba(255,255,255,0.4);"></div>
+                  <div class="line-bar-i4" style="height: 4px; width: 70%; background: rgba(255,255,255,0.4);"></div>
+                </div>
+              </div>
+              <div class="floating-badge-i4">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <span>AI Generated</span>
+              </div>
+            </div>
+            <div class="do-card-body-i4">
+              <h3 class="do-card-title-i4">Build Your Pitch Deck</h3>
+              <p class="do-card-desc-i4">Turn your idea into an investor ready pitch deck and business documents using Deckwale AI.</p>
+              <div class="do-card-cta-i4" data-hover-text="Generate Deck">
+                <span class="cta-normal-text-i4">Learn More</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Create a Secure Data Room -->
+          <div class="do-card-i4">
+            <div class="do-card-media-i4 bg-room">
+              <div style="display: flex; flex-direction: column; gap: 6px; width: 150px; background: #ffffff; border-radius: 6px; border: 1px solid #e2e8f0; padding: 10px; box-shadow: 0 6px 15px rgba(0,0,0,0.03);" class="mockup-element-i4">
+                <div style="display: flex; align-items: center; gap: 6px;">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path></svg>
+                  <span style="font-size: 8px; font-weight: 700; color: #334155;">Term_Sheet.pdf</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 6px; border-top: 1px solid #f1f5f9; padding-top: 6px;">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path></svg>
+                  <span style="font-size: 8px; font-weight: 700; color: #334155;">Cap_Table.xlsx</span>
+                </div>
+              </div>
+              <div class="floating-badge-i4">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <span>Encrypted</span>
+              </div>
+            </div>
+            <div class="do-card-body-i4">
+              <h3 class="do-card-title-i4">Create a Secure Data Room</h3>
+              <p class="do-card-desc-i4">Set up an encrypted virtual data room and share due diligence documents with full access control.</p>
+              <div class="do-card-cta-i4" data-hover-text="Open Data Room">
+                <span class="cta-normal-text-i4">Learn More</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Explore Government Grants -->
+          <div class="do-card-i4">
+            <div class="do-card-media-i4 bg-grants">
+              <div class="mini-phone-i4 mockup-element-i4">
+                <div style="width: 8px; height: 2px; background: #cbd5e1; align-self: center; border-radius: 1px;"></div>
+                <div style="display: flex; flex-direction: column; gap: 6px; margin-top: 10px;">
+                  <div style="display: flex; align-items: center; gap: 4px;">
+                    <span style="width: 6px; height: 6px; border-radius: 50%; background: #10b981; display: inline-block;"></span>
+                    <div class="line-bar-i4" style="height: 3px; background: #cbd5e1;"></div>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 4px;">
+                    <span style="width: 6px; height: 6px; border-radius: 50%; background: #10b981; display: inline-block;"></span>
+                    <div class="line-bar-i4" style="height: 3px; background: #cbd5e1;"></div>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 4px;">
+                    <span style="width: 6px; height: 6px; border-radius: 50%; background: #e2e8f0; display: inline-block;"></span>
+                    <div class="line-bar-i4" style="height: 3px; width: 40%; background: #cbd5e1;"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="floating-badge-i4">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0f766e" stroke-width="3.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Eligible</span>
+              </div>
+            </div>
+            <div class="do-card-body-i4">
+              <h3 class="do-card-title-i4">Explore Government Grants</h3>
+              <p class="do-card-desc-i4">Discover startup grants and schemes you may be eligible for, matched to your sector and stage.</p>
+              <div class="do-card-cta-i4" data-hover-text="Find Grants">
+                <span class="cta-normal-text-i4">Learn More</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Host and Discover Events -->
+          <div class="do-card-i4">
+            <div class="do-card-media-i4 bg-events">
+              <div style="width: 155px; background: #ffffff; border-radius: 6px; border: 1px solid #e2e8f0; padding: 10px; box-shadow: 0 6px 15px rgba(0,0,0,0.03);" class="mockup-element-i4">
+                <div style="font-size: 7px; font-weight: 800; color: #ec4899; text-transform: uppercase;">15 July 2026</div>
+                <div style="font-size: 11px; font-weight: 800; color: #1e293b; margin: 2px 0 6px;">Tech Synergy Meet</div>
+                <div style="display: flex; align-items: center; gap: 2px;">
+                  <span style="width: 12px; height: 12px; border-radius: 50%; background: #3b82f6; border: 1px solid #fff; margin-right: -4px;"></span>
+                  <span style="width: 12px; height: 12px; border-radius: 50%; background: #10b981; border: 1px solid #fff; margin-right: -4px;"></span>
+                  <span style="width: 12px; height: 12px; border-radius: 50%; background: #f59e0b; border: 1px solid #fff;"></span>
+                  <span style="font-size: 8px; color: #64748b; margin-left: 4px;">+18 RSVP</span>
+                </div>
+              </div>
+              <div class="floating-badge-i4">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ec4899" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                <span>RSVP Open</span>
+              </div>
+            </div>
+            <div class="do-card-body-i4">
+              <h3 class="do-card-title-i4">Host and Discover Events</h3>
+              <p class="do-card-desc-i4">Create your own startup event or find one to attend, and build investor connections that matter.</p>
+              <div class="do-card-cta-i4" data-hover-text="Browse Events">
+                <span class="cta-normal-text-i4">Learn More</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7: Manage Your Network -->
+          <div class="do-card-i4">
+            <div class="do-card-media-i4 bg-network">
+              <div style="position: relative; width: 140px; height: 85px; background: #ffffff; border-radius: 6px; border: 1px solid #e2e8f0; padding: 10px; box-shadow: 0 6px 15px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between;" class="mockup-element-i4">
+                <div>
+                  <div style="font-size: 9px; font-weight: 800; color: #1e293b;">John Doe</div>
+                  <div style="font-size: 7px; color: #64748b;">Managing Director</div>
+                </div>
+                <div style="font-size: 7px; color: #2563eb;">john@seedicon.com</div>
+                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; border: 1.5px dashed #2563eb; border-radius: 6px; pointer-events: none; opacity: 0.6;"></div>
+              </div>
+              <div class="floating-badge-i4">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8" cy="7" r="4"></circle></svg>
+                <span>Card Scanned</span>
+              </div>
+            </div>
+            <div class="do-card-body-i4">
+              <h3 class="do-card-title-i4">Manage Your Network</h3>
+              <p class="do-card-desc-i4">Scan business cards, save contacts, and follow up on time so a good connection is never lost.</p>
+              <div class="do-card-cta-i4" data-hover-text="Manage Contacts">
+                <span class="cta-normal-text-i4">Learn More</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How We Work Section (Light Mode Subtle Blue) -->
+    <section class="how-section how-section-i4">
+      <style>
+        .how-section-i4 {
+          position: relative;
+          background-color: #f1f5fa; /* Subtle blue canvas matching Who It's For */
+          padding: 90px 24px;
+          overflow: hidden;
+          border-top: 1px solid var(--slate-150);
+          border-bottom: 1px solid var(--slate-150);
+        }
+
+        .how-section-i4::before {
+          content: '';
+          position: absolute;
+          width: 450px;
+          height: 450px;
+          background: radial-gradient(circle, rgba(37, 99, 235, 0.05) 0%, rgba(255,255,255,0) 70%);
+          top: -120px;
+          left: -120px;
+          z-index: 1;
+          pointer-events: none;
+        }
+
+        .how-section-i4 .how-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          width: 100%;
+          position: relative;
+          z-index: 5;
+        }
+
+        .how-section-i4 .how-header {
+          text-align: left;
+          margin-bottom: 56px;
+        }
+
+        .how-section-i4 .how-title {
+          font-size: 40px;
+          font-weight: 800;
+          color: var(--slate-900);
+          letter-spacing: -0.02em;
+          margin: 0 0 16px 0;
+          line-height: 1.15;
+          background: none;
+          -webkit-background-clip: unset;
+          -webkit-text-fill-color: var(--slate-900);
+        }
+
+        .how-section-i4 .how-subtitle {
+          font-size: 16px;
+          line-height: 1.6;
+          color: var(--slate-600);
+          max-width: 760px;
+          margin: 0;
+        }
+
+        .how-section-i4 .how-timeline-i4 {
+          display: flex;
+          justify-content: space-between;
+          position: relative;
+          margin-top: 48px;
+          gap: 20px;
+        }
+
+        .how-section-i4 .timeline-line-i4 {
+          position: absolute;
+          top: 28px;
+          left: 30px;
+          right: 30px;
+          height: 2px;
+          background-color: var(--primary-blue);
+          z-index: 1;
+          opacity: 0.8;
+        }
+
+        .how-section-i4 .timeline-step-i4 {
+          flex: 1;
+          position: relative;
+          z-index: 2;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          transition: all 0.3s ease;
+        }
+
+        .how-section-i4 .step-badge-i4 {
+          width: 56px;
+          height: 56px;
+          border-radius: 50%;
+          background-color: #ffffff;
+          border: 2px solid var(--primary-blue);
+          color: var(--primary-blue);
+          font-size: 15px;
+          font-weight: 800;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 4px 10px rgba(37, 99, 235, 0.06);
+          margin-bottom: 20px;
+          transition: all 0.3s ease;
+          position: relative;
+          z-index: 5;
+        }
+
+        .how-section-i4 .timeline-step-i4:hover .step-badge-i4 {
+          background-color: var(--primary-blue);
+          color: #ffffff;
+          transform: scale(1.08);
+          box-shadow: 0 6px 15px rgba(37, 99, 235, 0.18);
+        }
+
+        .how-section-i4 .step-title-i4 {
+          font-size: 16.5px;
+          font-weight: 800;
+          color: var(--slate-900);
+          margin: 0 0 8px 0;
+        }
+
+        .how-section-i4 .step-desc-i4 {
+          font-size: 13px;
+          line-height: 1.55;
+          color: var(--slate-600);
+          margin: 0;
+        }
+
+        .how-section-i4 .step-link-i4 {
+          font-size: 13px;
+          font-weight: 700;
+          color: var(--primary-blue);
+          text-decoration: none;
+          display: inline-flex;
+          align-items: center;
+          gap: 4px;
+          margin-top: 14px;
+          transition: transform 0.2s ease;
+        }
+
+        .how-section-i4 .step-link-i4:hover {
+          color: var(--primary-blue-hover);
+        }
+        
+        .how-section-i4 .step-link-i4:hover span {
+          text-decoration: underline;
+        }
+
+        /* Bottom Action Banner */
+        .how-section-i4 .how-footer-banner-i4 {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-top: 1px solid var(--slate-200);
+          padding-top: 36px;
+          margin-top: 60px;
+          gap: 32px;
+        }
+
+        .how-section-i4 .how-footer-text-i4 {
+          font-size: 15px;
+          font-weight: 700;
+          color: var(--slate-700);
+          max-width: 600px;
+          line-height: 1.5;
+        }
+
+        .how-section-i4 .how-footer-actions-i4 {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+        }
+
+        .how-section-i4 .btn-banner-primary-i4 {
+          padding: 12px 24px;
+          background: var(--primary-blue);
+          color: #ffffff;
+          border-radius: 8px;
+          font-size: 14.5px;
+          font-weight: 700;
+          text-decoration: none;
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+          transition: all 0.2s ease;
+        }
+
+        .how-section-i4 .btn-banner-primary-i4:hover {
+          background: var(--primary-blue-hover);
+          transform: translateY(-1px);
+          box-shadow: 0 6px 16px rgba(37, 99, 235, 0.22);
+        }
+
+        .how-section-i4 .banner-link-secondary-i4 {
+          font-size: 14.5px;
+          font-weight: 700;
+          color: var(--slate-800);
+          text-decoration: underline;
+          transition: color 0.2s ease;
+        }
+
+        .how-section-i4 .banner-link-secondary-i4:hover {
+          color: var(--primary-blue);
+        }
+
+        @media (max-width: 900px) {
+          .how-section-i4 .how-timeline-i4 {
+            flex-direction: column;
+            gap: 32px;
+          }
+
+          .how-section-i4 .timeline-line-i4 {
+            display: none;
+          }
+
+          .how-section-i4 .timeline-step-i4 {
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 20px;
+          }
+
+          .how-section-i4 .step-badge-i4 {
+            margin-bottom: 0;
+            flex-shrink: 0;
+          }
+
+          .how-section-i4 .how-footer-banner-i4 {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+          }
+        }
+      </style>
+
+      <div class="how-container">
+        <div class="how-header">
+          <h2 class="how-title">From first pitch to term sheet, in six steps.</h2>
+          <p class="how-subtitle">Seedicon supports the full startup fundraising process, from investment advisory and pitch deck creation to investor shortlisting, secure due diligence sharing, and term sheet support.</p>
+        </div>
+
+        <div class="how-timeline-i4">
+          <div class="timeline-line-i4"></div>
+
+          <!-- Step 1 -->
+          <div class="timeline-step-i4">
+            <div class="step-badge-i4">01</div>
+            <h3 class="step-title-i4">List Your Startup</h3>
+            <p class="step-desc-i4">Add your startup profile, traction, funding needs, and business details on Seedicon Capital.</p>
+            <a href="#" class="step-link-i4"><span>List Your Startup</span> &rarr;</a>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="timeline-step-i4">
+            <div class="step-badge-i4">02</div>
+            <h3 class="step-title-i4">Startup Evaluation</h3>
+            <p class="step-desc-i4">Get your business model, market opportunity, and fundraising readiness reviewed by our team.</p>
+            <a href="#" class="step-link-i4"><span>Get Evaluated</span> &rarr;</a>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="timeline-step-i4">
+            <div class="step-badge-i4">03</div>
+            <h3 class="step-title-i4">Pitch Preparation</h3>
+            <p class="step-desc-i4">Build investor ready pitch decks and business documents using Deckwale AI.</p>
+            <a href="#" class="step-link-i4"><span>Build Your Deck</span> &rarr;</a>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="timeline-step-i4">
+            <div class="step-badge-i4">04</div>
+            <h3 class="step-title-i4">Investor Shortlisting</h3>
+            <p class="step-desc-i4">Connect with relevant investors matched to your sector, stage, and funding needs.</p>
+            <a href="#" class="step-link-i4"><span>View Investor Matches</span> &rarr;</a>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="timeline-step-i4">
+            <div class="step-badge-i4">05</div>
+            <h3 class="step-title-i4">Due Diligence Sharing</h3>
+            <p class="step-desc-i4">Share confidential documents securely through the Seedicon Watch virtual data room.</p>
+            <a href="#" class="step-link-i4"><span>Open Data Room</span> &rarr;</a>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="timeline-step-i4">
+            <div class="step-badge-i4">06</div>
+            <h3 class="step-title-i4">Term Sheet Support</h3>
+            <p class="step-desc-i4">Move forward with investment discussion and get support through your term sheet.</p>
+            <a href="#" class="step-link-i4"><span>Get Term Sheet Support</span> &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Footer Action Banner -->
+        <div class="how-footer-banner-i4">
+          <p class="how-footer-text-i4">Ready to move from idea to term sheet? List your startup and let the journey start today.</p>
+          <div class="how-footer-actions-i4">
+            <a href="#" class="btn-banner-primary-i4">Start Your Funding Journey &rarr;</a>
+            <a href="#" class="banner-link-secondary-i4">Talk to an advisor</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resources Section (Light Mode Subtle Blue) -->
+    <section class="resources-section resources-section-i4">
+      <style>
+        .resources-section-i4 {
+          position: relative;
+          background-color: #ffffff; /* Subtle blue background matching Who It's For & How We Work */
+          padding: 100px 24px;
+          overflow: hidden;
+          border-top: 1px solid var(--slate-150);
+          border-bottom: 1px solid var(--slate-150);
+          background-image: none; /* Override style.css dark gradient */
+        }
+
+        .resources-section-i4::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          background: radial-gradient(ellipse 85% 55% at 50% 0%, rgba(37, 99, 235, 0.05) 0%, transparent 60%);
+          z-index: 1;
+          pointer-events: none;
+        }
+
+        .resources-section-i4 .resources-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          width: 100%;
+          position: relative;
+          z-index: 5;
+        }
+
+        .resources-section-i4 .resources-header {
+          text-align: left;
+          margin-bottom: 56px;
+        }
+
+        .resources-section-i4 .resources-title {
+          font-size: 40px;
+          font-weight: 800;
+          color: var(--slate-900);
+          letter-spacing: -0.02em;
+          margin: 0 0 16px 0;
+          line-height: 1.15;
+          background: none;
+          -webkit-background-clip: unset;
+          -webkit-text-fill-color: var(--slate-900);
+          background-clip: unset;
+        }
+
+        .resources-section-i4 .resources-subtitle {
+          font-size: 16px;
+          line-height: 1.6;
+          color: var(--slate-600);
+          max-width: 760px;
+          margin: 0;
+        }
+
+        .resources-section-i4 .resource-featured-card {
+          background: #ffffff; /* White background in light mode */
+          border: 1px solid var(--slate-150);
+          border-radius: 20px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .resources-section-i4 .resource-featured-card:hover {
+          transform: translateY(-5px);
+          border-color: var(--primary-blue);
+          box-shadow: 0 12px 30px rgba(37, 99, 235, 0.08);
+        }
+
+        .resources-section-i4 .featured-image-box {
+          background-color: #f1f5fa;
+        }
+
+        .resources-section-i4 .meta-separator {
+          color: var(--slate-300);
+        }
+
+        .resources-section-i4 .resource-readtime {
+          color: var(--slate-500);
+        }
+
+        .resources-section-i4 .featured-title {
+          color: var(--slate-900);
+          font-weight: 800;
+          line-height: 1.35;
+          margin: 0 0 12px 0;
+        }
+
+        .resources-section-i4 .featured-excerpt {
+          color: var(--slate-600);
+          line-height: 1.6;
+          margin: 0 0 24px 0;
+        }
+
+        .resources-section-i4 .resource-link-btn {
+          color: var(--primary-blue);
+        }
+
+        .resources-section-i4 .resource-link-btn:hover {
+          color: var(--primary-blue-hover);
+        }
+
+        .resources-section-i4 .resource-mini-card {
+          background: #ffffff; /* White background in light mode */
+          border: 1px solid var(--slate-150);
+          border-radius: 16px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .resources-section-i4 .resource-mini-card:hover {
+          transform: translateY(-3px);
+          border-color: var(--primary-blue);
+          box-shadow: 0 10px 25px rgba(37, 99, 235, 0.06);
+        }
+
+        .resources-section-i4 .mini-img-box {
+          background-color: #f1f5fa;
+          border: 1px solid var(--slate-100);
+        }
+
+        .resources-section-i4 .mini-title {
+          color: var(--slate-900);
+          font-weight: 800;
+          line-height: 1.45;
+          margin: 0 0 10px 0;
+        }
+      </style>
+
+      <div class="resources-container">
+        <div class="resources-header">
+          <h2 class="resources-title">Resources</h2>
+          <p class="resources-subtitle">Guides, templates, and tools to help founders raise smarter and faster.</p>
+        </div>
+
+        <div class="resources-grid">
+          <!-- Featured Big Resource (Left Column) -->
+          <div class="resource-featured-card">
+            <div class="featured-image-box">
+              <img src="Assets/resource_featured.png" alt="Featured Resource" class="featured-img">
+            </div>
+            <div class="featured-content-box">
+              <div class="resource-meta-row">
+                <span class="resource-tag">Economy</span>
+                <span class="meta-separator">•</span>
+                <span class="resource-readtime">12 min read</span>
+              </div>
+              <h3 class="featured-title">India Drops from 4th to 6th in Global GDP Rankings: The Real Story Behind the Headlines</h3>
+              <p class="featured-excerpt">Hey there, if you've been following India's economy closely, you probably felt a little sting when the news broke. India, once knocking on the door of the top four global economies, has shifted rankings recently...</p>
+              <a href="#" class="resource-link-btn">
+                <span>Read article</span>
+                <svg class="link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Vertical List of Smaller Resources (Right Column) -->
+          <div class="resource-list-side">
+            <!-- Mini Resource 1 -->
+            <div class="resource-mini-card">
+              <div class="mini-img-box">
+                <img src="Assets/resource_1.png" alt="Playbook icon" class="mini-img">
+              </div>
+              <div class="mini-content-box">
+                <div class="resource-meta-row">
+                  <span class="resource-tag">Economy</span>
+                  <span class="meta-separator">•</span>
+                  <span class="resource-readtime">12 min read</span>
+                </div>
+                <h4 class="mini-title">The Professional Presenter's Playbook: AI Proposals & Board Presentations</h4>
+                <a href="#" class="resource-link-btn">
+                  <span>Read article</span>
+                  <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Mini Resource 2 -->
+            <div class="resource-mini-card">
+              <div class="mini-img-box">
+                <img src="Assets/resource_2.png" alt="Bangalore icon" class="mini-img">
+              </div>
+              <div class="mini-content-box">
+                <div class="resource-meta-row">
+                  <span class="resource-tag">Deckwale</span>
+                  <span class="meta-separator">•</span>
+                  <span class="resource-readtime">12 min read</span>
+                </div>
+                <h4 class="mini-title">Crafting Your Business Deck: A Comprehensive Guide to Capital Raising</h4>
+                <a href="#" class="resource-link-btn">
+                  <span>Read article</span>
+                  <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Mini Resource 3 -->
+            <div class="resource-mini-card">
+              <div class="mini-img-box">
+                <img src="Assets/resource_3.png" alt="Errors icon" class="mini-img">
+              </div>
+              <div class="mini-content-box">
+                <div class="resource-meta-row">
+                  <span class="resource-tag">Economy</span>
+                  <span class="meta-separator">•</span>
+                  <span class="resource-readtime">12 min read</span>
+                </div>
+                <h4 class="mini-title">5 Pitch Deck Mistakes That Kill Fundraising (2026 Strategy Guide)</h4>
+                <a href="#" class="resource-link-btn">
+                  <span>Read article</span>
+                  <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Ecosystem Section (Light Mode Features Grid) -->
+    <section class="ecosystem-section">
+      <div class="ecosystem-container">
+        <div class="ecosystem-header">
+          <h2 class="ecosystem-title">Our Product Ecosystem</h2>
+          <p class="ecosystem-subtitle">Explore the individual tools and platforms that power the Seedicon umbrella, built to support startup growth, document security, and export logistics.</p>
+        </div>
+
+        <div class="ecosystem-grid">
+          <!-- Card 1: Deckwale -->
+          <div class="ecosystem-card">
+            <div class="eco-img-box">
+              <img src="Assets/ecosystem_deckwale.png" alt="Deckwale Screen" class="eco-img">
+            </div>
+            <div class="eco-content-box">
+              <h3 class="eco-card-title">Deckwale</h3>
+              <span class="eco-card-tag">AI pitch deck & doc builder</span>
+              <ul class="eco-card-bullets">
+                <li>
+                  <svg class="eco-bullet-star" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12,2 C12,7.5 16.5,12 22,12 C16.5,12 12,16.5 12,22 C12,16.5 7.5,12 2,12 C7.5,12 12,7.5 12,2 Z"></path>
+                  </svg>
+                  <span>AI slide & deck builder</span>
+                </li>
+                <li>
+                  <svg class="eco-bullet-star" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12,2 C12,7.5 16.5,12 22,12 C16.5,12 12,16.5 12,22 C12,16.5 7.5,12 2,12 C7.5,12 12,7.5 12,2 Z"></path>
+                  </svg>
+                  <span>Fast document generation</span>
+                </li>
+                <li>
+                  <svg class="eco-bullet-star" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12,2 C12,7.5 16.5,12 22,12 C16.5,12 12,16.5 12,22 C12,16.5 7.5,12 2,12 C7.5,12 12,7.5 12,2 Z"></path>
+                  </svg>
+                  <span>Save time on pitch prep</span>
+                </li>
+              </ul>
+              <a href="#" class="btn btn-ecosystem-action">Generate Pitch Deck</a>
+            </div>
+          </div>
+
+          <!-- Card 2: Seedicon Watch -->
+          <div class="ecosystem-card">
+            <div class="eco-img-box">
+              <img src="Assets/ecosystem_watch.png" alt="Seedicon Watch Vault" class="eco-img">
+            </div>
+            <div class="eco-content-box">
+              <h3 class="eco-card-title">Seedicon Watch</h3>
+              <span class="eco-card-tag">Secure VDR for due diligence</span>
+              <ul class="eco-card-bullets">
+                <li>
+                  <svg class="eco-bullet-star" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12,2 C12,7.5 16.5,12 22,12 C16.5,12 12,16.5 12,22 C12,16.5 7.5,12 2,12 C7.5,12 12,7.5 12,2 Z"></path>
+                  </svg>
+                  <span>Secure virtual data room</span>
+                </li>
+                <li>
+                  <svg class="eco-bullet-star" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12,2 C12,7.5 16.5,12 22,12 C16.5,12 12,16.5 12,22 C12,16.5 7.5,12 2,12 C7.5,12 12,7.5 12,2 Z"></path>
+                  </svg>
+                  <span>Encrypted file sharing</span>
+                </li>
+                <li>
+                  <svg class="eco-bullet-star" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12,2 C12,7.5 16.5,12 22,12 C16.5,12 12,16.5 12,22 C12,16.5 7.5,12 2,12 C7.5,12 12,7.5 12,2 Z"></path>
+                  </svg>
+                  <span>Analytics & investor tracking</span>
+                </li>
+              </ul>
+              <a href="#" class="btn btn-ecosystem-action">Create encrypted VDR</a>
+            </div>
+          </div>
+
+          <!-- Card 3: Seedicon Events -->
+          <div class="ecosystem-card">
+            <div class="eco-img-box">
+              <img src="Assets/ecosystem_events.png" alt="Seedicon Events CRM" class="eco-img">
+            </div>
+            <div class="eco-content-box">
+              <h3 class="eco-card-title">Seedicon Events</h3>
+              <span class="eco-card-tag">Event & networking CRM</span>
+              <ul class="eco-card-bullets">
+                <li>
+                  <svg class="eco-bullet-star" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12,2 C12,7.5 16.5,12 22,12 C16.5,12 12,16.5 12,22 C12,16.5 7.5,12 2,12 C7.5,12 12,7.5 12,2 Z"></path>
+                  </svg>
+                  <span>Host & book startup events</span>
+                </li>
+                <li>
+                  <svg class="eco-bullet-star" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12,2 C12,7.5 16.5,12 22,12 C16.5,12 12,16.5 12,22 C12,16.5 7.5,12 2,12 C7.5,12 12,7.5 12,2 Z"></path>
+                  </svg>
+                  <span>CRM & card scanner</span>
+                </li>
+                <li>
+                  <svg class="eco-bullet-star" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12,2 C12,7.5 16.5,12 22,12 C16.5,12 12,16.5 12,22 C12,16.5 7.5,12 2,12 C7.5,12 12,7.5 12,2 Z"></path>
+                  </svg>
+                  <span>Follow-up tools</span>
+                </li>
+              </ul>
+              <a href="#" class="btn btn-ecosystem-action">Explore Events</a>
+            </div>
+          </div>
+
+          <!-- Card 4: Seedicon Trade -->
+          <div class="ecosystem-card">
+            <div class="eco-img-box">
+              <img src="Assets/ecosystem_trade.png" alt="Seedicon Trade Coffee" class="eco-img">
+            </div>
+            <div class="eco-content-box">
+              <h3 class="eco-card-title">Seedicon Trade</h3>
+              <span class="eco-card-tag">Coffee export & global trade</span>
+              <ul class="eco-card-bullets">
+                <li>
+                  <svg class="eco-bullet-star" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12,2 C12,7.5 16.5,12 22,12 C16.5,12 12,16.5 12,22 C12,16.5 7.5,12 2,12 C7.5,12 12,7.5 12,2 Z"></path>
+                  </svg>
+                  <span>Premium coffee export</span>
+                </li>
+                <li>
+                  <svg class="eco-bullet-star" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12,2 C12,7.5 16.5,12 22,12 C16.5,12 12,16.5 12,22 C12,16.5 7.5,12 2,12 C7.5,12 12,7.5 12,2 Z"></path>
+                  </svg>
+                  <span>Global buyer & importer access</span>
+                </li>
+                <li>
+                  <svg class="eco-bullet-star" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12,2 C12,7.5 16.5,12 22,12 C16.5,12 12,16.5 12,22 C12,16.5 7.5,12 2,12 C7.5,12 12,7.5 12,2 Z"></path>
+                  </svg>
+                  <span>Reliable supply business model</span>
+                </li>
+              </ul>
+              <a href="#" class="btn btn-ecosystem-action">Coffee Trade</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alternating Section: Enlarged Multi-Column Footer -->
+    <footer class="footer-section">
+      <div class="footer-container">
+        
+        <!-- Upper Footer CTA Section -->
+        <div class="footer-cta-row">
+          <div class="footer-cta-left">
+            <h3 class="footer-cta-title">Ready to scale your startup?</h3>
+            <p class="footer-cta-desc">Join thousands of founders, investors, and trade partners building the future on Seedicon.</p>
+          </div>
+          <div class="footer-cta-right">
+            <a href="#" class="btn-footer-secondary">Login</a>
+            <a href="#" class="btn-footer-primary">Sign up to Capital</a>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <!-- Middle Footer Links Grid -->
+        <div class="footer-links-grid">
+          <!-- Col 1 -->
+          <div class="footer-link-col">
+            <h4 class="link-col-title">Seedicon Capital</h4>
+            <ul class="link-col-list">
+              <li><a href="#">Raise Fund</a></li>
+              <li><a href="#">Invest in Startups</a></li>
+              <li><a href="#">List Startup</a></li>
+              <li><a href="#">Government Grants</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 2 -->
+          <div class="footer-link-col">
+            <h4 class="link-col-title">Deckwale</h4>
+            <ul class="link-col-list">
+              <li><a href="#">Generate Presentation</a></li>
+              <li><a href="#">Document Builder</a></li>
+              <li><a href="#">Build Pitch Deck</a></li>
+              <li><a href="#">Pricing</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3 -->
+          <div class="footer-link-col">
+            <h4 class="link-col-title">Watch</h4>
+            <ul class="link-col-list">
+              <li><a href="#">Share Due-Diligence Securely</a></li>
+              <li><a href="#">View Due-Diligence</a></li>
+              <li><a href="#">VDR Security</a></li>
+              <li><a href="#">Resources</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 4 -->
+          <div class="footer-link-col">
+            <h4 class="link-col-title">Seedicon Events</h4>
+            <ul class="link-col-list">
+              <li><a href="#">Host Event</a></li>
+              <li><a href="#">Book Event</a></li>
+              <li><a href="#">CRM Integration</a></li>
+              <li><a href="#">Scan Business Card</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 5 -->
+          <div class="footer-link-col">
+            <h4 class="link-col-title">Resources</h4>
+            <ul class="link-col-list">
+              <li><a href="#">Articles & Insights</a></li>
+              <li><a href="#">Private Equity</a></li>
+              <li><a href="#">Startups Growth</a></li>
+              <li><a href="#">Pitch Deck Templates</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 6 -->
+          <div class="footer-link-col">
+            <h4 class="link-col-title">Coffee Trade</h4>
+            <ul class="link-col-list">
+              <li><a href="#">Coffee Sourcing</a></li>
+              <li><a href="#">Contact for Export</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <!-- Bottom Copyright & Socials Bar -->
+        <div class="footer-bottom-row">
+          <p class="copyright-text">&copy; 2026 Seedicon. All rights reserved.</p>
+          <div class="footer-social-icons">
+            <!-- Facebook -->
+            <a href="#" aria-label="Facebook" class="social-icon-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+              </svg>
+            </a>
+            <!-- Instagram -->
+            <a href="#" aria-label="Instagram" class="social-icon-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <!-- X / Twitter -->
+            <a href="#" aria-label="X" class="social-icon-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <!-- LinkedIn -->
+            <a href="#" aria-label="LinkedIn" class="social-icon-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+            <!-- YouTube -->
+            <a href="#" aria-label="YouTube" class="social-icon-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.498 6.163c-.272-1.022-1.078-1.828-2.1-2.1-1.852-.5-9.398-.5-9.398-.5s-7.546 0-9.398.5c-1.022.272-1.828 1.078-2.1 2.1-.5 1.852-.5 5.787-.5 5.787s0 3.935.5 5.787c.272 1.022 1.078 1.828 2.1 2.1 1.852.5 9.398.5 9.398.5s7.546 0 9.398-.5c1.022-.272 1.828-1.078 2.1-2.1.5-1.852.5-5.787.5-5.787s0-3.935-.5-5.787zm-14.498 8.337v-6.999l6.082 3.5-6.082 3.499z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- =========================================================================
+       FLOATING ACTION BUTTON (FAB) & DROPUP SWITCHER
+       ========================================================================= -->
+  <div class="fab-container">
+    <div class="fab-dropup" id="fabDropup">
+      <div class="dropup-header">Design Iterations</div>
+      <a href="index.html" class="dropup-item">
+        <span class="dropup-num">1</span>
+        <span class="dropup-text">Classic Warm</span>
+      </a>
+      <a href="iteration2.html" class="dropup-item">
+        <span class="dropup-num">2</span>
+        <span class="dropup-text">Split-Screen Modern</span>
+      </a>
+      <a href="iteration3.html" class="dropup-item">
+        <span class="dropup-num">3</span>
+        <span class="dropup-text">Dark Premium Tech</span>
+      </a>
+      <a href="iteration4.html" class="dropup-item active">
+        <span class="dropup-num">4</span>
+        <span class="dropup-text">Classic Warm (Copy)</span>
+      </a>
+    </div>
+    <button class="fab-btn" id="fabBtn" aria-label="Toggle Design Menu">
+      <svg class="fab-icon-default" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="7" height="7"></rect>
+        <rect x="14" y="3" width="7" height="7"></rect>
+        <rect x="14" y="14" width="7" height="7"></rect>
+        <rect x="3" y="14" width="7" height="7"></rect>
+      </svg>
+      <svg class="fab-icon-close hidden" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Core Javascript -->
+  <script src="script.js"></script>
+  
+  <!-- Custom Javascript for Iteration 4 Hero Section -->
+  <script>
+    (function() {
+      const modes = {
+        founder: {
+          headline: 'Raise capital, the <span class="accent-i4">founder-first</span> way.',
+          sub: 'List your startup, build investor-ready pitch decks, and get shortlisted by the right investors — all from one place.',
+          primary: 'List Your Startup',
+          secondary: 'See how it works',
+          search: false
+        },
+        investor: {
+          headline: 'Discover <span class="accent-i4">startups</span> worth watching.',
+          sub: 'Explore vetted startups, review data rooms, and evaluate deals securely — before anyone else does.',
+          primary: 'Join to Invest',
+          secondary: 'Browse startups',
+          search: true
+        }
+      };
+
+      window.setMode = function(mode) {
+        const m = modes[mode];
+        const headlineEl = document.getElementById('headline');
+        const subtextEl = document.getElementById('subtext');
+        const ctaPrimaryEl = document.getElementById('cta-primary');
+        const ctaSecondaryEl = document.getElementById('cta-secondary');
+        const searchBoxEl = document.getElementById('search-box');
+        
+        if (headlineEl) headlineEl.innerHTML = m.headline;
+        if (subtextEl) subtextEl.textContent = m.sub;
+        if (ctaPrimaryEl) ctaPrimaryEl.textContent = m.primary;
+        if (ctaSecondaryEl) ctaSecondaryEl.textContent = m.secondary;
+        if (searchBoxEl) searchBoxEl.classList.toggle('show', m.search);
+
+        const btnFounder = document.getElementById('btn-founder');
+        const btnInvestor = document.getElementById('btn-investor');
+
+        if (btnFounder && btnInvestor) {
+          btnFounder.classList.toggle('active', mode === 'founder');
+          btnInvestor.classList.toggle('active', mode === 'investor');
+          btnFounder.setAttribute('aria-selected', mode === 'founder');
+          btnInvestor.setAttribute('aria-selected', mode === 'investor');
+        }
+      };
+
+      const startups = [
+        {
+          logo: 'https://cdn.brandfetch.io/airbnb.com?c=1idD5blp6f0v3UdGKX9',
+          name: 'Airbnb',
+          founders: 'Brian Chesky, Joe Gebbia, Nathan Blecharczyk',
+          desc: 'Book accommodations around the world.',
+          tags: ['Public', 'Consumer', 'Travel'],
+          location: 'San Francisco, CA, USA'
+        },
+        {
+          logo: 'https://cdn.brandfetch.io/doordash.com?c=1idD5blp6f0v3UdGKX9',
+          name: 'DoorDash',
+          founders: 'Tony Xu',
+          desc: 'Restaurant delivery connecting consumers with local businesses.',
+          tags: ['Public', 'Consumer', 'Food and Beverage'],
+          location: 'San Francisco, CA, USA'
+        },
+        {
+          logo: 'https://cdn.brandfetch.io/coinbase.com?c=1idD5blp6f0v3UdGKX9',
+          name: 'Coinbase',
+          founders: 'Brian Armstrong, Fred Ehrsam',
+          desc: 'Buy, sell, and manage cryptocurrencies online.',
+          tags: ['Public', 'Fintech', 'Banking and Exchange'],
+          location: 'San Francisco, CA, USA'
+        },
+        {
+          logo: 'https://cdn.brandfetch.io/groww.in?c=1idD5blp6f0v3UdGKX9',
+          name: 'Groww',
+          founders: 'Lalit Keshre, Harsh Jain',
+          desc: 'Making financial services simple, transparent and delightful.',
+          tags: ['Series E', 'Fintech', 'Investment'],
+          location: 'Bengaluru, KA, India'
+        }
+      ];
+
+      function renderDeals() {
+        const track = document.getElementById('ledger-track');
+        if (!track) return;
+        
+        const rowsHtml = startups.map(s => {
+          const tagsHtml = s.tags.map((t, idx) => `
+            <span>${t}</span>
+            ${idx < s.tags.length - 1 ? '<span class="meta-dot"></span>' : ''}
+          `).join('');
+          
+          return `
+            <div class="company-row">
+              <div class="company-logo-box">
+                <img src="${s.logo}" alt="${s.name}" class="company-logo">
+              </div>
+              <div class="company-content">
+                <div class="company-meta-top">
+                  <span class="company-name">${s.name}</span>
+                  <span class="meta-divider">•</span>
+                  <span class="company-founders">${s.founders}</span>
+                </div>
+                <div class="company-desc">${s.desc}</div>
+                <div class="company-meta-bottom">
+                  ${tagsHtml}
+                  <span class="meta-dot"></span>
+                  <span>${s.location}</span>
+                </div>
+              </div>
+            </div>
+          `;
+        }).join('');
+        
+        // Duplicate list for seamless infinite loop scroll
+        track.innerHTML = rowsHtml + rowsHtml;
+      }
+
+      function initLocalSearch() {
+        const searchBox = document.getElementById('search-box');
+        if (searchBox) {
+          const input = searchBox.querySelector('input');
+          const button = searchBox.querySelector('button');
+          const executeSearch = () => {
+            const query = input.value.trim();
+            if (query !== "") {
+              if (typeof showFeedbackToast === 'function') {
+                showFeedbackToast(`Searching Seedicon Database for: "${query}"...`);
+              } else {
+                alert(`Searching for: ${query}`);
+              }
+            } else {
+              input.focus();
+            }
+          };
+          if (button) {
+            button.addEventListener('click', (e) => {
+              e.preventDefault();
+              executeSearch();
+            });
+          }
+          if (input) {
+            input.addEventListener('keydown', (e) => {
+              if (e.key === 'Enter') {
+                e.preventDefault();
+                executeSearch();
+              }
+            });
+          }
+        }
+      }
+
+      function initCustomProductTabs() {
+        const buttons = document.querySelectorAll('.products-tab-btn');
+        const panels = document.querySelectorAll('.products-tab-panel');
+        const iconDecs = document.querySelectorAll('.tab-icon-dec');
+
+        buttons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const tabIndex = btn.getAttribute('data-tab');
+
+            // Set active button
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Set active icon dec
+            iconDecs.forEach(icon => icon.classList.remove('active'));
+            const targetIcon = document.querySelector(`.tab-icon-dec[data-tab-index="${tabIndex}"]`);
+            if (targetIcon) targetIcon.classList.add('active');
+
+            // Set active panel
+            panels.forEach(p => p.classList.remove('active'));
+            const targetPanel = document.querySelector(`.products-tab-panel[data-panel-index="${tabIndex}"]`);
+            if (targetPanel) targetPanel.classList.add('active');
+          });
+        });
+
+        // Initialize active icon decoration
+        if (iconDecs.length > 0) iconDecs[0].classList.add('active');
+      }
+
+      function initSecondaryCarousel() {
+        const prevBtn = document.getElementById('sec-prev-btn');
+        const nextBtn = document.getElementById('sec-next-btn');
+        const container = document.getElementById('who-scroll-track');
+
+        if (prevBtn && nextBtn && container) {
+          prevBtn.addEventListener('click', () => {
+            container.scrollBy({ left: -306, behavior: 'smooth' });
+          });
+
+          nextBtn.addEventListener('click', () => {
+            container.scrollBy({ left: 306, behavior: 'smooth' });
+          });
+        }
+      }
+
+      function initDoCarousel() {
+        const prevBtn = document.getElementById('do-prev-btn');
+        const nextBtn = document.getElementById('do-next-btn');
+        const container = document.getElementById('do-scroll-track');
+
+        if (prevBtn && nextBtn && container) {
+          prevBtn.addEventListener('click', () => {
+            container.scrollBy({ left: -334, behavior: 'smooth' });
+          });
+
+          nextBtn.addEventListener('click', () => {
+            container.scrollBy({ left: 334, behavior: 'smooth' });
+          });
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        renderDeals();
+        initLocalSearch();
+        initCustomProductTabs();
+        initSecondaryCarousel();
+        initDoCarousel();
+      });
+      // Fallback in case DOMContentLoaded has already fired
+      if (document.readyState === 'interactive' || document.readyState === 'complete') {
+        renderDeals();
+        initLocalSearch();
+        initCustomProductTabs();
+        initSecondaryCarousel();
+        initDoCarousel();
+      }
+    })();
+  </script>
+</body>
+
+</html>
