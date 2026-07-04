@@ -14,12 +14,12 @@
   <!-- Google Font - DM Mono -->
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <!-- Core Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-purple.css">
   <style>
     /* Mega menu active tab styling - subtle light blue/gray background instead of dark */
     .mega-sidebar-item.active {
       background-color: #f1f5fa !important;
-      border-left-color: var(--primary-blue) !important;
+      border-left-color: var(--primary-purple) !important;
     }
 
     .mega-sidebar-item.active .mega-sidebar-title {
@@ -56,486 +56,22 @@
       padding: 32px 36px !important;
     }
 
-    /* Local overrides and styles for Iteration 4 Hero Section */
-    #iteration-1 .hero-section-iteration4 {
-      background-color: #fcfbfa;
-      /* Warm light mode canvas background */
-      color: var(--slate-800);
-      padding: 36px 24px 48px 24px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      min-height: auto;
-      border-bottom: 1px solid var(--slate-100);
+    /* Hero Title Extrabold & Gradient text overrides */
+    #iteration-1 .hero-title {
+      font-weight: 800 !important;
     }
 
-    #iteration-1 .hero-section-iteration4 .hero-container-i4 {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 48px;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      text-align: left;
-      position: relative;
-      z-index: 5;
-    }
-
-    @media (max-width: 1000px) {
-      #iteration-1 .hero-section-iteration4 .hero-container-i4 {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-    }
-
-    /* Variables mapped to style.css tokens - Blue Theme */
-    #iteration-1 .hero-section-iteration4 {
-      --paper-2: #FFFFFF;
-      --ink-soft: var(--slate-600);
-      --ink-faint: var(--slate-400);
-      --theme-color: var(--primary-blue);
-      --theme-color-hover: var(--primary-blue-hover);
-      --theme-color-light: var(--primary-blue-light);
-      --line: var(--slate-200);
-      --radius: 16px;
-    }
-
-    #iteration-1 .hero-section-iteration4 .eyebrow-i4 {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--theme-color);
-      letter-spacing: 0.03em;
-      margin-bottom: 22px;
-      text-transform: uppercase;
-    }
-
-    #iteration-1 .hero-section-iteration4 .eyebrow-i4::before {
-      content: '';
-      width: 16px;
-      height: 2px;
-      background: var(--theme-color);
-    }
-
-    /* Toggle button design - Blue Accent */
-    #iteration-1 .hero-section-iteration4 .toggle-i4 {
-      display: inline-flex;
-      background: var(--slate-100);
-      border-radius: 999px;
-      padding: 4px;
-      margin-bottom: 28px;
-      gap: 2px;
-      border: 1px solid var(--slate-200);
-    }
-
-    #iteration-1 .hero-section-iteration4 .toggle-i4 button {
-      border: none;
-      background: transparent;
-      padding: 10px 22px;
-      border-radius: 999px;
-      font-size: 14.5px;
-      font-weight: 700;
-      color: var(--slate-600);
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-
-    #iteration-1 .hero-section-iteration4 .toggle-i4 button:hover {
-      color: #ea580c;
-    }
-
-    #iteration-1 .hero-section-iteration4 .toggle-i4 button.active {
-      background: #ea580c;
-      color: #ffffff;
-      box-shadow: 0 4px 12px rgba(234, 88, 12, 0.2);
-    }
-
-    #iteration-1 .hero-section-iteration4 h1.headline-i4 {
-      font-size: 52px;
-      line-height: 1.15;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      margin: 0 0 24px;
-      max-width: 640px;
-      color: var(--slate-900);
-    }
-
-    #iteration-1 .hero-section-iteration4 h1.headline-i4 .accent-i4 {
-      color: var(--theme-color);
-      background-color: var(--theme-color-light);
-      padding: 2px 10px;
-      border-radius: 6px;
-      border: 1px solid rgba(37, 99, 235, 0.15);
-      display: inline-block;
-      white-space: nowrap;
-    }
-
-    #iteration-1 .hero-section-iteration4 .sub-i4 {
-      font-size: 18px;
-      line-height: 1.6;
-      color: var(--slate-600);
-      max-width: 520px;
-      margin: 0 0 36px;
-      font-weight: 400;
-    }
-
-    /* Search Input with Blue border */
-    #iteration-1 .hero-section-iteration4 .search-i4 {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: #ffffff;
-      border: 1px solid var(--slate-200);
-      border-radius: 14px;
-      padding: 6px 8px 6px 18px;
-      max-width: 520px;
-      margin-bottom: 28px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
-      transition: all 0.2s ease;
-      display: none;
-    }
-
-    #iteration-1 .hero-section-iteration4 .search-i4.show {
-      display: flex;
-    }
-
-    #iteration-1 .hero-section-iteration4 .search-i4:focus-within {
-      border-color: var(--theme-color);
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
-    }
-
-    #iteration-1 .hero-section-iteration4 .search-i4 input {
-      border: none;
-      outline: none;
-      flex: 1;
-      font-family: inherit;
-      font-size: 15px;
-      padding: 10px 0;
-      background: transparent;
-      color: var(--slate-800);
-    }
-
-    #iteration-1 .hero-section-iteration4 .search-i4 input::placeholder {
-      color: var(--slate-400);
-    }
-
-    #iteration-1 .hero-section-iteration4 .search-i4 button {
-      background: var(--theme-color);
-      color: #ffffff;
-      border: none;
-      border-radius: 10px;
-      padding: 11px 20px;
-      font-weight: 700;
-      font-size: 14px;
-      cursor: pointer;
-      transition: background 0.2s ease;
-    }
-
-    #iteration-1 .hero-section-iteration4 .search-i4 button:hover {
-      background: var(--theme-color-hover);
-    }
-
-    /* CTAs - Matches styling.css design system */
-    #iteration-1 .hero-section-iteration4 .cta-row-i4 {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-bottom: 28px;
-    }
-
-    #iteration-1 .hero-section-iteration4 .btn-primary-i4,
-    #iteration-1 .hero-section-iteration4 .btn-secondary-i4 {
-      padding: 14px 28px;
-      border-radius: 12px;
-      font-size: 15.5px;
-      font-weight: 700;
-      cursor: pointer;
-      border: none;
-      transition: all 0.2s ease;
-      display: inline-block;
-    }
-
-    #iteration-1 .hero-section-iteration4 .btn-primary-i4 {
-      background: var(--theme-color);
-      color: #ffffff;
-      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.15);
-    }
-
-    #iteration-1 .hero-section-iteration4 .btn-primary-i4:hover {
-      background: var(--theme-color-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.22);
-    }
-
-    #iteration-1 .hero-section-iteration4 .btn-secondary-i4 {
-      background: transparent;
-      color: var(--slate-700);
-      border: 1px solid var(--slate-200);
-    }
-
-    #iteration-1 .hero-section-iteration4 .btn-secondary-i4:hover {
-      border-color: var(--theme-color);
-      color: var(--theme-color);
-      transform: translateY(-2px);
-    }
-
-    #iteration-1 .hero-section-iteration4 .grant-text-shimmer-i4 {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 13.5px;
-      font-weight: 700;
-      margin-left: 12px;
-      vertical-align: middle;
-    }
-
-    #iteration-1 .hero-section-iteration4 .shimmer-span-i4 {
-      background: linear-gradient(90deg, #475569 0%, var(--theme-color) 25%, #475569 50%, var(--theme-color) 75%, #475569 100%);
-      background-size: 200% auto;
+    #iteration-1 .gradient-text-i5 {
+      background: linear-gradient(135deg, #913175 10%, #e879f9 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation: shimmer-i4 3s linear infinite;
+      display: inline-block;
     }
 
-    #iteration-1 .hero-section-iteration4 .gemini-star-icon {
-      width: 15px;
-      height: 15px;
-      fill: var(--theme-color);
-      animation: pulse-star-i4 2s infinite ease-in-out;
-      flex-shrink: 0;
-    }
-
-    @keyframes pulse-star-i4 {
-
-      0%,
-      100% {
-        transform: scale(1);
-        opacity: 1;
-      }
-
-      50% {
-        transform: scale(1.15);
-        opacity: 0.8;
-      }
-    }
-
-    @keyframes shimmer-i4 {
-      to {
-        background-position: 200% center;
-      }
-    }
-
-    /* Stats */
-    #iteration-1 .hero-section-iteration4 .stats-i4 {
-      display: flex;
-      gap: 40px;
-      padding-top: 28px;
-      border-top: 1px solid var(--slate-200);
-      max-width: 560px;
-      margin-bottom: 28px;
-      width: 100%;
-    }
-
-    #iteration-1 .hero-section-iteration4 .stat-num-i4 {
-      font-size: 24px;
-      font-weight: 800;
-      color: var(--theme-color);
-      display: block;
-      letter-spacing: -0.01em;
-    }
-
-    #iteration-1 .hero-section-iteration4 .stat-label-i4 {
-      font-size: 13px;
-      color: var(--slate-500);
-      font-weight: 500;
-      margin-top: 4px;
-    }
-
-    /* Ecosystem strip */
-    #iteration-1 .hero-section-iteration4 .ecosystem-i4 {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-      font-size: 13px;
-      color: var(--slate-400);
-      font-weight: 500;
-    }
-
-    #iteration-1 .hero-section-iteration4 .ecosystem-i4 span.sep-i4 {
-      color: var(--slate-200);
-    }
-
-    #iteration-1 .hero-section-iteration4 .ecosystem-i4 span.label-i4 {
-      color: var(--slate-700);
-      font-weight: 700;
-      margin-right: 4px;
-    }
-
-    /* LEDGER / TICKER - Custom blue theme sidebar card */
-    #iteration-1 .hero-section-iteration4 .ledger-i4 {
-      background: #ffffff;
-      border: 1px solid var(--slate-200);
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow-xl);
-      width: 100%;
-    }
-
-    #iteration-1 .hero-section-iteration4 .ledger-head-i4 {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 18px 24px;
-      border-bottom: 1px solid var(--slate-200);
-      background: var(--slate-50);
-    }
-
-    #iteration-1 .hero-section-iteration4 .ledger-head-i4 .title-i4 {
-      font-size: 13.5px;
-      font-weight: 800;
-      color: var(--slate-800);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    #iteration-1 .hero-section-iteration4 .live-dot-i4 {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #10b981;
-      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
-      animation: pulse-i4 1.8s infinite ease-in-out;
-    }
-
-    @keyframes pulse-i4 {
-
-      0%,
-      100% {
-        opacity: 1;
-      }
-
-      50% {
-        opacity: .4;
-      }
-    }
-
-    #iteration-1 .hero-section-iteration4 .ledger-head-i4 .count-i4 {
-      font-size: 12px;
-      color: var(--slate-500);
-      font-weight: 600;
-    }
-
-    #iteration-1 .hero-section-iteration4 .ledger-viewport-i4 {
-      height: 480px;
-      overflow: hidden;
-      position: relative;
-      mask-image: linear-gradient(to bottom, transparent 0, black 32px, black calc(100% - 32px), transparent 100%);
-      -webkit-mask-image: linear-gradient(to bottom, transparent 0, black 32px, black calc(100% - 32px), transparent 100%);
-    }
-
-    #iteration-1 .hero-section-iteration4 .ledger-track-i4 {
-      display: flex;
-      flex-direction: column;
-      animation: scrollUp-i4 25s linear infinite;
-    }
-
-    #iteration-1 .hero-section-iteration4 .ledger-viewport-i4:hover .ledger-track-i4 {
-      animation-play-state: paused;
-    }
-
-    @keyframes scrollUp-i4 {
-      from {
-        transform: translateY(0);
-      }
-
-      to {
-        transform: translateY(-50%);
-      }
-    }
-
-    /* Target standard company-row styling when inside ledger track for narrower/smarter fit */
-    #iteration-1 .hero-section-iteration4 .ledger-viewport-i4 .company-row {
-      background-color: transparent !important;
-      border: none !important;
-      border-radius: 0 !important;
-      box-shadow: none !important;
-      margin: 0 !important;
-      padding: 16px 24px !important;
-      border-bottom: 1px solid var(--slate-100) !important;
-      transition: background-color 0.2s ease;
-    }
-
-    #iteration-1 .hero-section-iteration4 .ledger-viewport-i4 .company-row:hover {
-      background-color: rgba(37, 99, 235, 0.02) !important;
-      transform: none !important;
-    }
-
-    #iteration-1 .hero-section-iteration4 .ledger-viewport-i4 .company-row .company-socials {
-      display: none;
-      /* Hide socials in marquee for spacing/cleanliness */
-    }
-
-    #iteration-1 .hero-section-iteration4 .ledger-viewport-i4 .company-row .company-logo-box {
-      width: 44px;
-      height: 44px;
-      padding: 6px;
-      margin-right: 16px;
-    }
-
-    #iteration-1 .hero-section-iteration4 .ledger-viewport-i4 .company-row .company-name {
-      font-size: 15px;
-    }
-
-    #iteration-1 .hero-section-iteration4 .ledger-viewport-i4 .company-row .company-founders {
-      font-size: 11.5px;
-    }
-
-    #iteration-1 .hero-section-iteration4 .ledger-viewport-i4 .company-row .company-desc {
-      font-size: 12.5px;
-      margin-bottom: 6px;
-    }
-
-    #iteration-1 .hero-section-iteration4 .ledger-viewport-i4 .company-row .company-meta-bottom {
-      font-size: 11px;
-    }
-
-    #iteration-1 .hero-section-iteration4 .ledger-foot-i4 {
-      padding: 16px 20px;
-      font-size: 12.5px;
-      color: var(--slate-400);
-      text-align: center;
-      border-top: 1px solid var(--slate-200);
-      background: var(--slate-50);
-      font-weight: 500;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      #iteration-1 .hero-section-iteration4 .ledger-track-i4 {
-        animation: none;
-      }
-
-      #iteration-1 .hero-section-iteration4 .live-dot-i4 {
-        animation: none;
-      }
-    }
-
-    @media (max-width: 1000px) {
-      #iteration-1 .hero-section-iteration4 h1.headline-i4 {
-        font-size: 38px;
-      }
-
-      #iteration-1 .hero-section-iteration4 .stats-i4 {
-        gap: 24px;
-      }
+    /* Light Mode Hero Section styles - Solid White Background */
+    #iteration-1 .hero-section {
+      background-image: none !important;
+      background-color: #ffffff !important;
     }
   </style>
 </head>
@@ -1102,79 +638,228 @@
     </header>
 
     <!-- Warm Light Hero Section (Back to classic Warm layout) -->
-    <main class="hero-section-iteration4">
-      <div class="hero-container-i4">
-        <!-- Hero Left Column: Controls, Headline, Subtext, search, stats, ecosystem -->
-        <div class="hero-left-i4">
-          <div class="toggle-i4" role="tablist" aria-label="Choose your path">
-            <button id="btn-founder" class="active" onclick="setMode('founder')" role="tab" aria-selected="true">For
-              Founders</button>
-            <button id="btn-investor" onclick="setMode('investor')" role="tab" aria-selected="false">For
-              Investors</button>
-          </div>
+    <main class="hero-section">
+      <!-- Subtle decorative tech grid background -->
+      <div class="hero-grid-bg"></div>
 
-          <h1 id="headline" class="headline-i4">Raise capital, the <span class="accent-i4">founder-first</span> way.
-          </h1>
-          <p class="sub-i4" id="subtext">List your startup, build investor-ready pitch decks, and get shortlisted by the
-            right investors — all from one place.</p>
+      <div class="hero-container">
+        <h1 class="hero-title">
+          Fueling <span class="gradient-text-i5">startup growth</span> and global trade.
+        </h1>
 
-          <div class="search-i4" id="search-box">
-            <input type="text" placeholder="Search companies, founders, or sectors…"
-              aria-label="Search companies, founders, or sectors">
-            <button>Search</button>
+        <!-- Interactive Search Bar (Light Glassmorphic Theme) -->
+        <div class="search-bar-wrapper">
+          <div class="search-icon-left">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
           </div>
-
-          <div class="cta-row-i4">
-            <button class="btn-primary-i4" id="cta-primary">List Your Startup</button>
-            <button class="btn-secondary-i4" id="cta-secondary">See how it works</button>
-            <span class="grant-text-shimmer-i4">
-              <svg class="gemini-star-icon" viewBox="0 0 24 24">
-                <path d="M12 2L14.8 9.2L22 12L14.8 14.8L12 22L9.2 14.8L2 12L9.2 9.2L12 2Z" />
-              </svg>
-              <span class="shimmer-span-i4">Govt. grants &amp; schemes included</span>
-            </span>
-          </div>
-
-          <div class="stats-i4">
-            <div>
-              <span class="stat-num-i4">2,000+</span>
-              <span class="stat-label-i4">Startups listed</span>
-            </div>
-            <div>
-              <span class="stat-num-i4">50+</span>
-              <span class="stat-label-i4">DD conducted via VDR</span>
-            </div>
-            <div>
-              <span class="stat-num-i4">1,000+</span>
-              <span class="stat-label-i4">Pitch &amp; business decks built</span>
-            </div>
-          </div>
-
-          <div class="ecosystem-i4">
-            <span class="label-i4">One ecosystem</span>
-            <span>Capital</span><span class="sep-i4">·</span>
-            <span>Deckwale</span><span class="sep-i4">·</span>
-            <span>Watch</span><span class="sep-i4">·</span>
-            <span>Events</span><span class="sep-i4">·</span>
-            <span>Trade</span>
-          </div>
+          <input type="text" class="search-input" placeholder="Search companies, founders, or investors..."
+            aria-label="Search companies, founders, or investors">
+          <button class="search-btn-right" aria-label="Submit Search">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
         </div>
 
-        <!-- Hero Right Column: Ledger ticker list of startups -->
-        <div class="hero-right-i4">
-          <div class="ledger-i4">
-            <div class="ledger-head-i4">
-              <span class="title-i4"><span class="live-dot-i4"></span>Live on Seedicon</span>
-              <span class="count-i4">996 raising now</span>
-            </div>
-            <div class="ledger-viewport-i4">
-              <div class="ledger-track-i4" id="ledger-track">
-                <!-- rows injected by JS, duplicated for seamless loop -->
+        <!-- Call to Actions -->
+        <div class="hero-buttons">
+          <a href="#" class="btn btn-primary-hero">List your Startup</a>
+          <a href="#" class="btn btn-outline-hero">Join to Invest</a>
+        </div>
+
+        <!-- Company Showcase List (Brought back inside the hero section container) -->
+        <div class="company-showcase-container">
+          
+          <!-- Psychological FOMO Header -->
+          <div class="showcase-header">
+            <h2 class="showcase-title">996 startups are already seeking investment. Don't fall behind.</h2>
+          </div>
+
+          <div class="company-list">
+            <!-- Row 1: Airbnb -->
+            <div class="company-row">
+              <div class="company-logo-box">
+                <img src="https://cdn.brandfetch.io/airbnb.com?c=1idD5blp6f0v3UdGKX9" alt="Airbnb" class="company-logo">
+              </div>
+              <div class="company-content">
+                <div class="company-meta-top">
+                  <span class="company-name">Airbnb</span>
+                  <span class="meta-divider">•</span>
+                  <span class="company-founders">Brian Chesky, Joe Gebbia, Nathan Blecharczyk</span>
+                </div>
+                <div class="company-desc">Book accommodations around the world.</div>
+                <div class="company-meta-bottom">
+                  <span>Public</span>
+                  <span class="meta-dot"></span>
+                  <span>Consumer</span>
+                  <span class="meta-dot"></span>
+                  <span>Travel</span>
+                  <span class="meta-dot"></span>
+                  <span>San Francisco, CA, USA</span>
+                </div>
+              </div>
+              <div class="company-socials">
+                <a href="https://airbnb.com" target="_blank" class="social-link-btn" aria-label="Airbnb Website">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path
+                      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                    </path>
+                  </svg>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="social-link-btn" aria-label="Airbnb LinkedIn">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                </a>
               </div>
             </div>
-            <div class="ledger-foot-i4">Real founders. Real rounds. Updated as deals move.</div>
+
+            <!-- Row 2: DoorDash -->
+            <div class="company-row">
+              <div class="company-logo-box">
+                <img src="https://cdn.brandfetch.io/doordash.com?c=1idD5blp6f0v3UdGKX9" alt="DoorDash"
+                  class="company-logo">
+              </div>
+              <div class="company-content">
+                <div class="company-meta-top">
+                  <span class="company-name">DoorDash</span>
+                  <span class="meta-divider">•</span>
+                  <span class="company-founders">Tony Xu</span>
+                </div>
+                <div class="company-desc">Restaurant delivery connecting consumers with local businesses.</div>
+                <div class="company-meta-bottom">
+                  <span>Public</span>
+                  <span class="meta-dot"></span>
+                  <span>Consumer</span>
+                  <span class="meta-dot"></span>
+                  <span>Food and Beverage</span>
+                  <span class="meta-dot"></span>
+                  <span>San Francisco, CA, USA</span>
+                </div>
+              </div>
+              <div class="company-socials">
+                <a href="https://doordash.com" target="_blank" class="social-link-btn" aria-label="DoorDash Website">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path
+                      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                    </path>
+                  </svg>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="social-link-btn" aria-label="DoorDash LinkedIn">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Row 3: Coinbase -->
+            <div class="company-row">
+              <div class="company-logo-box">
+                <img src="https://cdn.brandfetch.io/coinbase.com?c=1idD5blp6f0v3UdGKX9" alt="Coinbase"
+                  class="company-logo">
+              </div>
+              <div class="company-content">
+                <div class="company-meta-top">
+                  <span class="company-name">Coinbase</span>
+                  <span class="meta-divider">•</span>
+                  <span class="company-founders">Brian Armstrong, Fred Ehrsam</span>
+                </div>
+                <div class="company-desc">Buy, sell, and manage cryptocurrencies online.</div>
+                <div class="company-meta-bottom">
+                  <span>Public</span>
+                  <span class="meta-dot"></span>
+                  <span>Fintech</span>
+                  <span class="meta-dot"></span>
+                  <span>Banking and Exchange</span>
+                  <span class="meta-dot"></span>
+                  <span>San Francisco, CA, USA</span>
+                </div>
+              </div>
+              <div class="company-socials">
+                <a href="https://coinbase.com" target="_blank" class="social-link-btn" aria-label="Coinbase Website">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path
+                      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                    </path>
+                  </svg>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="social-link-btn" aria-label="Coinbase LinkedIn">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Row 4: Groww -->
+            <div class="company-row">
+              <div class="company-logo-box">
+                <img src="https://cdn.brandfetch.io/groww.in?c=1idD5blp6f0v3UdGKX9" alt="Groww"
+                  class="company-logo">
+              </div>
+              <div class="company-content">
+                <div class="company-meta-top">
+                  <span class="company-name">Groww</span>
+                  <span class="meta-divider">•</span>
+                  <span class="company-founders">Lalit Keshre, Harsh Jain</span>
+                </div>
+                <div class="company-desc">Making financial services simple, transparent and delightful.</div>
+                <div class="company-meta-bottom">
+                  <span>Series E</span>
+                  <span class="meta-dot"></span>
+                  <span>Fintech</span>
+                  <span class="meta-dot"></span>
+                  <span>Investment</span>
+                  <span class="meta-dot"></span>
+                  <span>Bengaluru, KA, India</span>
+                </div>
+              </div>
+              <div class="company-socials">
+                <a href="https://groww.in" target="_blank" class="social-link-btn" aria-label="Groww Website">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path
+                      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                    </path>
+                  </svg>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="social-link-btn" aria-label="Groww LinkedIn">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Showcase Button -->
+          <div class="showcase-footer">
+            <button class="btn btn-showcase-more">Show 992 more startups</button>
           </div>
         </div>
+
       </div>
     </main>
 
@@ -1216,7 +901,7 @@
         }
 
         .products-tabbed-section-i4 .tab-icon-dec.active {
-          color: var(--primary-blue);
+          color: var(--primary-purple);
           opacity: 1;
         }
 
@@ -1255,7 +940,7 @@
           right: 0;
           bottom: -13px;
           height: 3px;
-          background-color: var(--primary-blue);
+          background-color: var(--primary-purple);
           border-radius: 999px;
         }
 
@@ -1322,7 +1007,7 @@
         .products-tabbed-section-i4 .product-badge-i4 {
           font-size: 11.5px;
           font-weight: 800;
-          color: var(--primary-blue);
+          color: var(--primary-purple);
           text-transform: uppercase;
           letter-spacing: 0.06em;
           margin-bottom: 12px;
@@ -1374,7 +1059,7 @@
           align-items: center;
           gap: 8px;
           padding: 12px 24px;
-          background: var(--primary-blue);
+          background: var(--primary-purple);
           color: #ffffff;
           border-radius: 10px;
           font-size: 14.5px;
@@ -1386,14 +1071,14 @@
         }
 
         .products-tabbed-section-i4 .product-cta-i4:hover {
-          background: var(--primary-blue-hover);
+          background: var(--primary-purple-hover);
           transform: translateY(-1px);
         }
 
         .products-tabbed-section-i4 .section-eyebrow-i4 {
           font-size: 13px;
           font-weight: 800;
-          color: var(--primary-blue);
+          color: var(--primary-purple);
           text-transform: uppercase;
           letter-spacing: 0.08em;
           margin-bottom: 12px;
@@ -1621,7 +1306,7 @@
           position: absolute;
           width: 400px;
           height: 400px;
-          background: radial-gradient(circle, rgba(37, 99, 235, 0.04) 0%, rgba(255, 255, 255, 0) 70%);
+          background: radial-gradient(circle, rgba(145, 49, 117, 0.04) 0%, rgba(255, 255, 255, 0) 70%);
           top: -100px;
           right: -100px;
           z-index: 1;
@@ -1652,7 +1337,7 @@
         .who-section-i4 .who-eyebrow-i4 {
           font-size: 13px;
           font-weight: 800;
-          color: var(--primary-blue);
+          color: var(--primary-purple);
           text-transform: uppercase;
           letter-spacing: 0.08em;
           margin-bottom: 12px;
@@ -1697,9 +1382,9 @@
         }
 
         .who-section-i4 .carousel-btn-i4:hover {
-          border-color: var(--primary-blue);
-          color: var(--primary-blue);
-          background: #eff6ff;
+          border-color: var(--primary-purple);
+          color: var(--primary-purple);
+          background: #fdf4ff;
         }
 
         .who-section-i4 .who-scroll-track-i4 {
@@ -1734,8 +1419,8 @@
         }
 
         .who-section-i4 .who-card-i4:hover {
-          border-color: var(--primary-blue);
-          box-shadow: 0 12px 30px rgba(37, 99, 235, 0.08);
+          border-color: var(--primary-purple);
+          box-shadow: 0 12px 30px rgba(145, 49, 117, 0.08);
           transform: translateY(-4px);
         }
 
@@ -1752,8 +1437,8 @@
 
         .who-section-i4 .card-icon-box-i4.founder-box,
         .who-section-i4 .card-icon-box-i4.ca-box {
-          background-color: #eff6ff;
-          color: #2563eb;
+          background-color: #fdf4ff;
+          color: #913175;
         }
 
         .who-section-i4 .card-icon-box-i4.investor-box,
@@ -1805,7 +1490,7 @@
           gap: 6px;
           font-size: 14px;
           font-weight: 700;
-          color: var(--primary-blue);
+          color: var(--primary-purple);
           text-decoration: none;
           transition: color 0.2s ease;
           border-top: 1px solid var(--slate-100);
@@ -1815,7 +1500,7 @@
         }
 
         .who-section-i4 .card-link-i4:hover {
-          color: var(--primary-blue-hover);
+          color: var(--primary-purple-hover);
         }
 
         .who-section-i4 .track-divider-card-i4 {
@@ -2077,7 +1762,7 @@
           height: 100%;
           left: 0;
           top: 0;
-          background: radial-gradient(ellipse 85% 55% at 50% 0%, rgba(37, 99, 235, 0.06) 0%, transparent 60%);
+          background: radial-gradient(ellipse 85% 55% at 50% 0%, rgba(145, 49, 117, 0.06) 0%, transparent 60%);
           z-index: 1;
           pointer-events: none;
         }
@@ -2106,7 +1791,7 @@
         .do-section-i4 .do-eyebrow-i4 {
           font-size: 13px;
           font-weight: 800;
-          color: var(--primary-blue);
+          color: var(--primary-purple);
           text-transform: uppercase;
           letter-spacing: 0.08em;
           margin-bottom: 12px;
@@ -2155,9 +1840,9 @@
         }
 
         .do-section-i4 .carousel-btn-i4:hover {
-          border-color: var(--primary-blue);
-          color: var(--primary-blue);
-          background: #eff6ff;
+          border-color: var(--primary-purple);
+          color: var(--primary-purple);
+          background: #fdf4ff;
         }
 
         .do-section-i4 .do-scroll-track-i4 {
@@ -2192,8 +1877,8 @@
         }
 
         .do-section-i4 .do-card-i4:hover {
-          border-color: var(--primary-blue);
-          box-shadow: 0 12px 30px rgba(37, 99, 235, 0.08);
+          border-color: var(--primary-purple);
+          box-shadow: 0 12px 30px rgba(145, 49, 117, 0.08);
           transform: translateY(-6px);
         }
 
@@ -2208,7 +1893,7 @@
 
         /* Mockup BG colors */
         .do-section-i4 .bg-startup {
-          background-color: #eff6ff;
+          background-color: #fdf4ff;
         }
 
         .do-section-i4 .bg-investments {
@@ -2342,8 +2027,8 @@
           width: 60%;
         }
 
-        .do-section-i4 .line-bar-i4.blue-i4 {
-          background: #bfdbfe;
+        .do-section-i4 .line-bar-i4.purple-i4 {
+          background: #f5d0fe;
         }
 
         /* Slider hover action buttons */
@@ -2370,7 +2055,7 @@
           position: absolute;
           width: 100%;
           height: 100%;
-          background: var(--primary-blue);
+          background: var(--primary-purple);
           color: #ffffff;
           display: flex;
           align-items: center;
@@ -2382,7 +2067,7 @@
         }
 
         .do-section-i4 .do-card-i4:hover .do-card-cta-i4 {
-          border-color: var(--primary-blue);
+          border-color: var(--primary-purple);
           color: transparent;
         }
 
@@ -2450,7 +2135,7 @@
           <div class="do-card-i4">
             <div class="do-card-media-i4 bg-startup">
               <div class="mini-laptop-i4 mockup-element-i4">
-                <div class="line-bar-i4 blue-i4" style="height: 10px; width: 45%;"></div>
+                <div class="line-bar-i4 purple-i4" style="height: 10px; width: 45%;"></div>
                 <div class="line-bar-i4" style="margin-top: 4px;"></div>
                 <div class="line-bar-i4 short-i4"></div>
                 <div style="display: flex; gap: 4px; margin-top: 6px;">
@@ -2495,14 +2180,14 @@
                     <div class="line-bar-i4" style="height: 4px; background: #e2e8f0; width: 70%;"></div>
                   </div>
                   <div
-                    style="width: 50%; height: 50px; background: #eff6ff; border-radius: 4px; border: 1px solid #bfdbfe; padding: 4px; display: flex; flex-direction: column; gap: 4px;">
-                    <div class="line-bar-i4" style="height: 4px; background: #60a5fa;"></div>
+                    style="width: 50%; height: 50px; background: #fdf4ff; border-radius: 4px; border: 1px solid #f5d0fe; padding: 4px; display: flex; flex-direction: column; gap: 4px;">
+                    <div class="line-bar-i4" style="height: 4px; background: #d946ef;"></div>
                     <div class="line-bar-i4" style="height: 4px; background: #e2e8f0; width: 60%;"></div>
                   </div>
                 </div>
               </div>
               <div class="floating-badge-i4">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="3"
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#913175" stroke-width="3"
                   stroke-linecap="round">
                   <circle cx="11" cy="11" r="8"></circle>
                   <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
@@ -2532,12 +2217,12 @@
                   <div style="display: flex; gap: 3px; align-items: flex-end; height: 35px; margin-top: 4px;">
                     <div style="height: 40%; width: 5px; background: #94a3b8; border-radius: 1px;"></div>
                     <div style="height: 70%; width: 5px; background: #94a3b8; border-radius: 1px;"></div>
-                    <div style="height: 90%; width: 5px; background: #2563eb; border-radius: 1px;"></div>
+                    <div style="height: 90%; width: 5px; background: #913175; border-radius: 1px;"></div>
                   </div>
                 </div>
                 <!-- Slide 2 -->
                 <div
-                  style="width: 90px; height: 70px; background: #2563eb; border-radius: 4px; padding: 6px; box-shadow: 0 4px 12px rgba(37,99,235,0.15); display: flex; flex-direction: column; gap: 4px;">
+                  style="width: 90px; height: 70px; background: #913175; border-radius: 4px; padding: 6px; box-shadow: 0 4px 12px rgba(145, 49, 117,0.15); display: flex; flex-direction: column; gap: 4px;">
                   <div class="line-bar-i4" style="height: 4px; width: 45%; background: #ffffff;"></div>
                   <div class="line-bar-i4" style="height: 4px; width: 80%; background: rgba(255,255,255,0.4);"></div>
                   <div class="line-bar-i4" style="height: 4px; width: 70%; background: rgba(255,255,255,0.4);"></div>
@@ -2656,7 +2341,7 @@
                 </div>
                 <div style="display: flex; align-items: center; gap: 2px;">
                   <span
-                    style="width: 12px; height: 12px; border-radius: 50%; background: #3b82f6; border: 1px solid #fff; margin-right: -4px;"></span>
+                    style="width: 12px; height: 12px; border-radius: 50%; background: #913175; border: 1px solid #fff; margin-right: -4px;"></span>
                   <span
                     style="width: 12px; height: 12px; border-radius: 50%; background: #10b981; border: 1px solid #fff; margin-right: -4px;"></span>
                   <span
@@ -2695,9 +2380,9 @@
                   <div style="font-size: 9px; font-weight: 800; color: #1e293b;">John Doe</div>
                   <div style="font-size: 7px; color: #64748b;">Managing Director</div>
                 </div>
-                <div style="font-size: 7px; color: #2563eb;">john@seedicon.com</div>
+                <div style="font-size: 7px; color: #913175;">john@seedicon.com</div>
                 <div
-                  style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; border: 1.5px dashed #2563eb; border-radius: 6px; pointer-events: none; opacity: 0.6;">
+                  style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; border: 1.5px dashed #913175; border-radius: 6px; pointer-events: none; opacity: 0.6;">
                 </div>
               </div>
               <div class="floating-badge-i4">
@@ -2740,7 +2425,7 @@
           position: absolute;
           width: 450px;
           height: 450px;
-          background: radial-gradient(circle, rgba(37, 99, 235, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+          background: radial-gradient(circle, rgba(145, 49, 117, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
           top: -120px;
           left: -120px;
           z-index: 1;
@@ -2794,7 +2479,7 @@
           left: 30px;
           right: 30px;
           height: 2px;
-          background-color: var(--primary-blue);
+          background-color: var(--primary-purple);
           z-index: 1;
           opacity: 0.8;
         }
@@ -2814,14 +2499,14 @@
           height: 56px;
           border-radius: 50%;
           background-color: #ffffff;
-          border: 2px solid var(--primary-blue);
-          color: var(--primary-blue);
+          border: 2px solid var(--primary-purple);
+          color: var(--primary-purple);
           font-size: 15px;
           font-weight: 800;
           display: flex;
           align-items: center;
           justify-content: center;
-          box-shadow: 0 4px 10px rgba(37, 99, 235, 0.06);
+          box-shadow: 0 4px 10px rgba(145, 49, 117, 0.06);
           margin-bottom: 20px;
           transition: all 0.3s ease;
           position: relative;
@@ -2829,10 +2514,10 @@
         }
 
         .how-section-i4 .timeline-step-i4:hover .step-badge-i4 {
-          background-color: var(--primary-blue);
+          background-color: var(--primary-purple);
           color: #ffffff;
           transform: scale(1.08);
-          box-shadow: 0 6px 15px rgba(37, 99, 235, 0.18);
+          box-shadow: 0 6px 15px rgba(145, 49, 117, 0.18);
         }
 
         .how-section-i4 .step-title-i4 {
@@ -2852,7 +2537,7 @@
         .how-section-i4 .step-link-i4 {
           font-size: 13px;
           font-weight: 700;
-          color: var(--primary-blue);
+          color: var(--primary-purple);
           text-decoration: none;
           display: inline-flex;
           align-items: center;
@@ -2862,7 +2547,7 @@
         }
 
         .how-section-i4 .step-link-i4:hover {
-          color: var(--primary-blue-hover);
+          color: var(--primary-purple-hover);
         }
 
         .how-section-i4 .step-link-i4:hover span {
@@ -2896,7 +2581,7 @@
 
         .how-section-i4 .btn-banner-primary-i4 {
           padding: 12px 24px;
-          background: var(--primary-blue);
+          background: var(--primary-purple);
           color: #ffffff;
           border-radius: 8px;
           font-size: 14.5px;
@@ -2905,14 +2590,14 @@
           display: inline-flex;
           align-items: center;
           gap: 6px;
-          box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+          box-shadow: 0 4px 12px rgba(145, 49, 117, 0.15);
           transition: all 0.2s ease;
         }
 
         .how-section-i4 .btn-banner-primary-i4:hover {
-          background: var(--primary-blue-hover);
+          background: var(--primary-purple-hover);
           transform: translateY(-1px);
-          box-shadow: 0 6px 16px rgba(37, 99, 235, 0.22);
+          box-shadow: 0 6px 16px rgba(145, 49, 117, 0.22);
         }
 
         .how-section-i4 .banner-link-secondary-i4 {
@@ -2924,7 +2609,7 @@
         }
 
         .how-section-i4 .banner-link-secondary-i4:hover {
-          color: var(--primary-blue);
+          color: var(--primary-purple);
         }
 
         @media (max-width: 900px) {
@@ -3053,7 +2738,7 @@
           height: 100%;
           left: 0;
           top: 0;
-          background: radial-gradient(ellipse 85% 55% at 50% 0%, rgba(37, 99, 235, 0.05) 0%, transparent 60%);
+          background: radial-gradient(ellipse 85% 55% at 50% 0%, rgba(145, 49, 117, 0.05) 0%, transparent 60%);
           z-index: 1;
           pointer-events: none;
         }
@@ -3103,8 +2788,8 @@
 
         .resources-section-i4 .resource-featured-card:hover {
           transform: translateY(-5px);
-          border-color: var(--primary-blue);
-          box-shadow: 0 12px 30px rgba(37, 99, 235, 0.08);
+          border-color: var(--primary-purple);
+          box-shadow: 0 12px 30px rgba(145, 49, 117, 0.08);
         }
 
         .resources-section-i4 .featured-image-box {
@@ -3133,11 +2818,11 @@
         }
 
         .resources-section-i4 .resource-link-btn {
-          color: var(--primary-blue);
+          color: var(--primary-purple);
         }
 
         .resources-section-i4 .resource-link-btn:hover {
-          color: var(--primary-blue-hover);
+          color: var(--primary-purple-hover);
         }
 
         .resources-section-i4 .resource-mini-card {
@@ -3151,8 +2836,8 @@
 
         .resources-section-i4 .resource-mini-card:hover {
           transform: translateY(-3px);
-          border-color: var(--primary-blue);
-          box-shadow: 0 10px 25px rgba(37, 99, 235, 0.06);
+          border-color: var(--primary-purple);
+          box-shadow: 0 10px 25px rgba(145, 49, 117, 0.06);
         }
 
         .resources-section-i4 .mini-img-box {
@@ -3595,11 +3280,11 @@
         <span class="dropup-num">3</span>
         <span class="dropup-text">Dark Premium Tech</span>
       </a>
-      <a href="iteration4.html" class="dropup-item active">
+      <a href="iteration4.html" class="dropup-item">
         <span class="dropup-num">4</span>
         <span class="dropup-text">Classic Warm (Copy)</span>
       </a>
-      <a href="purple-mode-1.html" class="dropup-item">
+      <a href="purple-mode-1.html" class="dropup-item active">
         <span class="dropup-num">5</span>
         <span class="dropup-text">Purple Mode 1</span>
       </a>
@@ -3624,155 +3309,8 @@
   <script src="script.js"></script>
 
   <!-- Custom Javascript for Iteration 4 Hero Section -->
-  <script>
+    <script>
     (function () {
-      const modes = {
-        founder: {
-          headline: 'Raise capital, the <span class="accent-i4">founder-first</span> way.',
-          sub: 'List your startup, build investor-ready pitch decks, and get shortlisted by the right investors — all from one place.',
-          primary: 'List Your Startup',
-          secondary: 'See how it works',
-          search: false
-        },
-        investor: {
-          headline: 'Discover <span class="accent-i4">startups</span> worth watching.',
-          sub: 'Explore vetted startups, review data rooms, and evaluate deals securely — before anyone else does.',
-          primary: 'Join to Invest',
-          secondary: 'Browse startups',
-          search: true
-        }
-      };
-
-      window.setMode = function (mode) {
-        const m = modes[mode];
-        const headlineEl = document.getElementById('headline');
-        const subtextEl = document.getElementById('subtext');
-        const ctaPrimaryEl = document.getElementById('cta-primary');
-        const ctaSecondaryEl = document.getElementById('cta-secondary');
-        const searchBoxEl = document.getElementById('search-box');
-
-        if (headlineEl) headlineEl.innerHTML = m.headline;
-        if (subtextEl) subtextEl.textContent = m.sub;
-        if (ctaPrimaryEl) ctaPrimaryEl.textContent = m.primary;
-        if (ctaSecondaryEl) ctaSecondaryEl.textContent = m.secondary;
-        if (searchBoxEl) searchBoxEl.classList.toggle('show', m.search);
-
-        const btnFounder = document.getElementById('btn-founder');
-        const btnInvestor = document.getElementById('btn-investor');
-
-        if (btnFounder && btnInvestor) {
-          btnFounder.classList.toggle('active', mode === 'founder');
-          btnInvestor.classList.toggle('active', mode === 'investor');
-          btnFounder.setAttribute('aria-selected', mode === 'founder');
-          btnInvestor.setAttribute('aria-selected', mode === 'investor');
-        }
-      };
-
-      const startups = [
-        {
-          logo: 'https://cdn.brandfetch.io/airbnb.com?c=1idD5blp6f0v3UdGKX9',
-          name: 'Airbnb',
-          founders: 'Brian Chesky, Joe Gebbia, Nathan Blecharczyk',
-          desc: 'Book accommodations around the world.',
-          tags: ['Public', 'Consumer', 'Travel'],
-          location: 'San Francisco, CA, USA'
-        },
-        {
-          logo: 'https://cdn.brandfetch.io/doordash.com?c=1idD5blp6f0v3UdGKX9',
-          name: 'DoorDash',
-          founders: 'Tony Xu',
-          desc: 'Restaurant delivery connecting consumers with local businesses.',
-          tags: ['Public', 'Consumer', 'Food and Beverage'],
-          location: 'San Francisco, CA, USA'
-        },
-        {
-          logo: 'https://cdn.brandfetch.io/coinbase.com?c=1idD5blp6f0v3UdGKX9',
-          name: 'Coinbase',
-          founders: 'Brian Armstrong, Fred Ehrsam',
-          desc: 'Buy, sell, and manage cryptocurrencies online.',
-          tags: ['Public', 'Fintech', 'Banking and Exchange'],
-          location: 'San Francisco, CA, USA'
-        },
-        {
-          logo: 'https://cdn.brandfetch.io/groww.in?c=1idD5blp6f0v3UdGKX9',
-          name: 'Groww',
-          founders: 'Lalit Keshre, Harsh Jain',
-          desc: 'Making financial services simple, transparent and delightful.',
-          tags: ['Series E', 'Fintech', 'Investment'],
-          location: 'Bengaluru, KA, India'
-        }
-      ];
-
-      function renderDeals() {
-        const track = document.getElementById('ledger-track');
-        if (!track) return;
-
-        const rowsHtml = startups.map(s => {
-          const tagsHtml = s.tags.map((t, idx) => `
-            <span>${t}</span>
-            ${idx < s.tags.length - 1 ? '<span class="meta-dot"></span>' : ''}
-          `).join('');
-
-          return `
-            <div class="company-row">
-              <div class="company-logo-box">
-                <img src="${s.logo}" alt="${s.name}" class="company-logo">
-              </div>
-              <div class="company-content">
-                <div class="company-meta-top">
-                  <span class="company-name">${s.name}</span>
-                  <span class="meta-divider">•</span>
-                  <span class="company-founders">${s.founders}</span>
-                </div>
-                <div class="company-desc">${s.desc}</div>
-                <div class="company-meta-bottom">
-                  ${tagsHtml}
-                  <span class="meta-dot"></span>
-                  <span>${s.location}</span>
-                </div>
-              </div>
-            </div>
-          `;
-        }).join('');
-
-        // Duplicate list for seamless infinite loop scroll
-        track.innerHTML = rowsHtml + rowsHtml;
-      }
-
-      function initLocalSearch() {
-        const searchBox = document.getElementById('search-box');
-        if (searchBox) {
-          const input = searchBox.querySelector('input');
-          const button = searchBox.querySelector('button');
-          const executeSearch = () => {
-            const query = input.value.trim();
-            if (query !== "") {
-              if (typeof showFeedbackToast === 'function') {
-                showFeedbackToast(`Searching Seedicon Database for: "${query}"...`);
-              } else {
-                alert(`Searching for: ${query}`);
-              }
-            } else {
-              input.focus();
-            }
-          };
-          if (button) {
-            button.addEventListener('click', (e) => {
-              e.preventDefault();
-              executeSearch();
-            });
-          }
-          if (input) {
-            input.addEventListener('keydown', (e) => {
-              if (e.key === 'Enter') {
-                e.preventDefault();
-                executeSearch();
-              }
-            });
-          }
-        }
-      }
-
       function initCustomProductTabs() {
         const buttons = document.querySelectorAll('.products-tab-btn');
         const panels = document.querySelectorAll('.products-tab-panel');
@@ -3835,16 +3373,12 @@
       }
 
       document.addEventListener('DOMContentLoaded', () => {
-        renderDeals();
-        initLocalSearch();
         initCustomProductTabs();
         initSecondaryCarousel();
         initDoCarousel();
       });
       // Fallback in case DOMContentLoaded has already fired
       if (document.readyState === 'interactive' || document.readyState === 'complete') {
-        renderDeals();
-        initLocalSearch();
         initCustomProductTabs();
         initSecondaryCarousel();
         initDoCarousel();
@@ -3852,5 +3386,4 @@
     })();
   </script>
 </body>
-
 </html>
