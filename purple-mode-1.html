@@ -16,6 +16,18 @@
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="style-purple.css">
   <style>
+    /* Optimize Scroll Performance & Fix Sticky/Sluggish Scroll Lag */
+    html {
+      scroll-behavior: auto !important;
+    }
+
+    .hiw-step {
+      will-change: transform, top;
+      transform: translate3d(0, 0, 0);
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+
     /* Mega menu active tab styling - subtle light blue/gray background instead of dark */
     .mega-sidebar-item.active {
       background-color: #f1f5fa !important;
@@ -72,6 +84,103 @@
     #iteration-1 .hero-section {
       background-image: none !important;
       background-color: #ffffff !important;
+    }
+
+    /* Permanent Rich Dark Fuchsia/Purple Footer overrides */
+    .footer-section {
+      background:
+        radial-gradient(ellipse 60% 40% at 50% 0%, rgba(232, 121, 249, 0.16) 0%, transparent 60%),
+        radial-gradient(ellipse 30% 30% at 10% 70%, rgba(145, 49, 117, 0.12) 0%, transparent 50%),
+        linear-gradient(185deg, #1b0716 0%, #0c020a 100%) !important;
+      border-top: 1px solid rgba(232, 121, 249, 0.18) !important;
+      box-shadow: inset 0 1px 0 rgba(232, 121, 249, 0.1) !important;
+      color: rgba(255, 255, 255, 0.8) !important;
+    }
+
+    .footer-cta-title {
+      background: linear-gradient(135deg, #ffffff 0%, #f472b6 60%, #e879f9 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+    }
+
+    .footer-cta-desc {
+      color: rgba(255, 255, 255, 0.7) !important;
+    }
+
+    .btn-footer-primary {
+      background: linear-gradient(135deg, #913175 0%, #e879f9 100%) !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 20px rgba(232, 121, 249, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+      border: none !important;
+      transition: all 0.25s ease !important;
+    }
+
+    .btn-footer-primary:hover {
+      transform: translateY(-2px) !important;
+      box-shadow: 0 8px 24px rgba(232, 121, 249, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+    }
+
+    .btn-footer-secondary {
+      color: rgba(255, 255, 255, 0.95) !important;
+      border: 1px solid rgba(232, 121, 249, 0.3) !important;
+      background-color: rgba(232, 121, 249, 0.05) !important;
+      transition: all 0.25s ease !important;
+    }
+
+    .btn-footer-secondary:hover {
+      color: #ffffff !important;
+      border-color: #e879f9 !important;
+      background-color: rgba(232, 121, 249, 0.15) !important;
+      box-shadow: 0 0 15px rgba(232, 121, 249, 0.25) !important;
+    }
+
+    .footer-divider {
+      background: linear-gradient(90deg, transparent 0%, rgba(232, 121, 249, 0.2) 30%, rgba(232, 121, 249, 0.2) 70%, transparent 100%) !important;
+    }
+
+    @media (min-width: 993px) {
+      .footer-links-grid {
+        grid-template-columns: repeat(7, 1fr) !important;
+      }
+    }
+
+    .link-col-title {
+      color: #e879f9 !important;
+      text-shadow: 0 0 10px rgba(232, 121, 249, 0.2) !important;
+      font-weight: 800 !important;
+      letter-spacing: 0.08em !important;
+    }
+
+    .link-col-list a {
+      color: rgba(255, 255, 255, 0.65) !important;
+      transition: all 0.22s ease !important;
+      display: inline-block !important;
+    }
+
+    .link-col-list a:hover {
+      color: #e879f9 !important;
+      text-shadow: 0 0 8px rgba(232, 121, 249, 0.4) !important;
+      transform: translateX(3px) !important;
+    }
+
+    .copyright-text {
+      color: rgba(255, 255, 255, 0.5) !important;
+    }
+
+    .social-icon-link {
+      background-color: rgba(255, 255, 255, 0.03) !important;
+      border: 1px solid rgba(232, 121, 249, 0.15) !important;
+      color: rgba(255, 255, 255, 0.7) !important;
+      transition: all 0.25s ease !important;
+    }
+
+    .social-icon-link:hover {
+      background-color: rgba(232, 121, 249, 0.15) !important;
+      color: #ffffff !important;
+      border-color: #e879f9 !important;
+      box-shadow: 0 0 15px rgba(232, 121, 249, 0.45) !important;
+      transform: translateY(-2px) !important;
     }
   </style>
 </head>
@@ -675,7 +784,7 @@
 
         <!-- Company Showcase List (Brought back inside the hero section container) -->
         <div class="company-showcase-container">
-          
+
           <!-- Psychological FOMO Header -->
           <div class="showcase-header">
             <h2 class="showcase-title">996 startups are already seeking investment. Don't fall behind.</h2>
@@ -813,8 +922,7 @@
             <!-- Row 4: Groww -->
             <div class="company-row">
               <div class="company-logo-box">
-                <img src="https://cdn.brandfetch.io/groww.in?c=1idD5blp6f0v3UdGKX9" alt="Groww"
-                  class="company-logo">
+                <img src="https://cdn.brandfetch.io/groww.in?c=1idD5blp6f0v3UdGKX9" alt="Groww" class="company-logo">
               </div>
               <div class="company-content">
                 <div class="company-meta-top">
@@ -946,9 +1054,9 @@
 
         .products-tabbed-section-i4 .products-showcase-container {
           position: relative;
-          background-color: #d6eaff;
+          background-color: var(--primary-purple-light);
           border-radius: 20px;
-          border: 1px solid var(--slate-100);
+          border: 1px solid rgba(145, 49, 117, 0.14);
           overflow: hidden;
         }
 
@@ -968,6 +1076,7 @@
           right: 0;
           width: 62%;
           height: 100%;
+          background-color: var(--primary-purple-light);
           z-index: 1;
         }
 
@@ -978,16 +1087,28 @@
           object-position: center left;
         }
 
+        .products-tabbed-section-i4 .products-tab-panel .panel-image-wrapper:not(.slideshow) img,
+        .products-tabbed-section-i4 .products-tab-panel .panel-image-wrapper.slideshow .slide.active {
+          opacity: 1;
+        }
+
+        .products-tabbed-section-i4 .products-tab-panel .panel-image-wrapper.slideshow .slide:not(.active) {
+          opacity: 0;
+        }
+
         .products-tabbed-section-i4 .products-tab-panel .panel-gradient-overlay {
           position: absolute;
           top: 0;
-          left: 35%;
-          /* Start slightly left of the image wrapper to feather the edge completely */
-          width: 65%;
+          left: 38%;
+          width: 62%;
           height: 100%;
-          background: linear-gradient(90deg, #d6eaff 0%, rgba(214, 234, 255, 0.95) 8%, rgba(214, 234, 255, 0) 38%);
+          background-color: transparent;
           z-index: 2;
           pointer-events: none;
+        }
+
+        .products-tabbed-section-i4 .products-tab-panel .panel-gradient-overlay::before {
+          content: none;
         }
 
         .products-tabbed-section-i4 .products-detail-card {
@@ -1289,8 +1410,8 @@
     </section>
 
     <!-- Who It's For Section (Light Mode) -->
-    <section class="who-section who-section-i4">
-      <style>
+    <section class="who-section who-section-i4" hidden aria-hidden="true">
+      <style media="not all">
         .who-section-i4 {
           position: relative;
           background-color: #f1f5fa;
@@ -1742,6 +1863,620 @@
       </div>
     </section>
 
+    <!-- Who It's For Section (Immersive Hub) -->
+    <section class="who-section who-section-i4 who-hub-section-i4" id="who-seat-hub">
+      <style>
+        .who-section-i4.who-hub-section-i4 {
+          position: relative;
+          background-color: #fff5fc;
+          padding: 88px 24px;
+          overflow: hidden;
+          border-top: 1px solid rgba(145, 49, 117, 0.1);
+          border-bottom: 1px solid rgba(145, 49, 117, 0.1);
+        }
+
+        .who-section-i4.who-hub-section-i4::before {
+          content: none;
+        }
+
+        .who-hub-section-i4 .who-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          width: 100%;
+          position: relative;
+          z-index: 5;
+        }
+
+        .who-hub-section-i4 .who-header {
+          text-align: center;
+          max-width: 780px;
+          margin: 0 auto 52px;
+        }
+
+        .who-hub-section-i4 .who-eyebrow-i4 {
+          font-size: 13px;
+          font-weight: 800;
+          color: var(--primary-purple);
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          margin-bottom: 12px;
+          display: block;
+        }
+
+        .who-hub-section-i4 .who-title {
+          font-size: 40px;
+          font-weight: 800;
+          line-height: 1.18;
+          color: var(--slate-900);
+          margin: 0;
+        }
+
+        .who-hub-section-i4 .who-subtitle {
+          font-size: 16px;
+          line-height: 1.65;
+          color: var(--slate-600);
+          margin: 16px auto 0;
+        }
+
+        .who-hub-section-i4 .who-immersive-grid {
+          display: grid;
+          grid-template-columns: minmax(250px, 1fr) minmax(400px, 520px) minmax(250px, 1fr);
+          align-items: center;
+          gap: 28px;
+        }
+
+        .who-hub-section-i4 .who-side-column-i4 {
+          display: grid;
+          gap: 18px;
+        }
+
+        .who-hub-section-i4 .who-role-card-i4 {
+          position: relative;
+          min-height: 206px;
+          background: rgba(255, 255, 255, 0.94);
+          border: 1px solid rgba(145, 49, 117, 0.12);
+          border-radius: 8px;
+          padding: 22px;
+          display: flex;
+          flex-direction: column;
+          box-shadow: 0 14px 36px rgba(15, 23, 42, 0.045);
+          transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+          cursor: pointer;
+          overflow: hidden;
+        }
+
+        .who-hub-section-i4 .who-role-card-i4::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 18px;
+          bottom: 18px;
+          width: 3px;
+          border-radius: 999px;
+          background-color: var(--primary-purple);
+          transform: scaleY(0.2);
+          transform-origin: center;
+          opacity: 0.35;
+          transition: transform 0.35s ease, opacity 0.35s ease;
+        }
+
+        .who-hub-section-i4 .who-role-card-i4:hover,
+        .who-hub-section-i4 .who-role-card-i4.active {
+          transform: translateY(-5px);
+          border-color: rgba(145, 49, 117, 0.34);
+          box-shadow: 0 24px 46px rgba(145, 49, 117, 0.12);
+        }
+
+        .who-hub-section-i4 .who-role-card-i4.active::before,
+        .who-hub-section-i4 .who-role-card-i4:hover::before {
+          transform: scaleY(1);
+          opacity: 1;
+        }
+
+        .who-hub-section-i4 .who-card-top-i4 {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          margin-bottom: 16px;
+        }
+
+        .who-hub-section-i4 .who-avatar-frame-i4,
+        .who-hub-section-i4 .hub-node-avatar-i4 {
+          width: 52px;
+          height: 52px;
+          border-radius: 50%;
+          background-color: #ffffff;
+          border: 2px solid rgba(145, 49, 117, 0.13);
+          overflow: hidden;
+          flex-shrink: 0;
+        }
+
+        .who-hub-section-i4 .who-avatar-frame-i4 img,
+        .who-hub-section-i4 .hub-node-avatar-i4 img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+
+        .who-hub-section-i4 .card-icon-box-i4 {
+          width: 52px;
+          height: 52px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          background-color: rgba(145, 49, 117, 0.08);
+          color: var(--primary-purple);
+          border: 1px solid rgba(145, 49, 117, 0.14);
+        }
+
+        .who-hub-section-i4 .card-title-i4 {
+          font-size: 20px;
+          font-weight: 800;
+          color: var(--slate-900);
+          margin: 0 0 4px;
+        }
+
+        .who-hub-section-i4 .card-tag-i4 {
+          font-size: 11px;
+          font-weight: 800;
+          color: var(--primary-purple);
+          text-transform: uppercase;
+          letter-spacing: 0.06em;
+          display: block;
+          margin: 0;
+        }
+
+        .who-hub-section-i4 .card-desc-i4 {
+          font-size: 13.5px;
+          line-height: 1.62;
+          color: var(--slate-600);
+          margin: 0 0 20px;
+          flex: 1;
+        }
+
+        .who-hub-section-i4 .card-link-i4 {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          font-size: 14px;
+          font-weight: 800;
+          color: var(--primary-purple);
+          text-decoration: none;
+          width: fit-content;
+          transition: color 0.2s ease, transform 0.2s ease;
+          border-top: 0;
+          padding-top: 0;
+          margin-top: auto;
+        }
+
+        .who-hub-section-i4 .card-link-i4:hover {
+          color: var(--primary-purple-hover);
+          transform: translateX(2px);
+        }
+
+        .who-hub-section-i4 .who-network-stage-i4 {
+          position: relative;
+          min-height: 520px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          perspective: 1000px;
+        }
+
+        .who-hub-section-i4 .who-network-stage-i4::before,
+        .who-hub-section-i4 .who-network-stage-i4::after {
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          border-radius: 50%;
+          border: 1px solid rgba(145, 49, 117, 0.14);
+          pointer-events: none;
+        }
+
+        .who-hub-section-i4 .who-network-stage-i4::before {
+          width: 86%;
+          height: 86%;
+          transform: translate(-50%, -50%);
+          animation: who-ring-spin-i4 28s linear infinite;
+        }
+
+        .who-hub-section-i4 .who-network-stage-i4::after {
+          width: 54%;
+          height: 54%;
+          border-style: dashed;
+          transform: translate(-50%, -50%) rotate(12deg);
+          animation: who-ring-spin-i4 22s linear infinite reverse;
+        }
+
+        .who-hub-section-i4 .who-hub-svg-i4 {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          overflow: visible;
+        }
+
+        .who-hub-section-i4 .who-flow-path-i4 {
+          stroke: rgba(145, 49, 117, 0.18);
+          stroke-width: 2;
+          stroke-dasharray: 7 9;
+          fill: none;
+          transition: stroke 0.28s ease, stroke-width 0.28s ease, opacity 0.28s ease;
+          opacity: 0.64;
+        }
+
+        .who-hub-section-i4 .who-flow-path-i4.active {
+          stroke: var(--primary-purple);
+          stroke-width: 3;
+          opacity: 1;
+          animation: who-flow-line-i4 1.1s linear infinite;
+        }
+
+        .who-hub-section-i4 .hub-center-node-i4 {
+          position: relative;
+          z-index: 8;
+          width: 132px;
+          height: 132px;
+          border-radius: 50%;
+          background-color: #ffffff;
+          border: 1px solid rgba(145, 49, 117, 0.22);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 22px 60px rgba(145, 49, 117, 0.14), inset 0 0 0 8px rgba(145, 49, 117, 0.045);
+        }
+
+        .who-hub-section-i4 .hub-center-node-i4::before,
+        .who-hub-section-i4 .hub-center-node-i4::after {
+          content: '';
+          position: absolute;
+          inset: -16px;
+          border-radius: 50%;
+          border: 1px solid rgba(145, 49, 117, 0.22);
+          animation: who-pulse-ring-i4 2.7s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+          pointer-events: none;
+        }
+
+        .who-hub-section-i4 .hub-center-node-i4::after {
+          inset: -30px;
+          opacity: 0.7;
+          animation-delay: 0.65s;
+        }
+
+        .who-hub-section-i4 .hub-center-logo-i4 {
+          width: 92px;
+          max-height: 54px;
+          object-fit: contain;
+          display: block;
+        }
+
+        .who-hub-section-i4 .hub-node-i4 {
+          --node-scale: 1;
+          position: absolute;
+          left: var(--x);
+          top: var(--y);
+          z-index: 9;
+          width: 64px;
+          height: 64px;
+          border-radius: 50%;
+          border: 2px solid rgba(145, 49, 117, 0.14);
+          background-color: #ffffff;
+          box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0;
+          font: inherit;
+          cursor: pointer;
+          transform: translate(-50%, -50%) scale(var(--node-scale));
+          transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease, box-shadow 0.28s ease;
+        }
+
+        .who-hub-section-i4 .hub-node-i4::after {
+          content: attr(data-label);
+          position: absolute;
+          top: calc(100% + 8px);
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: 10.5px;
+          font-weight: 800;
+          letter-spacing: 0.04em;
+          color: var(--slate-500);
+          white-space: nowrap;
+          text-transform: uppercase;
+        }
+
+        .who-hub-section-i4 .hub-node-i4:hover,
+        .who-hub-section-i4 .hub-node-i4.active {
+          --node-scale: 1.12;
+          border-color: var(--primary-purple);
+          box-shadow: 0 18px 34px rgba(145, 49, 117, 0.2);
+        }
+
+        .who-hub-section-i4 .hub-node-i4.active::after {
+          color: var(--primary-purple);
+        }
+
+        .who-hub-section-i4 .hub-node-avatar-i4 {
+          width: 54px;
+          height: 54px;
+        }
+
+        .who-hub-section-i4 .hub-node-icon-i4 {
+          width: 54px;
+          height: 54px;
+          border-radius: 50%;
+          background-color: rgba(145, 49, 117, 0.08);
+          color: var(--primary-purple);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        @keyframes who-ring-spin-i4 {
+          to {
+            transform: translate(-50%, -50%) rotate(360deg);
+          }
+        }
+
+        @keyframes who-flow-line-i4 {
+          to {
+            stroke-dashoffset: -32;
+          }
+        }
+
+        @keyframes who-pulse-ring-i4 {
+          0% {
+            transform: scale(0.92);
+            opacity: 0.9;
+          }
+
+          100% {
+            transform: scale(1.35);
+            opacity: 0;
+          }
+        }
+
+        @media (max-width: 1100px) {
+          .who-hub-section-i4 .who-immersive-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .who-hub-section-i4 .who-side-column-i4 {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+
+          .who-hub-section-i4 .who-network-stage-i4 {
+            min-height: 480px;
+            order: -1;
+          }
+
+        }
+
+        @media (max-width: 680px) {
+          .who-section-i4.who-hub-section-i4 {
+            padding: 56px 16px;
+          }
+
+          .who-hub-section-i4 .who-header {
+            text-align: left;
+            margin-bottom: 36px;
+          }
+
+          .who-hub-section-i4 .who-title {
+            font-size: 30px;
+          }
+
+          .who-hub-section-i4 .who-side-column-i4 {
+            grid-template-columns: 1fr;
+          }
+
+          .who-hub-section-i4 .who-network-stage-i4 {
+            min-height: 360px;
+            margin: 8px 0;
+          }
+
+          .who-hub-section-i4 .hub-center-node-i4 {
+            width: 104px;
+            height: 104px;
+          }
+
+          .who-hub-section-i4 .hub-center-logo-i4 {
+            width: 74px;
+          }
+
+          .who-hub-section-i4 .hub-node-i4 {
+            width: 52px;
+            height: 52px;
+          }
+
+          .who-hub-section-i4 .hub-node-avatar-i4,
+          .who-hub-section-i4 .hub-node-icon-i4 {
+            width: 44px;
+            height: 44px;
+          }
+
+          .who-hub-section-i4 .hub-node-i4::after {
+            display: none;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+          .who-hub-section-i4 *,
+          .who-hub-section-i4 *::before,
+          .who-hub-section-i4 *::after {
+            animation: none !important;
+            transition-duration: 0.01ms !important;
+          }
+        }
+      </style>
+
+      <div class="who-container">
+        <div class="who-header">
+          <span class="who-eyebrow-i4">WHO IT'S FOR</span>
+          <h2 class="who-title">One platform. Every seat at the table.</h2>
+          <p class="who-subtitle">From the founder raising a first round to the team closing the deal &mdash; Seedicon
+            supports everyone who touches a startup's journey.</p>
+        </div>
+
+        <div class="who-immersive-grid">
+          <div class="who-side-column-i4">
+            <article class="who-role-card-i4 active" data-role="founder" tabindex="0">
+              <div class="who-card-top-i4">
+                <div class="who-avatar-frame-i4">
+                  <img src="Assets/avatar_founder.png" alt="Founders">
+                </div>
+                <div>
+                  <h3 class="card-title-i4">Founders</h3>
+                  <span class="card-tag-i4">RAISE &amp; BUILD</span>
+                </div>
+              </div>
+              <p class="card-desc-i4">Raise capital, build investor-ready pitch decks, explore grants, and share your
+                documents securely &mdash; everything a founder needs, in one place.</p>
+              <a href="#" class="card-link-i4">Start as a Founder &rarr;</a>
+            </article>
+
+            <article class="who-role-card-i4" data-role="partner" tabindex="0">
+              <div class="who-card-top-i4">
+                <div class="who-avatar-frame-i4">
+                  <img src="Assets/avatar_partner.png" alt="Partners">
+                </div>
+                <div>
+                  <h3 class="card-title-i4">Partners</h3>
+                  <span class="card-tag-i4">STRATEGIC ALLIANCE</span>
+                </div>
+              </div>
+              <p class="card-desc-i4">Collaborate with Seedicon across funding, investment advisory, events, and
+                business
+                growth.</p>
+              <a href="#" class="card-link-i4">Partner With Us &rarr;</a>
+            </article>
+          </div>
+
+          <div class="who-network-stage-i4" aria-label="Connected Seedicon audience hub">
+            <svg class="who-hub-svg-i4" viewBox="0 0 520 520" fill="none" aria-hidden="true">
+              <path class="who-flow-path-i4 active" data-role="founder" d="M260 260 C260 190 260 128 260 60"></path>
+              <path class="who-flow-path-i4" data-role="investor" d="M260 260 C318 215 374 170 438 96"></path>
+              <path class="who-flow-path-i4" data-role="partner" d="M260 260 C318 306 374 350 438 424"></path>
+              <path class="who-flow-path-i4" data-role="ma" d="M260 260 C260 330 260 392 260 460"></path>
+              <path class="who-flow-path-i4" data-role="ca" d="M260 260 C202 306 146 350 82 424"></path>
+              <path class="who-flow-path-i4" data-role="family" d="M260 260 C202 215 146 170 82 96"></path>
+              <path class="who-flow-path-i4" data-role="event" d="M260 260 C198 260 140 260 56 260"></path>
+              <path class="who-flow-path-i4" data-role="network" d="M260 260 C322 260 380 260 464 260"></path>
+            </svg>
+
+            <div class="hub-center-node-i4">
+              <img src="Assets/wordmark.webp" alt="Seedicon" class="hub-center-logo-i4">
+            </div>
+
+            <button class="hub-node-i4 active" data-role="founder" data-label="Founders" style="--x: 50%; --y: 8%;"
+              aria-label="Founders">
+              <span class="hub-node-avatar-i4"><img src="Assets/avatar_founder.png" alt=""></span>
+            </button>
+            <button class="hub-node-i4" data-role="investor" data-label="Investors" style="--x: 84%; --y: 19%;"
+              aria-label="Investors">
+              <span class="hub-node-avatar-i4"><img src="Assets/avatar_investor.png" alt=""></span>
+            </button>
+            <button class="hub-node-i4" data-role="partner" data-label="Partners" style="--x: 84%; --y: 81%;"
+              aria-label="Partners">
+              <span class="hub-node-avatar-i4"><img src="Assets/avatar_partner.png" alt=""></span>
+            </button>
+            <button class="hub-node-i4" data-role="ma" data-label="M&amp;A" style="--x: 50%; --y: 92%;"
+              aria-label="M and A Teams">
+              <span class="hub-node-avatar-i4"><img src="Assets/avatar_ma.png" alt=""></span>
+            </button>
+            <button class="hub-node-i4" data-role="ca" data-label="CA Firms" style="--x: 16%; --y: 81%;"
+              aria-label="CA Firms and DD Auditors">
+              <span class="hub-node-icon-i4">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                </svg>
+              </span>
+            </button>
+            <button class="hub-node-i4" data-role="family" data-label="Offices" style="--x: 16%; --y: 19%;"
+              aria-label="Family Offices and Angel Networks">
+              <span class="hub-node-icon-i4">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+              </span>
+            </button>
+            <button class="hub-node-i4" data-role="event" data-label="Events" style="--x: 7%; --y: 50%;"
+              aria-label="Event Organizers">
+              <span class="hub-node-icon-i4">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </span>
+            </button>
+            <button class="hub-node-i4" data-role="network" data-label="Network" style="--x: 93%; --y: 50%;"
+              aria-label="Business Network">
+              <span class="hub-node-icon-i4">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="8" cy="7" r="4"></circle>
+                  <line x1="23" y1="11" x2="17" y2="11"></line>
+                  <line x1="23" y1="15" x2="17" y2="15"></line>
+                  <line x1="23" y1="19" x2="17" y2="19"></line>
+                </svg>
+              </span>
+            </button>
+          </div>
+
+          <div class="who-side-column-i4">
+            <article class="who-role-card-i4" data-role="investor" tabindex="0">
+              <div class="who-card-top-i4">
+                <div class="who-avatar-frame-i4">
+                  <img src="Assets/avatar_investor.png" alt="Investors">
+                </div>
+                <div>
+                  <h3 class="card-title-i4">Investors</h3>
+                  <span class="card-tag-i4">DEAL FLOW</span>
+                </div>
+              </div>
+              <p class="card-desc-i4">Discover vetted startups, review investment opportunities, and access due
+                diligence
+                documents before anyone else does.</p>
+              <a href="#" class="card-link-i4">Start as an Investor &rarr;</a>
+            </article>
+
+            <article class="who-role-card-i4" data-role="ma" tabindex="0">
+              <div class="who-card-top-i4">
+                <div class="who-avatar-frame-i4">
+                  <img src="Assets/avatar_ma.png" alt="M&amp;A Teams">
+                </div>
+                <div>
+                  <h3 class="card-title-i4">M&amp;A Teams</h3>
+                  <span class="card-tag-i4">DEAL MANAGEMENT</span>
+                </div>
+              </div>
+              <p class="card-desc-i4">Manage confidential deal documents, due diligence files, and secure data room
+                sharing for every transaction.</p>
+              <a href="#" class="card-link-i4">Talk to Us &rarr;</a>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <!-- What You Can Do Section (Light Mode Scroll Track) -->
     <section class="do-section do-section-i4">
       <style>
@@ -1754,17 +2489,8 @@
           border-bottom: 1px solid var(--slate-100);
         }
 
-        /* Decorative top-center radial gradient matching the Ecosystem section */
         .do-section-i4::before {
-          content: '';
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          left: 0;
-          top: 0;
-          background: radial-gradient(ellipse 85% 55% at 50% 0%, rgba(145, 49, 117, 0.06) 0%, transparent 60%);
-          z-index: 1;
-          pointer-events: none;
+          content: none;
         }
 
         .do-section-i4 .do-container {
@@ -1836,7 +2562,7 @@
           justify-content: center;
           cursor: pointer;
           transition: all 0.2s ease;
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+          box-shadow: none;
         }
 
         .do-section-i4 .carousel-btn-i4:hover {
@@ -1868,7 +2594,7 @@
           border: 1px solid var(--slate-150);
           display: flex;
           flex-direction: column;
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+          box-shadow: none;
           transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
           min-width: 310px;
           width: 310px;
@@ -1878,7 +2604,7 @@
 
         .do-section-i4 .do-card-i4:hover {
           border-color: var(--primary-purple);
-          box-shadow: 0 12px 30px rgba(145, 49, 117, 0.08);
+          box-shadow: none;
           transform: translateY(-6px);
         }
 
@@ -1889,35 +2615,35 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          background-color: #ffffff;
         }
 
-        /* Mockup BG colors */
         .do-section-i4 .bg-startup {
-          background-color: #fdf4ff;
+          background-color: #ffffff;
         }
 
         .do-section-i4 .bg-investments {
-          background-color: #ecfdf5;
+          background-color: #ffffff;
         }
 
         .do-section-i4 .bg-deck {
-          background-color: #fff7ed;
+          background-color: #ffffff;
         }
 
         .do-section-i4 .bg-room {
-          background-color: #f5f3ff;
+          background-color: #ffffff;
         }
 
         .do-section-i4 .bg-grants {
-          background-color: #f0fdfa;
+          background-color: #ffffff;
         }
 
         .do-section-i4 .bg-events {
-          background-color: #fff1f2;
+          background-color: #ffffff;
         }
 
         .do-section-i4 .bg-network {
-          background-color: #f8fafc;
+          background-color: #ffffff;
         }
 
         .do-section-i4 .do-card-body-i4 {
@@ -1956,7 +2682,7 @@
           background: #ffffff;
           border-radius: 8px;
           padding: 6px 12px;
-          box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+          box-shadow: none;
           border: 1px solid #f1f5f9;
           display: flex;
           align-items: center;
@@ -1972,7 +2698,7 @@
 
         .do-section-i4 .do-card-i4:hover .floating-badge-i4 {
           transform: translateY(-2px);
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.09);
+          box-shadow: none;
         }
 
         /* HTML mini forms/screens */
@@ -1981,7 +2707,7 @@
           height: 100px;
           background: #ffffff;
           border-radius: 6px;
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+          box-shadow: none;
           border: 1px solid #e2e8f0;
           padding: 10px;
           display: flex;
@@ -1994,7 +2720,7 @@
           height: 100px;
           background: #ffffff;
           border-radius: 6px;
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+          box-shadow: none;
           border: 3px solid #1e293b;
           padding: 8px;
           display: flex;
@@ -2007,7 +2733,7 @@
           height: 120px;
           background: #ffffff;
           border-radius: 8px;
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+          box-shadow: none;
           border: 3px solid #1e293b;
           padding: 8px;
           display: flex;
@@ -2045,35 +2771,19 @@
           background: #f8fafc;
           border: 1px solid var(--slate-200);
           color: var(--slate-700);
-          transition: all 0.25s ease;
-          overflow: hidden;
+          transition: all 0.22s ease;
           cursor: pointer;
         }
 
-        .do-section-i4 .do-card-cta-i4::after {
-          content: attr(data-hover-text);
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          background: var(--primary-purple);
-          color: #ffffff;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          top: 100%;
-          /* Hidden below */
-          left: 0;
-          transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
         .do-section-i4 .do-card-i4:hover .do-card-cta-i4 {
-          border-color: var(--primary-purple);
-          color: transparent;
+          background: var(--primary-purple) !important;
+          border-color: var(--primary-purple) !important;
+          color: #ffffff !important;
+          box-shadow: 0 4px 12px rgba(145, 49, 117, 0.2);
         }
 
-        .do-section-i4 .do-card-i4:hover .do-card-cta-i4::after {
-          top: 0;
-          /* Slide up! */
+        .do-section-i4 .do-card-i4:hover .do-card-cta-i4 .cta-normal-text-i4 {
+          color: #ffffff !important;
         }
 
         @media (max-width: 960px) {
@@ -2155,8 +2865,8 @@
               <h3 class="do-card-title-i4">List Your Startup</h3>
               <p class="do-card-desc-i4">Create your startup profile, share your traction and funding needs, and get
                 discovered by the right investors.</p>
-              <div class="do-card-cta-i4" data-hover-text="List Now">
-                <span class="cta-normal-text-i4">Learn More</span>
+              <div class="do-card-cta-i4">
+                <span class="cta-normal-text-i4">List Now</span>
               </div>
             </div>
           </div>
@@ -2168,29 +2878,24 @@
                 <div
                   style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f1f5f9; padding-bottom: 4px;">
                   <span style="font-size: 8px; font-weight: 800; color: #64748b;">Investments</span>
-                  <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="3">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                  </svg>
+                  <span style="font-size: 6px; color: #94a3b8;">Filter Applied</span>
                 </div>
-                <div style="display: flex; gap: 4px; margin-top: 4px;">
-                  <div
-                    style="width: 50%; height: 50px; background: #ecfdf5; border-radius: 4px; border: 1px solid #a7f3d0; padding: 4px; display: flex; flex-direction: column; gap: 4px;">
-                    <div class="line-bar-i4" style="height: 4px; background: #34d399;"></div>
-                    <div class="line-bar-i4" style="height: 4px; background: #e2e8f0; width: 70%;"></div>
+                <div style="display: flex; flex-direction: column; gap: 4px; margin-top: 6px;">
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div class="line-bar-i4" style="height: 4px; width: 50%;"></div>
+                    <div style="width: 12px; height: 4px; background: #34d399; border-radius: 2px;"></div>
                   </div>
-                  <div
-                    style="width: 50%; height: 50px; background: #fdf4ff; border-radius: 4px; border: 1px solid #f5d0fe; padding: 4px; display: flex; flex-direction: column; gap: 4px;">
-                    <div class="line-bar-i4" style="height: 4px; background: #d946ef;"></div>
-                    <div class="line-bar-i4" style="height: 4px; background: #e2e8f0; width: 60%;"></div>
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div class="line-bar-i4" style="height: 4px; width: 35%;"></div>
+                    <div style="width: 12px; height: 4px; background: #34d399; border-radius: 2px;"></div>
                   </div>
                 </div>
               </div>
               <div class="floating-badge-i4">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#913175" stroke-width="3"
-                  stroke-linecap="round">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
                 </svg>
                 <span>42 Matches</span>
               </div>
@@ -2199,8 +2904,8 @@
               <h3 class="do-card-title-i4">Explore Startup Investments</h3>
               <p class="do-card-desc-i4">Browse vetted startups by sector and stage, and evaluate real opportunities
                 before anyone else does.</p>
-              <div class="do-card-cta-i4" data-hover-text="Start Investing">
-                <span class="cta-normal-text-i4">Learn More</span>
+              <div class="do-card-cta-i4">
+                <span class="cta-normal-text-i4">Start Investing</span>
               </div>
             </div>
           </div>
@@ -2208,28 +2913,23 @@
           <!-- Card 3: Build Your Pitch Deck -->
           <div class="do-card-i4">
             <div class="do-card-media-i4 bg-deck">
-              <div style="display: flex; gap: 10px; align-items: center; justify-content: center;"
-                class="mockup-element-i4">
-                <!-- Slide 1 -->
-                <div
-                  style="width: 90px; height: 70px; background: #ffffff; border-radius: 4px; border: 1px solid #e2e8f0; padding: 6px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); display: flex; flex-direction: column; gap: 4px;">
-                  <div class="line-bar-i4" style="height: 4px; width: 60%; background: #cbd5e1;"></div>
-                  <div style="display: flex; gap: 3px; align-items: flex-end; height: 35px; margin-top: 4px;">
-                    <div style="height: 40%; width: 5px; background: #94a3b8; border-radius: 1px;"></div>
-                    <div style="height: 70%; width: 5px; background: #94a3b8; border-radius: 1px;"></div>
-                    <div style="height: 90%; width: 5px; background: #913175; border-radius: 1px;"></div>
+              <div class="mini-card-i4 mockup-element-i4">
+                <div style="display: flex; align-items: center; gap: 6px;">
+                  <div
+                    style="width: 14px; height: 14px; border-radius: 3px; background: #fae8ff; display: flex; align-items: center; justify-content: center;">
+                    <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="3">
+                      <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                      <polyline points="2 17 12 22 22 17"></polyline>
+                      <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
                   </div>
+                  <div class="line-bar-i4 purple-i4" style="height: 5px; width: 60px;"></div>
                 </div>
-                <!-- Slide 2 -->
-                <div
-                  style="width: 90px; height: 70px; background: #913175; border-radius: 4px; padding: 6px; box-shadow: 0 4px 12px rgba(145, 49, 117,0.15); display: flex; flex-direction: column; gap: 4px;">
-                  <div class="line-bar-i4" style="height: 4px; width: 45%; background: #ffffff;"></div>
-                  <div class="line-bar-i4" style="height: 4px; width: 80%; background: rgba(255,255,255,0.4);"></div>
-                  <div class="line-bar-i4" style="height: 4px; width: 70%; background: rgba(255,255,255,0.4);"></div>
-                </div>
+                <div class="line-bar-i4" style="margin-top: 8px;"></div>
+                <div class="line-bar-i4 short-i4"></div>
               </div>
               <div class="floating-badge-i4">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2.5"
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#d946ef" stroke-width="2.5"
                   stroke-linecap="round" stroke-linejoin="round">
                   <polygon
                     points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
@@ -2242,8 +2942,8 @@
               <h3 class="do-card-title-i4">Build Your Pitch Deck</h3>
               <p class="do-card-desc-i4">Turn your idea into an investor ready pitch deck and business documents using
                 Deckwale AI.</p>
-              <div class="do-card-cta-i4" data-hover-text="Generate Deck">
-                <span class="cta-normal-text-i4">Learn More</span>
+              <div class="do-card-cta-i4">
+                <span class="cta-normal-text-i4">Generate Deck</span>
               </div>
             </div>
           </div>
@@ -2281,8 +2981,8 @@
               <h3 class="do-card-title-i4">Create a Secure Data Room</h3>
               <p class="do-card-desc-i4">Set up an encrypted virtual data room and share due diligence documents with
                 full access control.</p>
-              <div class="do-card-cta-i4" data-hover-text="Open Data Room">
-                <span class="cta-normal-text-i4">Learn More</span>
+              <div class="do-card-cta-i4">
+                <span class="cta-normal-text-i4">Open Data Room</span>
               </div>
             </div>
           </div>
@@ -2323,8 +3023,8 @@
               <h3 class="do-card-title-i4">Explore Government Grants</h3>
               <p class="do-card-desc-i4">Discover startup grants and schemes you may be eligible for, matched to your
                 sector and stage.</p>
-              <div class="do-card-cta-i4" data-hover-text="Find Grants">
-                <span class="cta-normal-text-i4">Learn More</span>
+              <div class="do-card-cta-i4">
+                <span class="cta-normal-text-i4">Find Grants</span>
               </div>
             </div>
           </div>
@@ -2364,8 +3064,8 @@
               <h3 class="do-card-title-i4">Host and Discover Events</h3>
               <p class="do-card-desc-i4">Create your own startup event or find one to attend, and build investor
                 connections that matter.</p>
-              <div class="do-card-cta-i4" data-hover-text="Browse Events">
-                <span class="cta-normal-text-i4">Learn More</span>
+              <div class="do-card-cta-i4">
+                <span class="cta-normal-text-i4">Browse Events</span>
               </div>
             </div>
           </div>
@@ -2398,8 +3098,8 @@
               <h3 class="do-card-title-i4">Manage Your Network</h3>
               <p class="do-card-desc-i4">Scan business cards, save contacts, and follow up on time so a good connection
                 is never lost.</p>
-              <div class="do-card-cta-i4" data-hover-text="Manage Contacts">
-                <span class="cta-normal-text-i4">Learn More</span>
+              <div class="do-card-cta-i4">
+                <span class="cta-normal-text-i4">Manage Contacts</span>
               </div>
             </div>
           </div>
@@ -2412,24 +3112,15 @@
       <style>
         .how-section-i4 {
           position: relative;
-          background-color: #f1f5fa;
-          /* Subtle blue canvas matching Who It's For */
+          background-color: #fff5fc;
           padding: 90px 24px;
           overflow: hidden;
-          border-top: 1px solid var(--slate-150);
-          border-bottom: 1px solid var(--slate-150);
+          border-top: 1px solid rgba(145, 49, 117, 0.1);
+          border-bottom: 1px solid rgba(145, 49, 117, 0.1);
         }
 
         .how-section-i4::before {
-          content: '';
-          position: absolute;
-          width: 450px;
-          height: 450px;
-          background: radial-gradient(circle, rgba(145, 49, 117, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
-          top: -120px;
-          left: -120px;
-          z-index: 1;
-          pointer-events: none;
+          content: none;
         }
 
         .how-section-i4 .how-container {
@@ -2478,10 +3169,26 @@
           top: 28px;
           left: 30px;
           right: 30px;
-          height: 2px;
-          background-color: var(--primary-purple);
+          height: 4px;
+          background-color: rgba(145, 49, 117, 0.16);
+          border-radius: 999px;
           z-index: 1;
-          opacity: 0.8;
+          overflow: hidden;
+        }
+
+        .how-section-i4 .timeline-line-i4::after {
+          content: '';
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          background-color: var(--primary-purple);
+          border-radius: inherit;
+          transform: scaleX(0);
+          transform-origin: left center;
+        }
+
+        .how-section-i4.timeline-animate .timeline-line-i4::after {
+          animation: how-line-fill-i4 5.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
         }
 
         .how-section-i4 .timeline-step-i4 {
@@ -2508,16 +3215,70 @@
           justify-content: center;
           box-shadow: 0 4px 10px rgba(145, 49, 117, 0.06);
           margin-bottom: 20px;
-          transition: all 0.3s ease;
+          transition: transform 0.3s ease;
           position: relative;
           z-index: 5;
+          overflow: hidden;
+          isolation: isolate;
+        }
+
+        .how-section-i4 .step-badge-i4::before {
+          content: '';
+          position: absolute;
+          inset: -2px;
+          background-color: var(--primary-purple);
+          border-radius: inherit;
+          transform: scale(0);
+          transform-origin: center;
+          z-index: 0;
+        }
+
+        .how-section-i4 .step-badge-i4 span {
+          position: relative;
+          z-index: 1;
+        }
+
+        .how-section-i4.timeline-animate .step-badge-i4 {
+          animation: how-badge-text-i4 5.8s linear forwards;
+        }
+
+        .how-section-i4.timeline-animate .step-badge-i4::before {
+          animation: how-badge-fill-i4 5.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+        }
+
+        .how-section-i4 .timeline-step-i4:nth-of-type(3) .step-badge-i4,
+        .how-section-i4 .timeline-step-i4:nth-of-type(3) .step-badge-i4::before {
+          animation-delay: 0.9s;
+        }
+
+        .how-section-i4 .timeline-step-i4:nth-of-type(4) .step-badge-i4,
+        .how-section-i4 .timeline-step-i4:nth-of-type(4) .step-badge-i4::before {
+          animation-delay: 1.8s;
+        }
+
+        .how-section-i4 .timeline-step-i4:nth-of-type(5) .step-badge-i4,
+        .how-section-i4 .timeline-step-i4:nth-of-type(5) .step-badge-i4::before {
+          animation-delay: 2.7s;
+        }
+
+        .how-section-i4 .timeline-step-i4:nth-of-type(6) .step-badge-i4,
+        .how-section-i4 .timeline-step-i4:nth-of-type(6) .step-badge-i4::before {
+          animation-delay: 3.6s;
+        }
+
+        .how-section-i4 .timeline-step-i4:nth-of-type(7) .step-badge-i4,
+        .how-section-i4 .timeline-step-i4:nth-of-type(7) .step-badge-i4::before {
+          animation-delay: 4.5s;
         }
 
         .how-section-i4 .timeline-step-i4:hover .step-badge-i4 {
-          background-color: var(--primary-purple);
           color: #ffffff;
           transform: scale(1.08);
           box-shadow: 0 6px 15px rgba(145, 49, 117, 0.18);
+        }
+
+        .how-section-i4 .timeline-step-i4:hover .step-badge-i4::before {
+          transform: scale(1);
         }
 
         .how-section-i4 .step-title-i4 {
@@ -2612,6 +3373,43 @@
           color: var(--primary-purple);
         }
 
+        @keyframes how-line-fill-i4 {
+          0% {
+            transform: scaleX(0);
+          }
+
+          82%,
+          100% {
+            transform: scaleX(1);
+          }
+        }
+
+        @keyframes how-badge-fill-i4 {
+
+          0%,
+          8% {
+            transform: scale(0);
+          }
+
+          18%,
+          100% {
+            transform: scale(1);
+          }
+        }
+
+        @keyframes how-badge-text-i4 {
+
+          0%,
+          10% {
+            color: var(--primary-purple);
+          }
+
+          20%,
+          100% {
+            color: #ffffff;
+          }
+        }
+
         @media (max-width: 900px) {
           .how-section-i4 .how-timeline-i4 {
             flex-direction: column;
@@ -2619,7 +3417,24 @@
           }
 
           .how-section-i4 .timeline-line-i4 {
-            display: none;
+            display: block;
+            top: 28px;
+            bottom: 28px;
+            left: 28px;
+            right: auto;
+            width: 4px;
+            height: auto;
+          }
+
+          .how-section-i4 .timeline-line-i4::after {
+            width: 100%;
+            height: 100%;
+            transform: scaleY(0);
+            transform-origin: top center;
+          }
+
+          .how-section-i4.timeline-animate .timeline-line-i4::after {
+            animation-name: how-line-fill-vertical-i4;
           }
 
           .how-section-i4 .timeline-step-i4 {
@@ -2639,6 +3454,35 @@
             gap: 24px;
           }
         }
+
+        @keyframes how-line-fill-vertical-i4 {
+          0% {
+            transform: scaleY(0);
+          }
+
+          82%,
+          100% {
+            transform: scaleY(1);
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+          .how-section-i4 .timeline-line-i4::after,
+          .how-section-i4 .step-badge-i4,
+          .how-section-i4 .step-badge-i4::before {
+            animation: none !important;
+          }
+
+          .how-section-i4 .timeline-line-i4::after,
+          .how-section-i4 .step-badge-i4::before {
+            transform: scale(1);
+          }
+
+          .how-section-i4 .step-badge-i4 {
+            color: #ffffff;
+          }
+        }
       </style>
 
       <div class="how-container">
@@ -2653,7 +3497,7 @@
 
           <!-- Step 1 -->
           <div class="timeline-step-i4">
-            <div class="step-badge-i4">01</div>
+            <div class="step-badge-i4"><span>01</span></div>
             <h3 class="step-title-i4">List Your Startup</h3>
             <p class="step-desc-i4">Add your startup profile, traction, funding needs, and business details on Seedicon
               Capital.</p>
@@ -2662,7 +3506,7 @@
 
           <!-- Step 2 -->
           <div class="timeline-step-i4">
-            <div class="step-badge-i4">02</div>
+            <div class="step-badge-i4"><span>02</span></div>
             <h3 class="step-title-i4">Startup Evaluation</h3>
             <p class="step-desc-i4">Get your business model, market opportunity, and fundraising readiness reviewed by
               our team.</p>
@@ -2671,7 +3515,7 @@
 
           <!-- Step 3 -->
           <div class="timeline-step-i4">
-            <div class="step-badge-i4">03</div>
+            <div class="step-badge-i4"><span>03</span></div>
             <h3 class="step-title-i4">Pitch Preparation</h3>
             <p class="step-desc-i4">Build investor ready pitch decks and business documents using Deckwale AI.</p>
             <a href="#" class="step-link-i4"><span>Build Your Deck</span> &rarr;</a>
@@ -2679,7 +3523,7 @@
 
           <!-- Step 4 -->
           <div class="timeline-step-i4">
-            <div class="step-badge-i4">04</div>
+            <div class="step-badge-i4"><span>04</span></div>
             <h3 class="step-title-i4">Investor Shortlisting</h3>
             <p class="step-desc-i4">Connect with relevant investors matched to your sector, stage, and funding needs.
             </p>
@@ -2688,7 +3532,7 @@
 
           <!-- Step 5 -->
           <div class="timeline-step-i4">
-            <div class="step-badge-i4">05</div>
+            <div class="step-badge-i4"><span>05</span></div>
             <h3 class="step-title-i4">Due Diligence Sharing</h3>
             <p class="step-desc-i4">Share confidential documents securely through the Seedicon Watch virtual data room.
             </p>
@@ -2697,20 +3541,10 @@
 
           <!-- Step 6 -->
           <div class="timeline-step-i4">
-            <div class="step-badge-i4">06</div>
+            <div class="step-badge-i4"><span>06</span></div>
             <h3 class="step-title-i4">Term Sheet Support</h3>
             <p class="step-desc-i4">Move forward with investment discussion and get support through your term sheet.</p>
             <a href="#" class="step-link-i4"><span>Get Term Sheet Support</span> &rarr;</a>
-          </div>
-        </div>
-
-        <!-- Footer Action Banner -->
-        <div class="how-footer-banner-i4">
-          <p class="how-footer-text-i4">Ready to move from idea to term sheet? List your startup and let the journey
-            start today.</p>
-          <div class="how-footer-actions-i4">
-            <a href="#" class="btn-banner-primary-i4">Start Your Funding Journey &rarr;</a>
-            <a href="#" class="banner-link-secondary-i4">Talk to an advisor</a>
           </div>
         </div>
       </div>
@@ -2723,7 +3557,7 @@
           position: relative;
           background-color: #ffffff;
           /* Subtle blue background matching Who It's For & How We Work */
-          padding: 100px 24px;
+          padding: 60px 24px;
           overflow: hidden;
           border-top: 1px solid var(--slate-150);
           border-bottom: 1px solid var(--slate-150);
@@ -2732,15 +3566,7 @@
         }
 
         .resources-section-i4::before {
-          content: '';
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          left: 0;
-          top: 0;
-          background: radial-gradient(ellipse 85% 55% at 50% 0%, rgba(145, 49, 117, 0.05) 0%, transparent 60%);
-          z-index: 1;
-          pointer-events: none;
+          content: none;
         }
 
         .resources-section-i4 .resources-container {
@@ -2753,7 +3579,7 @@
 
         .resources-section-i4 .resources-header {
           text-align: left;
-          margin-bottom: 56px;
+          margin-bottom: 16px;
         }
 
         .resources-section-i4 .resources-title {
@@ -2777,23 +3603,69 @@
           margin: 0;
         }
 
+        .resources-section-i4 .resources-grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 24px;
+          align-items: stretch;
+        }
+
+        .resources-section-i4 .resource-featured-card {
+          grid-column: span 1;
+        }
+
+        .resources-section-i4 .resource-list-side {
+          display: contents;
+        }
+
         .resources-section-i4 .resource-featured-card {
           background: #ffffff;
-          /* White background in light mode */
           border: 1px solid var(--slate-150);
-          border-radius: 20px;
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+          border-radius: 12px;
+          box-shadow: none;
           transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          display: flex;
+          flex-direction: column;
+          gap: 0;
+          padding: 0;
+          min-width: 0;
+          overflow: hidden;
         }
 
         .resources-section-i4 .resource-featured-card:hover {
           transform: translateY(-5px);
           border-color: var(--primary-purple);
-          box-shadow: 0 12px 30px rgba(145, 49, 117, 0.08);
+          box-shadow: none;
         }
 
         .resources-section-i4 .featured-image-box {
-          background-color: #f1f5fa;
+          width: 100%;
+          aspect-ratio: 16 / 9;
+          height: auto;
+          background-color: var(--slate-50);
+          overflow: hidden;
+        }
+
+        .resources-section-i4 .featured-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+
+        .resources-section-i4 .featured-content-box,
+        .resources-section-i4 .mini-content-box {
+          padding: 24px 0px;
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+        }
+
+        .resources-section-i4 .resource-meta-row {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          margin-bottom: 14px;
         }
 
         .resources-section-i4 .meta-separator {
@@ -2809,16 +3681,12 @@
           font-weight: 800;
           line-height: 1.35;
           margin: 0 0 12px 0;
-        }
-
-        .resources-section-i4 .featured-excerpt {
-          color: var(--slate-600);
-          line-height: 1.6;
-          margin: 0 0 24px 0;
+          font-size: 21px;
         }
 
         .resources-section-i4 .resource-link-btn {
           color: var(--primary-purple);
+          margin-top: auto;
         }
 
         .resources-section-i4 .resource-link-btn:hover {
@@ -2827,22 +3695,40 @@
 
         .resources-section-i4 .resource-mini-card {
           background: #ffffff;
-          /* White background in light mode */
           border: 1px solid var(--slate-150);
-          border-radius: 16px;
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+          border-radius: 12px;
+          box-shadow: none;
           transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0;
+          padding: 0;
+          min-width: 0;
+          overflow: hidden;
         }
 
         .resources-section-i4 .resource-mini-card:hover {
           transform: translateY(-3px);
           border-color: var(--primary-purple);
-          box-shadow: 0 10px 25px rgba(145, 49, 117, 0.06);
+          box-shadow: none;
         }
 
         .resources-section-i4 .mini-img-box {
-          background-color: #f1f5fa;
-          border: 1px solid var(--slate-100);
+          width: 100%;
+          aspect-ratio: 16 / 9;
+          height: auto;
+          background-color: var(--slate-50);
+          border: 0;
+          overflow: hidden;
+          flex-shrink: 0;
+        }
+
+        .resources-section-i4 .mini-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
 
         .resources-section-i4 .mini-title {
@@ -2850,6 +3736,80 @@
           font-weight: 800;
           line-height: 1.45;
           margin: 0 0 10px 0;
+          font-size: 18px;
+        }
+
+        @media (max-width: 1100px) {
+          .resources-section-i4 .resources-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+        }
+
+        @media (max-width: 760px) {
+          .resources-section-i4 {
+            padding: 64px 16px;
+          }
+
+          .resources-section-i4 .resources-header {
+            margin-bottom: 32px;
+          }
+
+          .resources-section-i4 .resources-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        /* Premium Tabbed Resource UI Styles */
+        .resources-tabs-i4 {
+          display: flex;
+          gap: 12px;
+          margin-bottom: 20px;
+          border-bottom: 1px solid var(--slate-150);
+          padding-bottom: 1px;
+          flex-wrap: wrap;
+        }
+
+        .resources-tab-btn-i4 {
+          background: transparent;
+          border: none;
+          color: var(--slate-500);
+          font-size: 16px;
+          font-weight: 700;
+          padding: 12px 20px;
+          cursor: pointer;
+          position: relative;
+          transition: all 0.25s ease;
+          border-bottom: 3px solid transparent;
+          margin-bottom: -2px;
+        }
+
+        .resources-tab-btn-i4:hover {
+          color: var(--primary-purple);
+        }
+
+        .resources-tab-btn-i4.active {
+          color: var(--primary-purple);
+          border-bottom-color: var(--primary-purple);
+        }
+
+        .resources-tab-pane-i4 {
+          display: none;
+        }
+
+        .resources-tab-pane-i4.active {
+          display: block;
+          animation: fadeSlideInResource 0.4s ease-out;
+        }
+
+        @keyframes fadeSlideInResource {
+          from {
+            opacity: 0;
+            transform: translateY(12px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
       </style>
 
@@ -2859,104 +3819,462 @@
           <p class="resources-subtitle">Guides, templates, and tools to help founders raise smarter and faster.</p>
         </div>
 
-        <div class="resources-grid">
-          <!-- Featured Big Resource (Left Column) -->
-          <div class="resource-featured-card">
-            <div class="featured-image-box">
-              <img src="Assets/resource_featured.png" alt="Featured Resource" class="featured-img">
-            </div>
-            <div class="featured-content-box">
-              <div class="resource-meta-row">
-                <span class="resource-tag">Economy</span>
-                <span class="meta-separator">•</span>
-                <span class="resource-readtime">12 min read</span>
+        <!-- Tabs Nav -->
+        <div class="resources-tabs-i4">
+          <button class="resources-tab-btn-i4 active" data-tab="articles">Articles</button>
+          <button class="resources-tab-btn-i4" data-tab="private-equity">Private Equity</button>
+          <button class="resources-tab-btn-i4" data-tab="vdr">Virtual Data Room</button>
+        </div>
+
+        <div class="resources-tab-panes-i4">
+          <!-- Pane 1: Articles -->
+          <div class="resources-tab-pane-i4 active" id="tab-articles">
+            <div class="resources-grid">
+              <!-- Featured Big Resource -->
+              <div class="resource-featured-card">
+                <div class="featured-image-box">
+                  <img src="Assets/resource_featured.png" alt="Featured Resource" class="featured-img">
+                </div>
+                <div class="featured-content-box">
+                  <div class="resource-meta-row">
+                    <span class="resource-tag">Economy</span>
+                    <span class="meta-separator">•</span>
+                    <span class="resource-readtime">12 min read</span>
+                  </div>
+                  <h3 class="featured-title">India Drops from 4th to 6th in Global GDP Rankings: The Real Story Behind the Headlines</h3>
+                  <a href="#" class="resource-link-btn">
+                    <span>Read article</span>
+                    <svg class="link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
               </div>
-              <h3 class="featured-title">India Drops from 4th to 6th in Global GDP Rankings: The Real Story Behind the
-                Headlines</h3>
-              <p class="featured-excerpt">Hey there, if you've been following India's economy closely, you probably felt
-                a little sting when the news broke. India, once knocking on the door of the top four global economies,
-                has shifted rankings recently...</p>
-              <a href="#" class="resource-link-btn">
-                <span>Read article</span>
-                <svg class="link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </a>
+
+              <!-- Side Column List -->
+              <div class="resource-list-side">
+                <!-- Mini Resource 1 -->
+                <div class="resource-mini-card">
+                  <div class="mini-img-box">
+                    <img src="Assets/resource_1.png" alt="Playbook icon" class="mini-img">
+                  </div>
+                  <div class="mini-content-box">
+                    <div class="resource-meta-row">
+                      <span class="resource-tag">Presentation</span>
+                      <span class="meta-separator">•</span>
+                      <span class="resource-readtime">8 min read</span>
+                    </div>
+                    <h4 class="mini-title">The Professional Presenter's Playbook: AI Proposals & Board Presentations</h4>
+                    <a href="#" class="resource-link-btn">
+                      <span>Read article</span>
+                      <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Mini Resource 2 -->
+                <div class="resource-mini-card">
+                  <div class="mini-img-box">
+                    <img src="Assets/resource_2.png" alt="Bangalore icon" class="mini-img">
+                  </div>
+                  <div class="mini-content-box">
+                    <div class="resource-meta-row">
+                      <span class="resource-tag">Fundraising</span>
+                      <span class="meta-separator">•</span>
+                      <span class="resource-readtime">10 min read</span>
+                    </div>
+                    <h4 class="mini-title">Crafting Your Business Deck: A Comprehensive Guide to Capital Raising</h4>
+                    <a href="#" class="resource-link-btn">
+                      <span>Read article</span>
+                      <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- Vertical List of Smaller Resources (Right Column) -->
-          <div class="resource-list-side">
-            <!-- Mini Resource 1 -->
-            <div class="resource-mini-card">
-              <div class="mini-img-box">
-                <img src="Assets/resource_1.png" alt="Playbook icon" class="mini-img">
-              </div>
-              <div class="mini-content-box">
-                <div class="resource-meta-row">
-                  <span class="resource-tag">Economy</span>
-                  <span class="meta-separator">•</span>
-                  <span class="resource-readtime">12 min read</span>
+          <!-- Pane 2: Private Equity -->
+          <div class="resources-tab-pane-i4" id="tab-private-equity">
+            <div class="resources-grid">
+              <!-- Featured Big Resource -->
+              <div class="resource-featured-card">
+                <div class="featured-image-box">
+                  <img src="Assets/resource_featured.png" alt="Featured Private Equity" class="featured-img">
                 </div>
-                <h4 class="mini-title">The Professional Presenter's Playbook: AI Proposals & Board Presentations</h4>
-                <a href="#" class="resource-link-btn">
-                  <span>Read article</span>
-                  <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </a>
+                <div class="featured-content-box">
+                  <div class="resource-meta-row">
+                    <span class="resource-tag">Private Equity</span>
+                    <span class="meta-separator">•</span>
+                    <span class="resource-readtime">15 min read</span>
+                  </div>
+                  <h3 class="featured-title">Navigating the Private Equity Landscape: Growth Capital vs. Buyouts in 2026</h3>
+                  <a href="#" class="resource-link-btn">
+                    <span>Read article</span>
+                    <svg class="link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
               </div>
-            </div>
 
-            <!-- Mini Resource 2 -->
-            <div class="resource-mini-card">
-              <div class="mini-img-box">
-                <img src="Assets/resource_2.png" alt="Bangalore icon" class="mini-img">
-              </div>
-              <div class="mini-content-box">
-                <div class="resource-meta-row">
-                  <span class="resource-tag">Deckwale</span>
-                  <span class="meta-separator">•</span>
-                  <span class="resource-readtime">12 min read</span>
+              <!-- Side Column List -->
+              <div class="resource-list-side">
+                <!-- Mini Resource 1 -->
+                <div class="resource-mini-card">
+                  <div class="mini-img-box">
+                    <img src="Assets/resource_1.png" alt="Valuation icon" class="mini-img">
+                  </div>
+                  <div class="mini-content-box">
+                    <div class="resource-meta-row">
+                      <span class="resource-tag">Valuation</span>
+                      <span class="meta-separator">•</span>
+                      <span class="resource-readtime">12 min read</span>
+                    </div>
+                    <h4 class="mini-title">Understanding Term Sheets: Key Valuation Metrics & Liquidation Preferences</h4>
+                    <a href="#" class="resource-link-btn">
+                      <span>Read article</span>
+                      <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </a>
+                  </div>
                 </div>
-                <h4 class="mini-title">Crafting Your Business Deck: A Comprehensive Guide to Capital Raising</h4>
-                <a href="#" class="resource-link-btn">
-                  <span>Read article</span>
-                  <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </a>
-              </div>
-            </div>
 
-            <!-- Mini Resource 3 -->
-            <div class="resource-mini-card">
-              <div class="mini-img-box">
-                <img src="Assets/resource_3.png" alt="Errors icon" class="mini-img">
-              </div>
-              <div class="mini-content-box">
-                <div class="resource-meta-row">
-                  <span class="resource-tag">Economy</span>
-                  <span class="meta-separator">•</span>
-                  <span class="resource-readtime">12 min read</span>
+                <!-- Mini Resource 2 -->
+                <div class="resource-mini-card">
+                  <div class="mini-img-box">
+                    <img src="Assets/resource_2.png" alt="Governance icon" class="mini-img">
+                  </div>
+                  <div class="mini-content-box">
+                    <div class="resource-meta-row">
+                      <span class="resource-tag">Governance</span>
+                      <span class="meta-separator">•</span>
+                      <span class="resource-readtime">9 min read</span>
+                    </div>
+                    <h4 class="mini-title">Post-Investment Governance: Working with PE Board Members</h4>
+                    <a href="#" class="resource-link-btn">
+                      <span>Read article</span>
+                      <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </a>
+                  </div>
                 </div>
-                <h4 class="mini-title">5 Pitch Deck Mistakes That Kill Fundraising (2026 Strategy Guide)</h4>
-                <a href="#" class="resource-link-btn">
-                  <span>Read article</span>
-                  <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </a>
               </div>
             </div>
+          </div>
+
+          <!-- Pane 3: Virtual Data Room -->
+          <div class="resources-tab-pane-i4" id="tab-vdr">
+            <div class="resources-grid">
+              <!-- Featured Big Resource -->
+              <div class="resource-featured-card">
+                <div class="featured-image-box">
+                  <img src="Assets/resource_featured.png" alt="Featured VDR" class="featured-img">
+                </div>
+                <div class="featured-content-box">
+                  <div class="resource-meta-row">
+                    <span class="resource-tag">Due Diligence</span>
+                    <span class="meta-separator">•</span>
+                    <span class="resource-readtime">14 min read</span>
+                  </div>
+                  <h3 class="featured-title">Securing the Deal: Best Practices for Preparing Your Virtual Data Room (VDR)</h3>
+                  <a href="#" class="resource-link-btn">
+                    <span>Read article</span>
+                    <svg class="link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Side Column List -->
+              <div class="resource-list-side">
+                <!-- Mini Resource 1 -->
+                <div class="resource-mini-card">
+                  <div class="mini-img-box">
+                    <img src="Assets/resource_1.png" alt="Security icon" class="mini-img">
+                  </div>
+                  <div class="mini-content-box">
+                    <div class="resource-meta-row">
+                      <span class="resource-tag">Security</span>
+                      <span class="meta-separator">•</span>
+                      <span class="resource-readtime">11 min read</span>
+                    </div>
+                    <h4 class="mini-title">VDR Security Standards: SOC 2, HIPAA, and End-to-End Encryption Explained</h4>
+                    <a href="#" class="resource-link-btn">
+                      <span>Read article</span>
+                      <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Mini Resource 2 -->
+                <div class="resource-mini-card">
+                  <div class="mini-img-box">
+                    <img src="Assets/resource_2.png" alt="Access control icon" class="mini-img">
+                  </div>
+                  <div class="mini-content-box">
+                    <div class="resource-meta-row">
+                      <span class="resource-tag">Access Control</span>
+                      <span class="meta-separator">•</span>
+                      <span class="resource-readtime">7 min read</span>
+                    </div>
+                    <h4 class="mini-title">Document Access Control Checklist: Managing Investor Permissions</h4>
+                    <a href="#" class="resource-link-btn">
+                      <span>Read article</span>
+                      <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seedicon App Install Banner -->
+    <section class="app-install-banner-section">
+      <style>
+        .app-install-banner-section {
+          background-color: #ffffff;
+          padding: 0 !important;
+          width: 100% !important;
+          overflow: hidden;
+        }
+
+        .app-install-banner-section .app-banner-wrap {
+          position: relative;
+          width: 100% !important;
+          max-width: 100% !important;
+          min-height: 440px;
+          margin: 0 !important;
+          padding: 0 !important;
+          border-radius: 0 !important;
+          background: linear-gradient(135deg, #0f0714 0%, #150a1d 50%, #060408 100%);
+          border-left: none !important;
+          border-right: none !important;
+          border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+          isolation: isolate;
+          box-sizing: border-box;
+        }
+
+        .app-install-banner-section .app-banner-grid {
+          width: 100%;
+          max-width: 1600px;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+          align-items: stretch;
+          box-sizing: border-box;
+        }
+
+        .app-install-banner-section .app-banner-content {
+          padding: 64px 40px 64px 140px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          box-sizing: border-box;
+        }
+
+        .app-install-banner-section .app-banner-title {
+          max-width: 650px;
+          margin: 0;
+          color: #ffffff;
+          font-size: clamp(34px, 3.8vw, 46px);
+          line-height: 1.15;
+          font-weight: 800;
+        }
+
+        .app-install-banner-section .app-banner-title span {
+          color: #e879f9;
+          text-shadow: 0 0 30px rgba(232, 121, 249, 0.25);
+        }
+
+        .app-install-banner-section .app-banner-copy {
+          max-width: 580px;
+          margin: 20px 0 32px;
+          color: rgba(255, 255, 255, 0.72);
+          font-size: 16.5px;
+          line-height: 1.6;
+        }
+
+        .app-install-banner-section .app-banner-actions {
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          gap: 28px;
+          flex-wrap: wrap;
+        }
+
+        .app-install-banner-section .app-primary-cta {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          height: 52px;
+          padding: 0 24px;
+          border-radius: 12px;
+          background: #ffffff;
+          color: #150a1d;
+          font-size: 15px;
+          font-weight: 800;
+          text-decoration: none;
+          box-shadow: 0 10px 25px rgba(255, 255, 255, 0.08);
+          transition: all 0.22s ease;
+        }
+
+        .app-install-banner-section .app-primary-cta:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 15px 30px rgba(255, 255, 255, 0.16);
+          background: #fafafa;
+        }
+
+        .app-install-banner-section .app-qr-card-large {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          background: rgba(255, 255, 255, 0.05) !important;
+          padding: 12px 20px !important;
+          border-radius: 16px;
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
+          border: 1px solid rgba(255, 255, 255, 0.08) !important;
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+        }
+
+        .app-install-banner-section .app-qr-img-large {
+          width: 90px;
+          height: 90px;
+          border-radius: 12px;
+          display: block;
+          background-color: #ffffff !important;
+          padding: 6px !important;
+          box-shadow: 0 0 16px rgba(232, 121, 249, 0.65) !important;
+          box-sizing: border-box;
+        }
+
+        .app-install-banner-section .app-qr-info {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+        }
+
+        .app-install-banner-section .app-qr-label-large {
+          color: #ffffff !important;
+          font-size: 15px;
+          font-weight: 800;
+          margin: 0;
+          line-height: 1.2;
+          text-align: left;
+        }
+
+        .app-install-banner-section .app-qr-sub-large {
+          color: rgba(255, 255, 255, 0.6) !important;
+          font-size: 12px;
+          font-weight: 600;
+          margin: 0;
+          text-align: left;
+        }
+
+        .app-install-banner-section .app-hand-visual {
+          position: relative;
+          height: 100%;
+          width: 100%;
+          min-height: 440px;
+          display: flex;
+          align-items: stretch;
+          justify-content: stretch;
+          overflow: hidden;
+          background-color: #f7ebf4;
+        }
+
+        .app-install-banner-section .app-hand-visual img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+          display: block;
+        }
+
+        @media (max-width: 960px) {
+          .app-install-banner-section .app-banner-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .app-install-banner-section .app-banner-content {
+            padding: 48px 24px;
+            text-align: center;
+          }
+
+          .app-install-banner-section .app-banner-copy {
+            margin-left: auto;
+            margin-right: auto;
+          }
+
+          .app-install-banner-section .app-banner-actions {
+            justify-content: start;
+          }
+
+          .app-install-banner-section .app-hand-visual {
+            min-height: 380px;
+          }
+        }
+      </style>
+
+      <div class="app-banner-wrap">
+        <div class="app-banner-grid">
+          <div class="app-banner-content">
+            <h2 class="app-banner-title">Scan contacts in seconds. <span>Never lose a warm lead.</span></h2>
+            <p class="app-banner-copy">Try the newest Seedicon mobile experience built for fast-moving business
+              conversations.</p>
+
+            <div class="app-banner-actions">
+              <a href="https://seedicon.com/app" class="app-primary-cta">Download App for Free <span
+                  aria-hidden="true">&rarr;</span></a>
+              <div class="app-qr-card-large">
+                <img class="app-qr-img-large"
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&amp;data=https%3A%2F%2Fseedicon.com%2Fapp"
+                  alt="QR code to install the Seedicon app">
+                <div class="app-qr-info">
+                  <p class="app-qr-label-large">Scan to download the app</p>
+                  <p class="app-qr-sub-large">Available on iOS and Android</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="app-hand-visual" aria-hidden="true">
+            <img src="Assets/Hand.png" alt="">
           </div>
         </div>
       </div>
@@ -3121,6 +4439,850 @@
                 </li>
               </ul>
               <a href="#" class="btn btn-ecosystem-action">Coffee Trade</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Government Grants Section -->
+    <section class="grants-section" id="gov-grants">
+      <style>
+        .grants-section {
+          background-color: #fff5fc;
+          padding: 90px 24px;
+          border-top: 1px solid rgba(145, 49, 117, 0.08);
+          border-bottom: 1px solid rgba(145, 49, 117, 0.08);
+          position: relative;
+          overflow: hidden;
+        }
+
+        .grants-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          position: relative;
+          z-index: 2;
+        }
+
+        .grants-header {
+          text-align: center;
+          margin-bottom: 56px;
+        }
+
+        .grants-eyebrow {
+          font-size: 13px;
+          font-weight: 700;
+          color: #913175;
+          text-transform: uppercase;
+          letter-spacing: 0.15em;
+          display: block;
+          margin-bottom: 12px;
+        }
+
+        .grants-title {
+          font-size: clamp(28px, 3.2vw, 38px);
+          font-weight: 800;
+          color: #111827;
+          line-height: 1.2;
+          margin: 0 0 16px;
+        }
+
+        .grants-subtitle {
+          font-size: 16px;
+          color: #4b5563;
+          max-width: 600px;
+          margin: 0 auto;
+          line-height: 1.5;
+        }
+
+        .grants-list {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          margin-bottom: 40px;
+        }
+
+        /* List Row Item */
+        .grant-row {
+          background: #ffffff;
+          border: 1px solid rgba(145, 49, 117, 0.08);
+          border-radius: 18px;
+          padding: 24px 30px;
+          display: grid;
+          grid-template-columns: 1fr 340px;
+          gap: 40px;
+          align-items: center;
+          transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+          box-shadow: 0 4px 20px rgba(145, 49, 117, 0.01);
+        }
+
+        .grant-row:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 12px 30px rgba(145, 49, 117, 0.06);
+          border-color: rgba(145, 49, 117, 0.18);
+        }
+
+        /* Left Content Info */
+        .grant-info-col {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          text-align: left;
+        }
+
+        .grant-title-row {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          margin-bottom: 6px;
+        }
+
+        .grant-row-title {
+          font-size: 19px;
+          font-weight: 800;
+          color: #111827;
+          margin: 0;
+          text-decoration: none;
+          line-height: 1.3;
+          transition: color 0.2s;
+        }
+
+        .grant-row-title:hover {
+          color: #913175;
+        }
+
+        .grant-bookmark-btn {
+          background: transparent;
+          border: none;
+          color: #94a3b8;
+          cursor: pointer;
+          padding: 4px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          transition: color 0.2s;
+        }
+
+        .grant-bookmark-btn:hover {
+          color: #e879f9;
+        }
+
+        .grant-meta-sub {
+          font-size: 13px;
+          color: #6b7280;
+          margin: 0 0 14px;
+          line-height: 1.4;
+        }
+
+        .grant-meta-sub strong {
+          color: #374151;
+          font-weight: 600;
+        }
+
+        .grant-desc {
+          font-size: 14.5px;
+          color: #4b5563;
+          margin: 0 0 20px;
+          line-height: 1.55;
+        }
+
+        /* Badges / Tags */
+        .grant-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+
+        .grant-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 4px;
+          padding: 4px 12px;
+          background-color: #ffffff;
+          border: 1px solid #e28a07;
+          border-radius: 9999px;
+          font-size: 12px;
+          font-weight: 600;
+          color: #e28a07;
+          line-height: 1;
+        }
+
+        .grant-badge::before {
+          content: '★';
+          font-size: 10px;
+          color: #e28a07;
+        }
+
+        .grant-badge.no-star::before {
+          content: none;
+        }
+
+        /* Right Meta Col */
+        .grant-action-col {
+          display: grid;
+          grid-template-columns: 1fr auto;
+          align-items: center;
+          gap: 16px;
+          border-left: 1px solid rgba(145, 49, 117, 0.08);
+          padding-left: 32px;
+          height: 100%;
+        }
+
+        .grant-value-info {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          text-align: left;
+        }
+
+        .grant-amount-label {
+          font-size: 13px;
+          color: #6b7280;
+          margin: 0 0 2px;
+          font-weight: 500;
+        }
+
+        .grant-amount {
+          font-size: 26px;
+          font-weight: 800;
+          color: #111827;
+          margin: 0 0 6px;
+        }
+
+        .grant-closes-row {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          font-size: 12px;
+          color: #6b7280;
+          margin-bottom: 4px;
+        }
+
+        .grant-closes-row span.closes-badge {
+          font-weight: 700;
+          color: #4b5563;
+        }
+
+        .grant-closes-row span.closes-badge.urgent {
+          color: #dc2626; /* red text for 'today' closes */
+        }
+
+        .grant-results-row {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          font-size: 12px;
+          color: #6b7280;
+        }
+
+        .grant-results-row span.results-badge {
+          font-weight: 700;
+          color: #d97706; /* gold text for 'locked' results */
+          display: inline-flex;
+          align-items: center;
+          gap: 3px;
+        }
+
+        /* Subscribe & Apply Button */
+        .grant-btn-apply {
+          grid-column: 1 / span 2;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 6px;
+          height: 46px;
+          background-color: #eff6ff;
+          border: 1px solid #bfdbfe;
+          border-radius: 10px;
+          font-size: 13.5px;
+          font-weight: 700;
+          color: #2563eb;
+          text-decoration: none;
+          transition: all 0.22s;
+          cursor: pointer;
+        }
+
+        .grant-btn-apply:hover {
+          background-color: #2563eb;
+          border-color: #2563eb;
+          color: #ffffff;
+        }
+
+        .grant-btn-apply svg {
+          stroke: currentColor;
+          fill: none;
+          transition: transform 0.22s;
+        }
+
+        .grant-btn-doc {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 46px;
+          height: 46px;
+          border-radius: 10px;
+          border: 1px solid #e5e7eb;
+          background-color: #ffffff;
+          color: #6b7280;
+          cursor: pointer;
+          transition: all 0.2s;
+        }
+
+        .grant-btn-doc:hover {
+          border-color: #913175;
+          color: #913175;
+          background-color: rgba(145, 49, 117, 0.02);
+        }
+
+        /* Show All Options Button */
+        .grants-footer {
+          display: flex;
+          justify-content: center;
+          margin-top: 36px;
+        }
+
+        .btn-show-grants {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 12px 32px;
+          background-color: #ffffff;
+          border: 1px solid rgba(145, 49, 117, 0.2);
+          border-radius: 12px;
+          font-size: 14.5px;
+          font-weight: 700;
+          color: #913175;
+          cursor: pointer;
+          transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+          box-shadow: 0 4px 15px rgba(145, 49, 117, 0.02);
+        }
+
+        .btn-show-grants:hover {
+          transform: translateY(-2px);
+          border-color: #913175;
+          box-shadow: 0 8px 24px rgba(145, 49, 117, 0.06);
+          background-color: rgba(145, 49, 117, 0.02);
+        }
+
+        .grant-row.hidden-grant {
+          display: none;
+        }
+
+        @media (max-width: 960px) {
+          .grant-row {
+            grid-template-columns: 1fr;
+            gap: 24px;
+            padding: 24px;
+          }
+
+          .grant-action-col {
+            border-left: none;
+            border-top: 1px solid rgba(145, 49, 117, 0.08);
+            padding-left: 0;
+            padding-top: 20px;
+            grid-template-columns: 1fr auto;
+          }
+
+          .grant-btn-apply {
+            grid-column: 1 / span 2;
+          }
+        }
+
+        /* Modal Overlay & Dialog Styles */
+        .login-modal-overlay {
+          position: fixed;
+          inset: 0;
+          background: rgba(15, 7, 20, 0.6);
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 10000;
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity 0.3s ease;
+        }
+
+        .login-modal-overlay.active {
+          opacity: 1;
+          pointer-events: auto;
+        }
+
+        .login-modal-box {
+          background: #ffffff;
+          border: 1px solid rgba(145, 49, 117, 0.15);
+          border-radius: 20px;
+          width: 100%;
+          max-width: 420px;
+          padding: 36px;
+          box-shadow: 0 25px 50px -12px rgba(15, 7, 20, 0.25), 0 0 40px rgba(145, 49, 117, 0.1);
+          position: relative;
+          transform: scale(0.95);
+          transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+          box-sizing: border-box;
+          text-align: left;
+        }
+
+        .login-modal-overlay.active .login-modal-box {
+          transform: scale(1);
+        }
+
+        .login-modal-close {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          background: transparent;
+          border: none;
+          font-size: 24px;
+          color: #94a3b8;
+          cursor: pointer;
+          transition: color 0.2s;
+          line-height: 1;
+        }
+
+        .login-modal-close:hover {
+          color: #913175;
+        }
+
+        .login-modal-header {
+          margin-bottom: 24px;
+        }
+
+        .login-modal-title {
+          font-size: 22px;
+          font-weight: 800;
+          color: #111827;
+          margin: 0 0 8px;
+        }
+
+        .login-modal-subtitle {
+          font-size: 14px;
+          color: #6b7280;
+          margin: 0;
+          line-height: 1.5;
+        }
+
+        .login-modal-form .form-group {
+          margin-bottom: 18px;
+        }
+
+        .login-modal-form label {
+          display: block;
+          font-size: 12.5px;
+          font-weight: 700;
+          color: #374151;
+          margin-bottom: 6px;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+        }
+
+        .login-modal-form input {
+          width: 100%;
+          height: 44px;
+          border: 1px solid #e5e7eb;
+          border-radius: 8px;
+          padding: 0 14px;
+          font-size: 14px;
+          color: #1f2937;
+          box-sizing: border-box;
+          outline: none;
+          transition: all 0.2s;
+        }
+
+        .login-modal-form input:focus {
+          border-color: #913175;
+          box-shadow: 0 0 0 3px rgba(145, 49, 117, 0.1);
+        }
+
+        .modal-submit-btn {
+          width: 100%;
+          height: 46px;
+          background: linear-gradient(135deg, #913175 0%, #e879f9 100%);
+          border: none;
+          border-radius: 10px;
+          color: #ffffff;
+          font-size: 14.5px;
+          font-weight: 700;
+          cursor: pointer;
+          box-shadow: 0 4px 15px rgba(145, 49, 117, 0.2);
+          transition: all 0.22s;
+          margin-top: 10px;
+        }
+
+        .modal-submit-btn:hover {
+          transform: translateY(-1px);
+          box-shadow: 0 8px 20px rgba(145, 49, 117, 0.35);
+        }
+
+        .login-modal-footer {
+          margin-top: 24px;
+          text-align: center;
+          border-top: 1px solid #f3f4f6;
+          padding-top: 20px;
+          font-size: 13.5px;
+          color: #6b7280;
+        }
+
+        .login-modal-footer a {
+          color: #913175;
+          font-weight: 700;
+          text-decoration: none;
+        }
+
+        .login-modal-footer a:hover {
+          text-decoration: underline;
+        }
+      </style>
+
+      <div class="grants-container">
+        <div class="grants-header">
+          <span class="grants-eyebrow">Funding Opportunities</span>
+          <h2 class="grants-title">Government Grants for Startups</h2>
+          <p class="grants-subtitle">Apply for verified national, state, and departmental grant programs to scale your startup idea.</p>
+        </div>
+
+        <div class="grants-list" id="grants-list-container">
+          <!-- Default Row 1 -->
+          <div class="grant-row">
+            <div class="grant-info-col">
+              <div class="grant-title-row">
+                <a href="#" class="grant-row-title">MSME Idea Hackathon 6.0</a>
+                <button class="grant-bookmark-btn" aria-label="Bookmark this grant">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                </button>
+              </div>
+              <p class="grant-meta-sub">under <strong>MSME Idea Hackathon</strong> • by <strong>Ministry of MSME</strong></p>
+              <p class="grant-desc">National MSME innovation hackathon on frontier tech — renewable energy, Industry 4.0/5.0, robotics, automotive & more. Up to ₹15 lakh + incubation per approved idea.</p>
+              <div class="grant-tags">
+                <span class="grant-badge">Eligibility</span>
+                <span class="grant-badge no-star">Grant</span>
+                <span class="grant-badge no-star">Idea</span>
+                <span class="grant-badge">Fund Type</span>
+                <span class="grant-badge">Preferred Sector</span>
+                <span class="grant-badge">Preferred State</span>
+                <span class="grant-badge">Payment Terms</span>
+                <span class="grant-badge">Founder Type</span>
+              </div>
+            </div>
+            <div class="grant-action-col">
+              <div class="grant-value-info">
+                <span class="grant-amount-label">Up to</span>
+                <span class="grant-amount">₹15L</span>
+                <div class="grant-closes-row">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Closes: <span class="closes-badge">this month</span></span>
+                </div>
+                <div class="grant-results-row">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <span>Results: <span class="results-badge">Locked</span></span>
+                </div>
+              </div>
+              <button class="grant-btn-doc" aria-label="View guidelines document">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              </button>
+              <a href="#" class="grant-btn-apply">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                Subscribe & Apply
+              </a>
+            </div>
+          </div>
+
+          <!-- Default Row 2 -->
+          <div class="grant-row">
+            <div class="grant-info-col">
+              <div class="grant-title-row">
+                <a href="#" class="grant-row-title">ELEVATE 2026 — Startup Karnataka Grant-in-Aid Program</a>
+                <button class="grant-bookmark-btn" aria-label="Bookmark this grant">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                </button>
+              </div>
+              <p class="grant-meta-sub">under <strong>ELEVATE Karnataka</strong> • by <strong>Startup Karnataka</strong></p>
+              <p class="grant-desc">One-time grant up to ₹50L for any Karnataka startup to build a proof-of-concept.</p>
+              <div class="grant-tags">
+                <span class="grant-badge">Eligibility</span>
+                <span class="grant-badge no-star">Grant</span>
+                <span class="grant-badge no-star">Idea</span>
+                <span class="grant-badge no-star">Product</span>
+                <span class="grant-badge no-star">Revenue</span>
+                <span class="grant-badge">Fund Type</span>
+                <span class="grant-badge">Preferred Sector</span>
+                <span class="grant-badge">Preferred State</span>
+                <span class="grant-badge">Payment Terms</span>
+                <span class="grant-badge">Founder Type</span>
+              </div>
+            </div>
+            <div class="grant-action-col">
+              <div class="grant-value-info">
+                <span class="grant-amount-label">Up to</span>
+                <span class="grant-amount">₹50L</span>
+                <div class="grant-closes-row">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Closes: <span class="closes-badge urgent">today!</span></span>
+                </div>
+                <div class="grant-results-row">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <span>Results: <span class="results-badge">Locked</span></span>
+                </div>
+              </div>
+              <button class="grant-btn-doc" aria-label="View guidelines document">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              </button>
+              <a href="#" class="grant-btn-apply">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                Subscribe & Apply
+              </a>
+            </div>
+          </div>
+
+          <!-- Default Row 3 -->
+          <div class="grant-row">
+            <div class="grant-info-col">
+              <div class="grant-title-row">
+                <a href="#" class="grant-row-title">NIDHI-PRAYAS Support Program</a>
+                <button class="grant-bookmark-btn" aria-label="Bookmark this grant">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                </button>
+              </div>
+              <p class="grant-meta-sub">under <strong>DST NIDHI</strong> • by <strong>Department of Science & Technology</strong></p>
+              <p class="grant-desc">Grant support for early stage innovators to translate their innovative ideas into physical prototypes.</p>
+              <div class="grant-tags">
+                <span class="grant-badge">Eligibility</span>
+                <span class="grant-badge no-star">Grant</span>
+                <span class="grant-badge no-star">Idea</span>
+                <span class="grant-badge no-star">Hardware</span>
+                <span class="grant-badge no-star">Prototype</span>
+                <span class="grant-badge">Fund Type</span>
+                <span class="grant-badge">Preferred Sector</span>
+                <span class="grant-badge">Founder Type</span>
+              </div>
+            </div>
+            <div class="grant-action-col">
+              <div class="grant-value-info">
+                <span class="grant-amount-label">Up to</span>
+                <span class="grant-amount">₹10L</span>
+                <div class="grant-closes-row">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Closes: <span class="closes-badge">in 15 days</span></span>
+                </div>
+                <div class="grant-results-row">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <span>Results: <span class="results-badge">Locked</span></span>
+                </div>
+              </div>
+              <button class="grant-btn-doc" aria-label="View guidelines document">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              </button>
+              <a href="#" class="grant-btn-apply">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                Subscribe & Apply
+              </a>
+            </div>
+          </div>
+
+          <!-- Default Row 4 -->
+          <div class="grant-row hidden-grant">
+            <div class="grant-info-col">
+              <div class="grant-title-row">
+                <a href="#" class="grant-row-title">BIRAC Biotech Ignition Grant (BIG)</a>
+                <button class="grant-bookmark-btn" aria-label="Bookmark this grant">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                </button>
+              </div>
+              <p class="grant-meta-sub">under <strong>BIRAC Innovation Schemes</strong> • by <strong>Biotechnology Industry Research Assistance Council</strong></p>
+              <p class="grant-desc">Ignition grant support for biotech start-ups and entrepreneurs to establish proof of concept.</p>
+              <div class="grant-tags">
+                <span class="grant-badge">Eligibility</span>
+                <span class="grant-badge no-star">Grant</span>
+                <span class="grant-badge no-star">Idea</span>
+                <span class="grant-badge no-star">Product</span>
+                <span class="grant-badge no-star">BioTech</span>
+                <span class="grant-badge">Fund Type</span>
+                <span class="grant-badge">Preferred Sector</span>
+                <span class="grant-badge">Preferred State</span>
+              </div>
+            </div>
+            <div class="grant-action-col">
+              <div class="grant-value-info">
+                <span class="grant-amount-label">Up to</span>
+                <span class="grant-amount">₹50L</span>
+                <div class="grant-closes-row">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Closes: <span class="closes-badge">next month</span></span>
+                </div>
+                <div class="grant-results-row">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <span>Results: <span class="results-badge">Locked</span></span>
+                </div>
+              </div>
+              <button class="grant-btn-doc" aria-label="View guidelines document">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              </button>
+              <a href="#" class="grant-btn-apply">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                Subscribe & Apply
+              </a>
+            </div>
+          </div>
+
+          <!-- Default Row 5 -->
+          <div class="grant-row hidden-grant">
+            <div class="grant-info-col">
+              <div class="grant-title-row">
+                <a href="#" class="grant-row-title">SAMRIDH Acceleration Scheme</a>
+                <button class="grant-bookmark-btn" aria-label="Bookmark this grant">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                </button>
+              </div>
+              <p class="grant-meta-sub">under <strong>SAMRIDH MeitY</strong> • by <strong>Ministry of Electronics & IT (MeitY)</strong></p>
+              <p class="grant-desc">Acceleration support for tech startups to scale product development, market access, and secure venture capital.</p>
+              <div class="grant-tags">
+                <span class="grant-badge">Eligibility</span>
+                <span class="grant-badge no-star">Grant</span>
+                <span class="grant-badge no-star">Scaling</span>
+                <span class="grant-badge no-star">Software</span>
+                <span class="grant-badge no-star">Revenue</span>
+                <span class="grant-badge">Fund Type</span>
+                <span class="grant-badge">Preferred State</span>
+                <span class="grant-badge">Founder Type</span>
+              </div>
+            </div>
+            <div class="grant-action-col">
+              <div class="grant-value-info">
+                <span class="grant-amount-label">Up to</span>
+                <span class="grant-amount">₹40L</span>
+                <div class="grant-closes-row">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Closes: <span class="closes-badge">in 3 weeks</span></span>
+                </div>
+                <div class="grant-results-row">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <span>Results: <span class="results-badge">Locked</span></span>
+                </div>
+              </div>
+              <button class="grant-btn-doc" aria-label="View guidelines document">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              </button>
+              <a href="#" class="grant-btn-apply">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                Subscribe & Apply
+              </a>
+            </div>
+          </div>
+
+          <!-- Extra Hidden Row 6 -->
+          <div class="grant-row hidden-grant">
+            <div class="grant-info-col">
+              <div class="grant-title-row">
+                <a href="#" class="grant-row-title">TIDE 2.0 (Technology Incubation & Development of Entrepreneurs)</a>
+                <button class="grant-bookmark-btn" aria-label="Bookmark this grant">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                </button>
+              </div>
+              <p class="grant-meta-sub">under <strong>MeitY Incubation Support</strong> • by <strong>Ministry of Electronics & IT</strong></p>
+              <p class="grant-desc">Grant-in-aid to tech startups focusing on emerging technologies like IoT, AI, Blockchain, and Robotics.</p>
+              <div class="grant-tags">
+                <span class="grant-badge">Eligibility</span>
+                <span class="grant-badge no-star">Grant</span>
+                <span class="grant-badge no-star">Tech</span>
+                <span class="grant-badge no-star">Idea</span>
+                <span class="grant-badge no-star">Product</span>
+              </div>
+            </div>
+            <div class="grant-action-col">
+              <div class="grant-value-info">
+                <span class="grant-amount-label">Up to</span>
+                <span class="grant-amount">₹7L</span>
+                <div class="grant-closes-row">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Closes: <span class="closes-badge">next month</span></span>
+                </div>
+                <div class="grant-results-row">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <span>Results: <span class="results-badge">Locked</span></span>
+                </div>
+              </div>
+              <button class="grant-btn-doc" aria-label="View guidelines document">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              </button>
+              <a href="#" class="grant-btn-apply">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                Subscribe & Apply
+              </a>
+            </div>
+          </div>
+
+          <!-- Extra Hidden Row 7 -->
+          <div class="grant-row hidden-grant">
+            <div class="grant-info-col">
+              <div class="grant-title-row">
+                <a href="#" class="grant-row-title">Startup India Seed Fund Scheme (SISFS)</a>
+                <button class="grant-bookmark-btn" aria-label="Bookmark this grant">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                </button>
+              </div>
+              <p class="grant-meta-sub">under <strong>Startup India Initiative</strong> • by <strong>DPIIT (Ministry of Commerce)</strong></p>
+              <p class="grant-desc">Financial assistance to early-stage startups for proof of concept, prototype development, product trials, and market entry.</p>
+              <div class="grant-tags">
+                <span class="grant-badge">Eligibility</span>
+                <span class="grant-badge no-star">Grant</span>
+                <span class="grant-badge no-star">Seed</span>
+                <span class="grant-badge no-star">Idea</span>
+                <span class="grant-badge no-star">Prototype</span>
+                <span class="grant-badge">Fund Type</span>
+              </div>
+            </div>
+            <div class="grant-action-col">
+              <div class="grant-value-info">
+                <span class="grant-amount-label">Up to</span>
+                <span class="grant-amount">₹20L</span>
+                <div class="grant-closes-row">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Closes: <span class="closes-badge">ongoing</span></span>
+                </div>
+                <div class="grant-results-row">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <span>Results: <span class="results-badge">Locked</span></span>
+                </div>
+              </div>
+              <button class="grant-btn-doc" aria-label="View guidelines document">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              </button>
+              <a href="#" class="grant-btn-apply">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                Subscribe & Apply
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="grants-footer">
+          <button class="btn-show-grants" id="btn-toggle-grants">
+            <span>Show All Grants</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+        </div>
+
+        <!-- Login Modal Popup -->
+        <div class="login-modal-overlay" id="loginModal">
+          <div class="login-modal-box">
+            <button class="login-modal-close" id="closeLoginModal">&times;</button>
+            <div class="login-modal-header">
+              <h3 class="login-modal-title">Access Premium Grants</h3>
+              <p class="login-modal-subtitle">Login or create an account to view and subscribe to all government grant opportunities.</p>
+            </div>
+            <form class="login-modal-form" onsubmit="event.preventDefault(); alert('Login successful!'); document.getElementById('loginModal').classList.remove('active');">
+              <div class="form-group">
+                <label for="modal-email">Email Address</label>
+                <input type="email" id="modal-email" required placeholder="name@company.com">
+              </div>
+              <div class="form-group">
+                <label for="modal-password">Password</label>
+                <input type="password" id="modal-password" required placeholder="••••••••">
+              </div>
+              <button type="submit" class="modal-submit-btn">Login & View Grants</button>
+            </form>
+            <div class="login-modal-footer">
+              <p>Don't have an account? <a href="#">Sign up here</a></p>
             </div>
           </div>
         </div>
@@ -3211,13 +5373,26 @@
               <li><a href="#">Contact for Export</a></li>
             </ul>
           </div>
+
+          <!-- Col 7 -->
+          <div class="footer-link-col">
+            <h4 class="link-col-title">Legal</h4>
+            <ul class="link-col-list">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cookies Policy</a></li>
+              <li><a href="#">GDPR</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
         </div>
 
         <div class="footer-divider"></div>
 
         <!-- Bottom Copyright & Socials Bar -->
         <div class="footer-bottom-row">
-          <p class="copyright-text">&copy; 2026 Seedicon. All rights reserved.</p>
+          <div class="footer-bottom-left" style="display: flex; flex-direction: column; gap: 8px; text-align: left;">
+            <p class="copyright-text" style="font-size: 14px; color: var(--dark-text-muted); margin: 0; font-weight: 500;">Copyright 2026 &copy; by Seedicon. Secured by FWC</p>
+          </div>
           <div class="footer-social-icons">
             <!-- Facebook -->
             <a href="#" aria-label="Facebook" class="social-icon-link">
@@ -3309,7 +5484,7 @@
   <script src="script.js"></script>
 
   <!-- Custom Javascript for Iteration 4 Hero Section -->
-    <script>
+  <script>
     (function () {
       function initCustomProductTabs() {
         const buttons = document.querySelectorAll('.products-tab-btn');
@@ -3340,20 +5515,28 @@
         if (iconDecs.length > 0) iconDecs[0].classList.add('active');
       }
 
-      function initSecondaryCarousel() {
-        const prevBtn = document.getElementById('sec-prev-btn');
-        const nextBtn = document.getElementById('sec-next-btn');
-        const container = document.getElementById('who-scroll-track');
+      function initWhoSeatHub() {
+        const section = document.getElementById('who-seat-hub');
+        if (!section || section.dataset.hubReady === 'true') return;
 
-        if (prevBtn && nextBtn && container) {
-          prevBtn.addEventListener('click', () => {
-            container.scrollBy({ left: -306, behavior: 'smooth' });
-          });
+        const cards = section.querySelectorAll('.who-role-card-i4[data-role]');
+        const nodes = section.querySelectorAll('.hub-node-i4[data-role]');
+        const paths = section.querySelectorAll('.who-flow-path-i4[data-role]');
 
-          nextBtn.addEventListener('click', () => {
-            container.scrollBy({ left: 306, behavior: 'smooth' });
-          });
-        }
+        const activateRole = (role) => {
+          cards.forEach(card => card.classList.toggle('active', card.dataset.role === role));
+          nodes.forEach(node => node.classList.toggle('active', node.dataset.role === role));
+          paths.forEach(path => path.classList.toggle('active', path.dataset.role === role));
+        };
+
+        [...cards, ...nodes].forEach(item => {
+          item.addEventListener('mouseenter', () => activateRole(item.dataset.role));
+          item.addEventListener('focus', () => activateRole(item.dataset.role));
+          item.addEventListener('click', () => activateRole(item.dataset.role));
+        });
+
+        activateRole('founder');
+        section.dataset.hubReady = 'true';
       }
 
       function initDoCarousel() {
@@ -3372,18 +5555,98 @@
         }
       }
 
+      function initHowTimelineAnimation() {
+        const section = document.querySelector('.how-section-i4');
+        if (!section || section.dataset.timelineReady === 'true') return;
+
+        const startTimeline = () => {
+          section.classList.add('timeline-animate');
+          section.dataset.timelineReady = 'true';
+        };
+
+        if (!('IntersectionObserver' in window)) {
+          startTimeline();
+          return;
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              startTimeline();
+              observer.disconnect();
+            }
+          });
+        }, { threshold: 0.35 });
+
+        observer.observe(section);
+      }
+
+      function initGovGrantsToggle() {
+        const toggleBtn = document.getElementById('btn-toggle-grants');
+        const loginModal = document.getElementById('loginModal');
+        const closeModal = document.getElementById('closeLoginModal');
+        if (!toggleBtn || !loginModal || !closeModal) return;
+
+        // Click "Show All Grants" triggers Login Modal
+        toggleBtn.addEventListener('click', () => {
+          loginModal.classList.add('active');
+        });
+
+        // Close button
+        closeModal.addEventListener('click', () => {
+          loginModal.classList.remove('active');
+        });
+
+        // Click outside modal box to close
+        loginModal.addEventListener('click', (e) => {
+          if (e.target === loginModal) {
+            loginModal.classList.remove('active');
+          }
+        });
+      }
+
+      function initResourcesTabs() {
+        const buttons = document.querySelectorAll('.resources-tab-btn-i4');
+        const panes = document.querySelectorAll('.resources-tab-pane-i4');
+        if (buttons.length === 0 || panes.length === 0) return;
+
+        buttons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const targetTab = btn.getAttribute('data-tab');
+
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            panes.forEach(p => {
+              if (p.id === `tab-${targetTab}`) {
+                p.classList.add('active');
+              } else {
+                p.classList.remove('active');
+              }
+            });
+          });
+        });
+      }
+
       document.addEventListener('DOMContentLoaded', () => {
         initCustomProductTabs();
-        initSecondaryCarousel();
+        initWhoSeatHub();
         initDoCarousel();
+        initHowTimelineAnimation();
+        initGovGrantsToggle();
+        initResourcesTabs();
       });
       // Fallback in case DOMContentLoaded has already fired
       if (document.readyState === 'interactive' || document.readyState === 'complete') {
         initCustomProductTabs();
-        initSecondaryCarousel();
+        initWhoSeatHub();
         initDoCarousel();
+        initHowTimelineAnimation();
+        initGovGrantsToggle();
+        initResourcesTabs();
       }
     })();
   </script>
 </body>
+
 </html>

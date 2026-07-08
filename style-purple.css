@@ -3757,7 +3757,7 @@ button {
    13. PRODUCT ECOSYSTEM SECTION (Light Mode Features Grid)
    ========================================================================= */
 .ecosystem-section {
-  background-color: #f0f4f8;
+  background-color: #ffffff;
   padding: 100px 24px;
   box-sizing: border-box;
   width: 100%;
@@ -3939,7 +3939,7 @@ button {
       #f8fafc calc(50% - 272px),
       #ffffff calc(50% - 272px),
       #ffffff 100%);
-  border-radius: 0 0 28px 28px;
+  border-radius: 0;
   box-shadow:
     0 4px 6px -1px rgba(0, 0, 0, 0.04),
     0 20px 48px -8px rgba(0, 0, 0, 0.12),
