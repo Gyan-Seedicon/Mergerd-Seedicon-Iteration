@@ -421,7 +421,8 @@
 
                       <div class="mega-promo-box">
                         <div class="promo-image-container">
-                          <img src="Assets/Watch/Watch-1.png" alt="Seedicon Watch encrypted document vaults" class="promo-img">
+                          <img src="Assets/Watch/Watch-1.png" alt="Seedicon Watch encrypted document vaults"
+                            class="promo-img">
                         </div>
                         <div class="promo-text-container">
                           <div class="promo-title-row">
@@ -483,7 +484,8 @@
 
                       <div class="mega-promo-box">
                         <div class="promo-image-container">
-                          <img src="Assets/Events/Event-1.png" alt="Seedicon Events host and book events" class="promo-img">
+                          <img src="Assets/Events/Event-1.png" alt="Seedicon Events host and book events"
+                            class="promo-img">
                         </div>
                         <div class="promo-text-container">
                           <div class="promo-title-row">
@@ -789,8 +791,7 @@
           <div class="showcase-header">
             <h2 class="showcase-title">996 startups are already seeking investment. Don't fall behind.</h2>
           </div>
-
-          <div class="company-list">
+ make
             <!-- Row 1: Airbnb -->
             <div class="company-row">
               <div class="company-logo-box">
@@ -1014,42 +1015,37 @@
         }
 
         .products-tabbed-section-i4 .products-tab-menu {
-          display: flex;
-          gap: 32px;
-          border-bottom: 1px solid var(--slate-100);
-          padding-bottom: 12px;
+          display: inline-flex;
+          gap: 6px;
+          background: rgba(145, 49, 117, 0.04);
+          border: 1px solid rgba(145, 49, 117, 0.08);
+          padding: 6px;
+          border-radius: 99px;
           margin-bottom: 40px;
         }
 
         .products-tabbed-section-i4 .products-tab-btn {
           border: none;
           background: transparent;
-          font-size: 15.5px;
+          font-size: 14.5px;
           font-weight: 700;
-          color: var(--slate-500);
+          color: var(--slate-600);
           cursor: pointer;
           position: relative;
-          transition: color 0.2s ease;
-          padding-bottom: 12px;
+          transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+          padding: 8px 24px;
+          border-radius: 99px;
         }
 
         .products-tabbed-section-i4 .products-tab-btn:hover {
-          color: var(--slate-800);
+          color: var(--primary-purple);
+          background: rgba(145, 49, 117, 0.06);
         }
 
         .products-tabbed-section-i4 .products-tab-btn.active {
-          color: var(--slate-900);
-        }
-
-        .products-tabbed-section-i4 .products-tab-btn.active::after {
-          content: '';
-          position: absolute;
-          left: 0;
-          right: 0;
-          bottom: -13px;
-          height: 3px;
-          background-color: var(--primary-purple);
-          border-radius: 999px;
+          color: #ffffff;
+          background: var(--primary-purple);
+          box-shadow: 0 4px 12px rgba(145, 49, 117, 0.25);
         }
 
         .products-tabbed-section-i4 .products-showcase-container {
@@ -1231,11 +1227,20 @@
           }
 
           .products-tabbed-section-i4 .products-tab-menu {
-            gap: 16px;
+            display: flex;
+            width: 100%;
+            max-width: 100%;
+            gap: 6px;
             overflow-x: auto;
             white-space: nowrap;
-            padding-bottom: 8px;
+            padding: 6px;
             margin-bottom: 28px;
+            border-radius: 99px;
+            scrollbar-width: none;
+          }
+
+          .products-tabbed-section-i4 .products-tab-menu::-webkit-scrollbar {
+            display: none;
           }
 
           .products-tabbed-section-i4 .products-tab-panel {
@@ -1312,7 +1317,8 @@
           <!-- Panel 2: Deckwale -->
           <div class="products-tab-panel" data-panel-index="1">
             <div class="panel-image-wrapper slideshow deckwale-slideshow">
-              <img src="Assets/Deckwale/Deckwale-1.png" alt="Deckwale presentation, pitch deck, and document builder" class="slide active">
+              <img src="Assets/Deckwale/Deckwale-1.png" alt="Deckwale presentation, pitch deck, and document builder"
+                class="slide active">
               <img src="Assets/Deckwale/Deckwale-3.png" alt="Deckwale AI pitch preparation workspace" class="slide">
               <img src="Assets/Deckwale/Deckwale-4.png" alt="Deckwale AI research and outline generation" class="slide">
               <img src="Assets/Deckwale/Deckwale-2.png" alt="Deckwale document builder preview" class="slide">
@@ -3805,6 +3811,7 @@
             opacity: 0;
             transform: translateY(12px);
           }
+
           to {
             opacity: 1;
             transform: translateY(0);
@@ -3840,7 +3847,8 @@
                     <span class="meta-separator">•</span>
                     <span class="resource-readtime">12 min read</span>
                   </div>
-                  <h3 class="featured-title">India Drops from 4th to 6th in Global GDP Rankings: The Real Story Behind the Headlines</h3>
+                  <h3 class="featured-title">India Drops from 4th to 6th in Global GDP Rankings: The Real Story Behind
+                    the Headlines</h3>
                   <a href="#" class="resource-link-btn">
                     <span>Read article</span>
                     <svg class="link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -3865,11 +3873,12 @@
                       <span class="meta-separator">•</span>
                       <span class="resource-readtime">8 min read</span>
                     </div>
-                    <h4 class="mini-title">The Professional Presenter's Playbook: AI Proposals & Board Presentations</h4>
+                    <h4 class="mini-title">The Professional Presenter's Playbook: AI Proposals & Board Presentations
+                    </h4>
                     <a href="#" class="resource-link-btn">
                       <span>Read article</span>
-                      <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                         <polyline points="12 5 19 12 12 19"></polyline>
                       </svg>
@@ -3891,8 +3900,8 @@
                     <h4 class="mini-title">Crafting Your Business Deck: A Comprehensive Guide to Capital Raising</h4>
                     <a href="#" class="resource-link-btn">
                       <span>Read article</span>
-                      <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                         <polyline points="12 5 19 12 12 19"></polyline>
                       </svg>
@@ -3917,7 +3926,8 @@
                     <span class="meta-separator">•</span>
                     <span class="resource-readtime">15 min read</span>
                   </div>
-                  <h3 class="featured-title">Navigating the Private Equity Landscape: Growth Capital vs. Buyouts in 2026</h3>
+                  <h3 class="featured-title">Navigating the Private Equity Landscape: Growth Capital vs. Buyouts in 2026
+                  </h3>
                   <a href="#" class="resource-link-btn">
                     <span>Read article</span>
                     <svg class="link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -3942,11 +3952,12 @@
                       <span class="meta-separator">•</span>
                       <span class="resource-readtime">12 min read</span>
                     </div>
-                    <h4 class="mini-title">Understanding Term Sheets: Key Valuation Metrics & Liquidation Preferences</h4>
+                    <h4 class="mini-title">Understanding Term Sheets: Key Valuation Metrics & Liquidation Preferences
+                    </h4>
                     <a href="#" class="resource-link-btn">
                       <span>Read article</span>
-                      <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                         <polyline points="12 5 19 12 12 19"></polyline>
                       </svg>
@@ -3968,8 +3979,8 @@
                     <h4 class="mini-title">Post-Investment Governance: Working with PE Board Members</h4>
                     <a href="#" class="resource-link-btn">
                       <span>Read article</span>
-                      <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                         <polyline points="12 5 19 12 12 19"></polyline>
                       </svg>
@@ -3994,7 +4005,8 @@
                     <span class="meta-separator">•</span>
                     <span class="resource-readtime">14 min read</span>
                   </div>
-                  <h3 class="featured-title">Securing the Deal: Best Practices for Preparing Your Virtual Data Room (VDR)</h3>
+                  <h3 class="featured-title">Securing the Deal: Best Practices for Preparing Your Virtual Data Room
+                    (VDR)</h3>
                   <a href="#" class="resource-link-btn">
                     <span>Read article</span>
                     <svg class="link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -4019,11 +4031,12 @@
                       <span class="meta-separator">•</span>
                       <span class="resource-readtime">11 min read</span>
                     </div>
-                    <h4 class="mini-title">VDR Security Standards: SOC 2, HIPAA, and End-to-End Encryption Explained</h4>
+                    <h4 class="mini-title">VDR Security Standards: SOC 2, HIPAA, and End-to-End Encryption Explained
+                    </h4>
                     <a href="#" class="resource-link-btn">
                       <span>Read article</span>
-                      <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                         <polyline points="12 5 19 12 12 19"></polyline>
                       </svg>
@@ -4045,8 +4058,8 @@
                     <h4 class="mini-title">Document Access Control Checklist: Managing Investor Permissions</h4>
                     <a href="#" class="resource-link-btn">
                       <span>Read article</span>
-                      <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                         <polyline points="12 5 19 12 12 19"></polyline>
                       </svg>
@@ -4438,9 +4451,9 @@
                 </li>
               </ul>
               <a href="#" class="btn btn-ecosystem-action">Coffee Trade</a>
+            </div>
           </div>
         </div>
-      </div>
     </section>
 
     <!-- Government Grants Section -->
@@ -4662,7 +4675,8 @@
         }
 
         .grant-closes-row span.closes-badge.urgent {
-          color: #dc2626; /* red text for 'today' closes */
+          color: #dc2626;
+          /* red text for 'today' closes */
         }
 
         .grant-results-row {
@@ -4675,7 +4689,8 @@
 
         .grant-results-row span.results-badge {
           font-weight: 700;
-          color: #d97706; /* gold text for 'locked' results */
+          color: #d97706;
+          /* gold text for 'locked' results */
           display: inline-flex;
           align-items: center;
           gap: 3px;
@@ -4937,7 +4952,8 @@
         <div class="grants-header">
           <span class="grants-eyebrow">Funding Opportunities</span>
           <h2 class="grants-title">Government Grants for Startups</h2>
-          <p class="grants-subtitle">Apply for verified national, state, and departmental grant programs to scale your startup idea.</p>
+          <p class="grants-subtitle">Apply for verified national, state, and departmental grant programs to scale your
+            startup idea.</p>
         </div>
 
         <div class="grants-list" id="grants-list-container">
@@ -4947,11 +4963,16 @@
               <div class="grant-title-row">
                 <a href="#" class="grant-row-title">MSME Idea Hackathon 6.0</a>
                 <button class="grant-bookmark-btn" aria-label="Bookmark this grant">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                  </svg>
                 </button>
               </div>
-              <p class="grant-meta-sub">under <strong>MSME Idea Hackathon</strong> • by <strong>Ministry of MSME</strong></p>
-              <p class="grant-desc">National MSME innovation hackathon on frontier tech — renewable energy, Industry 4.0/5.0, robotics, automotive & more. Up to ₹15 lakh + incubation per approved idea.</p>
+              <p class="grant-meta-sub">under <strong>MSME Idea Hackathon</strong> • by <strong>Ministry of
+                  MSME</strong></p>
+              <p class="grant-desc">National MSME innovation hackathon on frontier tech — renewable energy, Industry
+                4.0/5.0, robotics, automotive & more. Up to ₹15 lakh + incubation per approved idea.</p>
               <div class="grant-tags">
                 <span class="grant-badge">Eligibility</span>
                 <span class="grant-badge no-star">Grant</span>
@@ -4968,19 +4989,37 @@
                 <span class="grant-amount-label">Up to</span>
                 <span class="grant-amount">₹15L</span>
                 <div class="grant-closes-row">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
                   <span>Closes: <span class="closes-badge">this month</span></span>
                 </div>
                 <div class="grant-results-row">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
                   <span>Results: <span class="results-badge">Locked</span></span>
                 </div>
               </div>
               <button class="grant-btn-doc" aria-label="View guidelines document">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
               </button>
               <a href="#" class="grant-btn-apply">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
                 Subscribe & Apply
               </a>
             </div>
@@ -4992,10 +5031,14 @@
               <div class="grant-title-row">
                 <a href="#" class="grant-row-title">ELEVATE 2026 — Startup Karnataka Grant-in-Aid Program</a>
                 <button class="grant-bookmark-btn" aria-label="Bookmark this grant">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                  </svg>
                 </button>
               </div>
-              <p class="grant-meta-sub">under <strong>ELEVATE Karnataka</strong> • by <strong>Startup Karnataka</strong></p>
+              <p class="grant-meta-sub">under <strong>ELEVATE Karnataka</strong> • by <strong>Startup Karnataka</strong>
+              </p>
               <p class="grant-desc">One-time grant up to ₹50L for any Karnataka startup to build a proof-of-concept.</p>
               <div class="grant-tags">
                 <span class="grant-badge">Eligibility</span>
@@ -5015,19 +5058,37 @@
                 <span class="grant-amount-label">Up to</span>
                 <span class="grant-amount">₹50L</span>
                 <div class="grant-closes-row">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
                   <span>Closes: <span class="closes-badge urgent">today!</span></span>
                 </div>
                 <div class="grant-results-row">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
                   <span>Results: <span class="results-badge">Locked</span></span>
                 </div>
               </div>
               <button class="grant-btn-doc" aria-label="View guidelines document">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
               </button>
               <a href="#" class="grant-btn-apply">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
                 Subscribe & Apply
               </a>
             </div>
@@ -5039,11 +5100,16 @@
               <div class="grant-title-row">
                 <a href="#" class="grant-row-title">NIDHI-PRAYAS Support Program</a>
                 <button class="grant-bookmark-btn" aria-label="Bookmark this grant">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                  </svg>
                 </button>
               </div>
-              <p class="grant-meta-sub">under <strong>DST NIDHI</strong> • by <strong>Department of Science & Technology</strong></p>
-              <p class="grant-desc">Grant support for early stage innovators to translate their innovative ideas into physical prototypes.</p>
+              <p class="grant-meta-sub">under <strong>DST NIDHI</strong> • by <strong>Department of Science &
+                  Technology</strong></p>
+              <p class="grant-desc">Grant support for early stage innovators to translate their innovative ideas into
+                physical prototypes.</p>
               <div class="grant-tags">
                 <span class="grant-badge">Eligibility</span>
                 <span class="grant-badge no-star">Grant</span>
@@ -5060,19 +5126,37 @@
                 <span class="grant-amount-label">Up to</span>
                 <span class="grant-amount">₹10L</span>
                 <div class="grant-closes-row">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
                   <span>Closes: <span class="closes-badge">in 15 days</span></span>
                 </div>
                 <div class="grant-results-row">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
                   <span>Results: <span class="results-badge">Locked</span></span>
                 </div>
               </div>
               <button class="grant-btn-doc" aria-label="View guidelines document">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
               </button>
               <a href="#" class="grant-btn-apply">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
                 Subscribe & Apply
               </a>
             </div>
@@ -5084,11 +5168,16 @@
               <div class="grant-title-row">
                 <a href="#" class="grant-row-title">BIRAC Biotech Ignition Grant (BIG)</a>
                 <button class="grant-bookmark-btn" aria-label="Bookmark this grant">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                  </svg>
                 </button>
               </div>
-              <p class="grant-meta-sub">under <strong>BIRAC Innovation Schemes</strong> • by <strong>Biotechnology Industry Research Assistance Council</strong></p>
-              <p class="grant-desc">Ignition grant support for biotech start-ups and entrepreneurs to establish proof of concept.</p>
+              <p class="grant-meta-sub">under <strong>BIRAC Innovation Schemes</strong> • by <strong>Biotechnology
+                  Industry Research Assistance Council</strong></p>
+              <p class="grant-desc">Ignition grant support for biotech start-ups and entrepreneurs to establish proof of
+                concept.</p>
               <div class="grant-tags">
                 <span class="grant-badge">Eligibility</span>
                 <span class="grant-badge no-star">Grant</span>
@@ -5105,19 +5194,37 @@
                 <span class="grant-amount-label">Up to</span>
                 <span class="grant-amount">₹50L</span>
                 <div class="grant-closes-row">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
                   <span>Closes: <span class="closes-badge">next month</span></span>
                 </div>
                 <div class="grant-results-row">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
                   <span>Results: <span class="results-badge">Locked</span></span>
                 </div>
               </div>
               <button class="grant-btn-doc" aria-label="View guidelines document">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
               </button>
               <a href="#" class="grant-btn-apply">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
                 Subscribe & Apply
               </a>
             </div>
@@ -5129,11 +5236,16 @@
               <div class="grant-title-row">
                 <a href="#" class="grant-row-title">SAMRIDH Acceleration Scheme</a>
                 <button class="grant-bookmark-btn" aria-label="Bookmark this grant">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                  </svg>
                 </button>
               </div>
-              <p class="grant-meta-sub">under <strong>SAMRIDH MeitY</strong> • by <strong>Ministry of Electronics & IT (MeitY)</strong></p>
-              <p class="grant-desc">Acceleration support for tech startups to scale product development, market access, and secure venture capital.</p>
+              <p class="grant-meta-sub">under <strong>SAMRIDH MeitY</strong> • by <strong>Ministry of Electronics & IT
+                  (MeitY)</strong></p>
+              <p class="grant-desc">Acceleration support for tech startups to scale product development, market access,
+                and secure venture capital.</p>
               <div class="grant-tags">
                 <span class="grant-badge">Eligibility</span>
                 <span class="grant-badge no-star">Grant</span>
@@ -5150,19 +5262,37 @@
                 <span class="grant-amount-label">Up to</span>
                 <span class="grant-amount">₹40L</span>
                 <div class="grant-closes-row">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
                   <span>Closes: <span class="closes-badge">in 3 weeks</span></span>
                 </div>
                 <div class="grant-results-row">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
                   <span>Results: <span class="results-badge">Locked</span></span>
                 </div>
               </div>
               <button class="grant-btn-doc" aria-label="View guidelines document">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
               </button>
               <a href="#" class="grant-btn-apply">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
                 Subscribe & Apply
               </a>
             </div>
@@ -5174,11 +5304,16 @@
               <div class="grant-title-row">
                 <a href="#" class="grant-row-title">TIDE 2.0 (Technology Incubation & Development of Entrepreneurs)</a>
                 <button class="grant-bookmark-btn" aria-label="Bookmark this grant">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                  </svg>
                 </button>
               </div>
-              <p class="grant-meta-sub">under <strong>MeitY Incubation Support</strong> • by <strong>Ministry of Electronics & IT</strong></p>
-              <p class="grant-desc">Grant-in-aid to tech startups focusing on emerging technologies like IoT, AI, Blockchain, and Robotics.</p>
+              <p class="grant-meta-sub">under <strong>MeitY Incubation Support</strong> • by <strong>Ministry of
+                  Electronics & IT</strong></p>
+              <p class="grant-desc">Grant-in-aid to tech startups focusing on emerging technologies like IoT, AI,
+                Blockchain, and Robotics.</p>
               <div class="grant-tags">
                 <span class="grant-badge">Eligibility</span>
                 <span class="grant-badge no-star">Grant</span>
@@ -5192,19 +5327,37 @@
                 <span class="grant-amount-label">Up to</span>
                 <span class="grant-amount">₹7L</span>
                 <div class="grant-closes-row">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
                   <span>Closes: <span class="closes-badge">next month</span></span>
                 </div>
                 <div class="grant-results-row">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
                   <span>Results: <span class="results-badge">Locked</span></span>
                 </div>
               </div>
               <button class="grant-btn-doc" aria-label="View guidelines document">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
               </button>
               <a href="#" class="grant-btn-apply">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
                 Subscribe & Apply
               </a>
             </div>
@@ -5216,11 +5369,16 @@
               <div class="grant-title-row">
                 <a href="#" class="grant-row-title">Startup India Seed Fund Scheme (SISFS)</a>
                 <button class="grant-bookmark-btn" aria-label="Bookmark this grant">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                  </svg>
                 </button>
               </div>
-              <p class="grant-meta-sub">under <strong>Startup India Initiative</strong> • by <strong>DPIIT (Ministry of Commerce)</strong></p>
-              <p class="grant-desc">Financial assistance to early-stage startups for proof of concept, prototype development, product trials, and market entry.</p>
+              <p class="grant-meta-sub">under <strong>Startup India Initiative</strong> • by <strong>DPIIT (Ministry of
+                  Commerce)</strong></p>
+              <p class="grant-desc">Financial assistance to early-stage startups for proof of concept, prototype
+                development, product trials, and market entry.</p>
               <div class="grant-tags">
                 <span class="grant-badge">Eligibility</span>
                 <span class="grant-badge no-star">Grant</span>
@@ -5235,19 +5393,37 @@
                 <span class="grant-amount-label">Up to</span>
                 <span class="grant-amount">₹20L</span>
                 <div class="grant-closes-row">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
                   <span>Closes: <span class="closes-badge">ongoing</span></span>
                 </div>
                 <div class="grant-results-row">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
                   <span>Results: <span class="results-badge">Locked</span></span>
                 </div>
               </div>
               <button class="grant-btn-doc" aria-label="View guidelines document">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
               </button>
               <a href="#" class="grant-btn-apply">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
                 Subscribe & Apply
               </a>
             </div>
@@ -5257,7 +5433,10 @@
         <div class="grants-footer">
           <button class="btn-show-grants" id="btn-toggle-grants">
             <span>Show All Grants</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
           </button>
         </div>
 
@@ -5267,9 +5446,11 @@
             <button class="login-modal-close" id="closeLoginModal">&times;</button>
             <div class="login-modal-header">
               <h3 class="login-modal-title">Access Premium Grants</h3>
-              <p class="login-modal-subtitle">Login or create an account to view and subscribe to all government grant opportunities.</p>
+              <p class="login-modal-subtitle">Login or create an account to view and subscribe to all government grant
+                opportunities.</p>
             </div>
-            <form class="login-modal-form" onsubmit="event.preventDefault(); alert('Login successful!'); document.getElementById('loginModal').classList.remove('active');">
+            <form class="login-modal-form"
+              onsubmit="event.preventDefault(); alert('Login successful!'); document.getElementById('loginModal').classList.remove('active');">
               <div class="form-group">
                 <label for="modal-email">Email Address</label>
                 <input type="email" id="modal-email" required placeholder="name@company.com">
@@ -5390,7 +5571,9 @@
         <!-- Bottom Copyright & Socials Bar -->
         <div class="footer-bottom-row">
           <div class="footer-bottom-left" style="display: flex; flex-direction: column; gap: 8px; text-align: left;">
-            <p class="copyright-text" style="font-size: 14px; color: var(--dark-text-muted); margin: 0; font-weight: 500;">Copyright 2026 &copy; by Seedicon. Secured by FWC</p>
+            <p class="copyright-text"
+              style="font-size: 14px; color: var(--dark-text-muted); margin: 0; font-weight: 500;">Copyright 2026 &copy;
+              by Seedicon. Secured by FWC</p>
           </div>
           <div class="footer-social-icons">
             <!-- Facebook -->

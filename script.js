@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFabSwitcher();
   initMobileMenus();
   initSearchFeedback();
+  initHeroStartupSearch();
   initStickyBanner();
   initProductAccordion();
   initSlideshows();
@@ -108,6 +109,45 @@ function initSearchFeedback() {
         executeSearch();
       }
     });
+  });
+}
+
+/**
+ * Filters the startup discovery hero as the user types.
+ */
+function initHeroStartupSearch() {
+  const form = document.querySelector('.startup-search-i6');
+  if (!form) return;
+
+  const input = form.querySelector('.startup-search-input-i6');
+  const showcase = document.querySelector('.startup-showcase-i6');
+  const status = showcase?.querySelector('.startup-search-status-i6');
+  const rows = showcase ? Array.from(showcase.querySelectorAll('.company-row')) : [];
+
+  if (!input || rows.length === 0) return;
+
+  const filterStartups = () => {
+    const query = input.value.trim().toLowerCase();
+    let visibleCount = 0;
+
+    rows.forEach(row => {
+      const matches = !query || row.textContent.toLowerCase().includes(query);
+      row.hidden = !matches;
+      if (matches) visibleCount += 1;
+    });
+
+    if (status) {
+      status.textContent = query && visibleCount === 0
+        ? `No startups found for "${input.value.trim()}".`
+        : '';
+    }
+  };
+
+  input.addEventListener('input', filterStartups);
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    filterStartups();
+    if (!input.value.trim()) input.focus();
   });
 }
 
@@ -270,27 +310,90 @@ function initSlideshows() {
   slideshows.forEach(slideshow => {
     const slides = slideshow.querySelectorAll('.slide');
     if (slides.length <= 1) return;
+    
+    // Create dots container
+    const dotsContainer = document.createElement('div');
+    dotsContainer.className = 'slideshow-dots';
+    
+    const dots = [];
     let currentIndex = 0;
+    
+    // Find initial active index
+    slides.forEach((slide, idx) => {
+      if (slide.classList.contains('active')) {
+        currentIndex = idx;
+      }
+    });
 
-    setInterval(() => {
-      // Find current slide
+    // Create a dot for each slide
+    slides.forEach((_, idx) => {
+      const dot = document.createElement('span');
+      dot.className = 'slideshow-dot';
+      if (idx === currentIndex) {
+        dot.classList.add('active');
+      }
+      dot.setAttribute('data-index', idx);
+      dot.setAttribute('role', 'button');
+      dot.setAttribute('aria-label', `Go to slide ${idx + 1}`);
+      dotsContainer.appendChild(dot);
+      dots.push(dot);
+    });
+
+    slideshow.appendChild(dotsContainer);
+
+    let cycleInterval = null;
+
+    function goToSlide(nextIndex) {
+      if (nextIndex === currentIndex) return;
+      
       const currentSlide = slides[currentIndex];
+      const nextSlide = slides[nextIndex];
+
+      // Remove active, add exit to current
       currentSlide.classList.remove('active');
       currentSlide.classList.add('exit');
 
-      // Increment
-      currentIndex = (currentIndex + 1) % slides.length;
-
-      // Next slide
-      const nextSlide = slides[currentIndex];
+      // Set next slide active
       nextSlide.classList.remove('exit');
       nextSlide.classList.add('active');
 
-      // Clean up exit class after slide transition completes (800ms)
+      // Update dots state
+      dots.forEach((dot, idx) => {
+        if (idx === nextIndex) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+
+      // Cleanup exit class after transition
       setTimeout(() => {
         currentSlide.classList.remove('exit');
       }, 800);
-    }, 3000);
+
+      currentIndex = nextIndex;
+    }
+
+    function startAutoCycle() {
+      if (cycleInterval) clearInterval(cycleInterval);
+      cycleInterval = setInterval(() => {
+        let nextIndex = (currentIndex + 1) % slides.length;
+        goToSlide(nextIndex);
+      }, 4000);
+    }
+
+    // Dot click listeners
+    dots.forEach(dot => {
+      dot.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const idx = parseInt(dot.getAttribute('data-index'), 10);
+        goToSlide(idx);
+        startAutoCycle(); // Reset timer on manual click
+      });
+    });
+
+    // Initialize cycle
+    startAutoCycle();
   });
 }
 
@@ -457,65 +560,40 @@ function initMegaMenuTabs() {
  * Activates connection lines and node glows when hovering role cards or nodes.
  */
 function initWhoItForInteractive() {
-  const cards = document.querySelectorAll('.who-role-card');
-  const nodes = document.querySelectorAll('.hub-node');
-  const svgPaths = {
-    founder: document.getElementById('path-founder'),
-    partner: document.getElementById('path-partner'),
-    investor: document.getElementById('path-investor'),
-    ma: document.getElementById('path-ma')
-  };
+  const hub = document.getElementById('who-seat-hub');
+  if (!hub) return;
 
-  if (!cards.length) return;
+  const cards = hub.querySelectorAll('.who-role-card-i4');
+  const nodes = hub.querySelectorAll('.hub-node-i4');
+  const paths = hub.querySelectorAll('.who-flow-path-i4');
 
   function activateRole(role) {
-    // Reset cards active state
-    cards.forEach(c => {
-      if (c.getAttribute('data-role') === role) {
-        c.classList.add('active');
-      } else {
-        c.classList.remove('active');
-      }
+    cards.forEach(card => {
+      card.classList.toggle('active', card.dataset.role === role);
     });
 
-    // Reset outer nodes active state
-    nodes.forEach(n => {
-      if (n.getAttribute('data-role') === role) {
-        n.classList.add('active');
-      } else {
-        n.classList.remove('active');
-      }
+    nodes.forEach(node => {
+      node.classList.toggle('active', node.dataset.role === role);
     });
 
-    // Reset SVG paths glow state
-    for (const key in svgPaths) {
-      if (svgPaths[key]) {
-        if (key === role) {
-          svgPaths[key].classList.add('glow-active');
-        } else {
-          svgPaths[key].classList.remove('glow-active');
-        }
-      }
-    }
+    paths.forEach(path => {
+      path.classList.toggle('active', path.dataset.role === role);
+    });
   }
 
-  // Set default active to founder
   activateRole('founder');
 
-  // Hover triggers on role cards
   cards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-      const role = card.getAttribute('data-role');
-      activateRole(role);
-    });
+    const activateCard = () => activateRole(card.dataset.role);
+    card.addEventListener('mouseenter', activateCard);
+    card.addEventListener('focusin', activateCard);
   });
 
-  // Hover triggers on center outer nodes
   nodes.forEach(node => {
-    node.addEventListener('mouseenter', () => {
-      const role = node.getAttribute('data-role');
-      activateRole(role);
-    });
+    const activateNode = () => activateRole(node.dataset.role);
+    node.addEventListener('mouseenter', activateNode);
+    node.addEventListener('focus', activateNode);
+    node.addEventListener('click', activateNode);
   });
 }
 

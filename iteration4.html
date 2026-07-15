@@ -1425,11 +1425,19 @@
           }
 
           .products-tabbed-section-i4 .products-tab-menu {
-            gap: 16px;
+            display: flex;
+            width: 100%;
+            max-width: 100%;
+            gap: 6px;
             overflow-x: auto;
             white-space: nowrap;
-            padding-bottom: 8px;
+            padding: 6px;
             margin-bottom: 28px;
+            border-radius: 99px;
+            scrollbar-width: none;
+          }
+          .products-tabbed-section-i4 .products-tab-menu::-webkit-scrollbar {
+            display: none;
           }
 
           .products-tabbed-section-i4 .products-tab-panel {

@@ -28,9 +28,9 @@
       -webkit-backface-visibility: hidden;
     }
 
-    /* Mega menu active tab styling - subtle light blue/gray background instead of dark */
+    /* Mega menu active tab styling - brand purple tint background instead of slate */
     .mega-sidebar-item.active {
-      background-color: #f1f5fa !important;
+      background-color: rgba(145, 49, 117, 0.04) !important;
       border-left-color: var(--primary-purple) !important;
     }
 
@@ -39,18 +39,18 @@
     }
 
     .mega-sidebar-item.active .mega-sidebar-subtitle {
-      color: var(--slate-500) !important;
+      color: rgba(145, 49, 117, 0.6) !important;
     }
 
     .mega-sidebar-item:hover {
-      background-color: rgba(15, 23, 42, 0.03) !important;
+      background-color: rgba(145, 49, 117, 0.01) !important;
     }
 
     /* Mega menu spacing improvements - narrow sidebar & tighter padding */
     .dropdown-menu.mega-menu {
       background: linear-gradient(to right,
-          #f8fafc 0,
-          #f8fafc calc(50% - 336px),
+          #fcf9fc 0,
+          #fcf9fc calc(50% - 336px),
           #ffffff calc(50% - 336px),
           #ffffff 100%) !important;
     }
@@ -89,79 +89,112 @@
     /* Permanent Rich Dark Fuchsia/Purple Footer overrides */
     .footer-section {
       background:
-        radial-gradient(ellipse 60% 40% at 50% 0%, rgba(232, 121, 249, 0.16) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 50% 0%, rgba(145, 49, 117, 0.18) 0%, transparent 60%),
         radial-gradient(ellipse 30% 30% at 10% 70%, rgba(145, 49, 117, 0.12) 0%, transparent 50%),
         linear-gradient(185deg, #1b0716 0%, #0c020a 100%) !important;
-      border-top: 1px solid rgba(232, 121, 249, 0.18) !important;
-      box-shadow: inset 0 1px 0 rgba(232, 121, 249, 0.1) !important;
+      border-radius: 40px 40px 0 0 !important;
+      margin: 0 40px !important;
+      padding: 60px 40px 40px 40px !important;
       color: rgba(255, 255, 255, 0.8) !important;
+      box-shadow: 0 -20px 40px -10px rgba(145, 49, 117, 0.15) !important;
+      width: auto !important;
+      overflow: hidden !important;
+    }
+
+    @media (max-width: 768px) {
+      .footer-section {
+        margin: 40px 16px 0 16px !important;
+        padding: 40px 20px 24px 20px !important;
+        border-radius: 24px 24px 0 0 !important;
+        width: auto !important;
+      }
     }
 
     .footer-cta-title {
-      background: linear-gradient(135deg, #ffffff 0%, #f472b6 60%, #e879f9 100%) !important;
-      -webkit-background-clip: text !important;
-      -webkit-text-fill-color: transparent !important;
-      background-clip: text !important;
+      color: #ffffff !important;
+      background: none !important;
+      -webkit-text-fill-color: #ffffff !important;
+      font-size: 32px !important;
+      font-weight: 700 !important;
+      margin: 0 !important;
     }
 
     .footer-cta-desc {
-      color: rgba(255, 255, 255, 0.7) !important;
+      color: rgba(255, 255, 255, 0.6) !important;
+      font-size: 15px !important;
+      margin: 8px 0 0 0 !important;
     }
 
     .btn-footer-primary {
-      background: linear-gradient(135deg, #913175 0%, #e879f9 100%) !important;
+      background: linear-gradient(135deg, var(--primary-purple) 0%, #c26ca8 100%) !important;
       color: #ffffff !important;
-      box-shadow: 0 4px 20px rgba(232, 121, 249, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+      box-shadow: 0 0 20px rgba(145, 49, 117, 0.45) !important;
       border: none !important;
+      border-radius: 8px !important;
+      padding: 12px 24px !important;
+      font-weight: 600 !important;
+      font-size: 14.5px !important;
       transition: all 0.25s ease !important;
     }
 
     .btn-footer-primary:hover {
       transform: translateY(-2px) !important;
-      box-shadow: 0 8px 24px rgba(232, 121, 249, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+      box-shadow: 0 0 30px rgba(145, 49, 117, 0.7) !important;
     }
 
     .btn-footer-secondary {
-      color: rgba(255, 255, 255, 0.95) !important;
-      border: 1px solid rgba(232, 121, 249, 0.3) !important;
-      background-color: rgba(232, 121, 249, 0.05) !important;
+      color: #ffffff !important;
+      border: 1px solid rgba(255, 255, 255, 0.15) !important;
+      background-color: rgba(255, 255, 255, 0.03) !important;
+      border-radius: 8px !important;
+      padding: 12px 24px !important;
+      font-weight: 600 !important;
+      font-size: 14.5px !important;
       transition: all 0.25s ease !important;
     }
 
     .btn-footer-secondary:hover {
       color: #ffffff !important;
-      border-color: #e879f9 !important;
-      background-color: rgba(232, 121, 249, 0.15) !important;
-      box-shadow: 0 0 15px rgba(232, 121, 249, 0.25) !important;
+      border-color: rgba(255, 255, 255, 0.3) !important;
+      background-color: rgba(255, 255, 255, 0.08) !important;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.08) !important;
     }
 
     .footer-divider {
-      background: linear-gradient(90deg, transparent 0%, rgba(232, 121, 249, 0.2) 30%, rgba(232, 121, 249, 0.2) 70%, transparent 100%) !important;
+      background: rgba(255, 255, 255, 0.07) !important;
+      height: 1px !important;
+      margin: 30px 0 !important;
     }
 
     @media (min-width: 993px) {
       .footer-links-grid {
         grid-template-columns: repeat(7, 1fr) !important;
+        gap: 32px 16px !important;
       }
     }
 
     .link-col-title {
-      color: #e879f9 !important;
-      text-shadow: 0 0 10px rgba(232, 121, 249, 0.2) !important;
-      font-weight: 800 !important;
+      color: #d68ac0 !important;
+      text-transform: uppercase !important;
+      font-size: 12px !important;
+      font-weight: 700 !important;
       letter-spacing: 0.08em !important;
+      margin-bottom: 20px !important;
+      text-shadow: none !important;
     }
 
     .link-col-list a {
       color: rgba(255, 255, 255, 0.65) !important;
       transition: all 0.22s ease !important;
       display: inline-block !important;
+      font-size: 13.5px !important;
+      font-weight: 500 !important;
     }
 
     .link-col-list a:hover {
-      color: #e879f9 !important;
-      text-shadow: 0 0 8px rgba(232, 121, 249, 0.4) !important;
+      color: #d68ac0 !important;
       transform: translateX(3px) !important;
+      text-shadow: none !important;
     }
 
     .copyright-text {
@@ -169,18 +202,23 @@
     }
 
     .social-icon-link {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 36px !important;
+      height: 36px !important;
       background-color: rgba(255, 255, 255, 0.03) !important;
-      border: 1px solid rgba(232, 121, 249, 0.15) !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      border-radius: 6px !important;
       color: rgba(255, 255, 255, 0.7) !important;
       transition: all 0.25s ease !important;
+      padding: 0 !important;
     }
 
     .social-icon-link:hover {
-      background-color: rgba(232, 121, 249, 0.15) !important;
+      background-color: rgba(145, 49, 117, 0.2) !important;
+      border-color: rgba(145, 49, 117, 0.4) !important;
       color: #ffffff !important;
-      border-color: #e879f9 !important;
-      box-shadow: 0 0 15px rgba(232, 121, 249, 0.45) !important;
-      transform: translateY(-2px) !important;
     }
   </style>
 </head>
@@ -421,7 +459,8 @@
 
                       <div class="mega-promo-box">
                         <div class="promo-image-container">
-                          <img src="Assets/Watch/Watch-1.png" alt="Seedicon Watch encrypted document vaults" class="promo-img">
+                          <img src="Assets/Watch/Watch-1.png" alt="Seedicon Watch encrypted document vaults"
+                            class="promo-img">
                         </div>
                         <div class="promo-text-container">
                           <div class="promo-title-row">
@@ -483,7 +522,8 @@
 
                       <div class="mega-promo-box">
                         <div class="promo-image-container">
-                          <img src="Assets/Events/Event-1.png" alt="Seedicon Events host and book events" class="promo-img">
+                          <img src="Assets/Events/Event-1.png" alt="Seedicon Events host and book events"
+                            class="promo-img">
                         </div>
                         <div class="promo-text-container">
                           <div class="promo-title-row">
@@ -744,333 +784,245 @@
           </div>
         </nav>
       </div>
-    </header>    <!-- Warm Light Hero Section Redesigned in Premium Dark Purple Coda Style -->
-    <main class="hero-section-i6">
-      <div class="glow-blob-i6 glow-blob-1-i6"></div>
-      <div class="glow-blob-i6 glow-blob-2-i6"></div>
+    </header>
+
+    <!-- Startup discovery hero -->
+    <main class="hero-section-i6 hero-startup-discovery-i6">
       <div class="hero-container-i6">
-        <div class="hero-content-i6">
-          <h1 class="hero-title-i6">
-            Fueling <span class="gradient-text-i6">startup growth</span> and global trade.
-          </h1>
-          <p class="hero-subtitle-i6">
-            List your startup, build investor-ready pitch decks, and get shortlisted by the right investors — all from one place.
-          </p>
+        <header class="hero-content-i6">
+          <h1 class="hero-title-i6">Discover the <span class="hero-title-accent-i6">startups</span> shaping what comes next.</h1>
+
+          <form class="startup-search-i6" role="search" novalidate>
+            <svg class="startup-search-icon-i6" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+            <input type="search" class="startup-search-input-i6"
+              placeholder="Search by company, founder, sector, or location"
+              aria-label="Search startups by company, founder, sector, or location" autocomplete="off">
+            <button type="submit" class="startup-search-submit-i6" aria-label="Search startups"
+              title="Search startups">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg>
+            </button>
+          </form>
+
           <div class="hero-buttons-i6">
-            <a href="#" class="btn-pill-primary-i6">List your Startup</a>
-            <a href="#" class="btn-pill-secondary-i6">Join to Invest</a>
+            <a href="#" class="btn-pill-primary-i6">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 5v14"></path>
+                <path d="M5 12h14"></path>
+              </svg>
+              <span>List your startup</span>
+            </a>
+            <a href="#" class="btn-pill-secondary-i6">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="8" r="4"></circle>
+                <path d="M4 21a8 8 0 0 1 16 0"></path>
+              </svg>
+              <span>Join to invest</span>
+            </a>
           </div>
-        </div>
+        </header>
 
-        <div class="hero-mockup-wrapper-i6">
-          <div class="chrome-window-mockup-i6">
-            <!-- Chrome Title Bar -->
-            <div class="chrome-title-bar-i6">
-              <div class="chrome-dots-i6">
-                <div class="chrome-dot-i6 red"></div>
-                <div class="chrome-dot-i6 yellow"></div>
-                <div class="chrome-dot-i6 green"></div>
+        <section class="company-showcase-container startup-showcase-i6" aria-label="Featured startups">
+          <div class="company-list">
+            <!-- Row 1: Airbnb -->
+            <div class="company-row">
+              <div class="company-logo-box">
+                <img src="https://cdn.brandfetch.io/airbnb.com?c=1idD5blp6f0v3UdGKX9" alt="Airbnb logo" class="company-logo">
               </div>
-              <div class="chrome-address-bar-i6">seedicon.com/workspace</div>
+              <div class="company-content">
+                <div class="company-meta-top">
+                  <span class="company-name">Airbnb</span>
+                  <span class="meta-divider">•</span>
+                  <span class="company-founders">Brian Chesky, Joe Gebbia, Nathan Blecharczyk</span>
+                </div>
+                <div class="company-desc">Book accommodations around the world.</div>
+                <div class="company-meta-bottom">
+                  <span>Public</span>
+                  <span class="meta-dot"></span>
+                  <span>Consumer</span>
+                  <span class="meta-dot"></span>
+                  <span>Travel</span>
+                  <span class="meta-dot"></span>
+                  <span>San Francisco, CA, USA</span>
+                </div>
+              </div>
+              <div class="company-socials">
+                <a href="https://airbnb.com" target="_blank" rel="noopener noreferrer" class="social-link-btn"
+                  aria-label="Airbnb website" title="Website">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path
+                      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                    </path>
+                  </svg>
+                </a>
+                <a href="https://www.linkedin.com/company/airbnb/" target="_blank" rel="noopener noreferrer"
+                  class="social-link-btn" aria-label="Airbnb on LinkedIn" title="LinkedIn">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                </a>
+              </div>
             </div>
 
-            <!-- Workspace Body -->
-            <div class="chrome-body-grid-i6">
-              <!-- Sidebar -->
-              <aside class="mockup-sidebar-i6">
-                <div class="mockup-logo-wrap-i6">
-                  <div class="mockup-logo-icon-i6">S</div>
-                  <div class="mockup-sidebar-text-i6">
-                    <span class="mockup-sidebar-title-i6">Seedicon Workspace</span>
-                    <span class="mockup-sidebar-sub-i6">Capital & Trade Hub</span>
-                  </div>
+            <!-- Row 2: DoorDash -->
+            <div class="company-row">
+              <div class="company-logo-box">
+                <img src="https://cdn.brandfetch.io/doordash.com?c=1idD5blp6f0v3UdGKX9" alt="DoorDash logo"
+                  class="company-logo">
+              </div>
+              <div class="company-content">
+                <div class="company-meta-top">
+                  <span class="company-name">DoorDash</span>
+                  <span class="meta-divider">•</span>
+                  <span class="company-founders">Tony Xu</span>
                 </div>
-
-                <ul class="mockup-nav-list-i6">
-                  <li>
-                    <a href="#" class="mockup-nav-item-i6 active">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
-                      <span>My dashboard</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="mockup-nav-item-i6">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                      <span>Pitch Decks</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="mockup-nav-item-i6">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                      <span>Explore Investments</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="mockup-nav-item-i6">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                      <span>Virtual Data Room</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="mockup-nav-item-i6">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
-                      <span>CRM Integration</span>
-                    </a>
-                  </li>
-                </ul>
-              </aside>
-
-              <!-- Main Content View -->
-              <section class="mockup-main-i6">
-                <!-- Top collaborative toolbar bar -->
-                <div class="mockup-topbar-i6">
-                  <div class="mockup-topbar-title-i6">
-                    <span class="mockup-kicker-i6">Seedicon Capital</span>
-                    <strong>Investor discovery workspace</strong>
-                  </div>
-                  <div class="mockup-actions-i6">
-                    <button class="btn-mockup-share-i6">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
-                      <span>Verified deals</span>
-                    </button>
-                    <button class="btn-mockup-insert-i6">
-                      <span>List startup</span>
-                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                    </button>
-                    <button class="mockup-icon-btn-i6" aria-label="Settings">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-                    </button>
-                    <img class="mockup-avatar-i6" style="margin-left: 0; width: 28px; height: 28px;" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=80&q=80" alt="Self Profile">
-                  </div>
+                <div class="company-desc">Restaurant delivery connecting consumers with local businesses.</div>
+                <div class="company-meta-bottom">
+                  <span>Public</span>
+                  <span class="meta-dot"></span>
+                  <span>Consumer</span>
+                  <span class="meta-dot"></span>
+                  <span>Food and Beverage</span>
+                  <span class="meta-dot"></span>
+                  <span>San Francisco, CA, USA</span>
                 </div>
+              </div>
+              <div class="company-socials">
+                <a href="https://doordash.com" target="_blank" rel="noopener noreferrer" class="social-link-btn"
+                  aria-label="DoorDash website" title="Website">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path
+                      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                    </path>
+                  </svg>
+                </a>
+                <a href="https://www.linkedin.com/company/doordash/" target="_blank" rel="noopener noreferrer"
+                  class="social-link-btn" aria-label="DoorDash on LinkedIn" title="LinkedIn">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
 
-                <!-- Page content body (Adapted with showcase startups list) -->
-                <div class="mockup-content-area-i6">
-                  <div class="company-showcase-container startup-marketplace-i6">
-                    <div class="marketplace-header-i6">
-                      <div class="marketplace-title-block-i6">
-                        <span class="marketplace-eyebrow-i6">Curated startup list</span>
-                        <h3>High-signal companies investors can act on today</h3>
-                        <p>Founders get structured visibility. Investors see the traction, raise context, and readiness signals first.</p>
-                      </div>
-                      <div class="marketplace-score-card-i6">
-                        <span class="score-label-i6">Profile quality</span>
-                        <strong>92%</strong>
-                        <span class="score-note-i6">Verified</span>
-                      </div>
-                    </div>
-
-                    <div class="marketplace-controls-i6">
-                      <div class="marketplace-search-i6">
-                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                        <span>Search fintech, climate, SaaS...</span>
-                      </div>
-                      <div class="marketplace-filter-row-i6">
-                        <span class="filter-chip-i6 active">Investor ready</span>
-                        <span class="filter-chip-i6">Growth</span>
-                        <span class="filter-chip-i6">Warm intros</span>
-                      </div>
-                    </div>
-
-                    <div class="marketplace-metrics-i6">
-                      <div>
-                        <strong>214</strong>
-                        <span>verified profiles</span>
-                      </div>
-                      <div>
-                        <strong>86</strong>
-                        <span>investor views</span>
-                      </div>
-                      <div>
-                        <strong>31</strong>
-                        <span>intro requests</span>
-                      </div>
-                    </div>
-
-                    <div class="startup-list-i6">
-                      <div class="startup-list-head-i6">
-                        <span>Company</span>
-                        <span>Stage</span>
-                        <span>Signal</span>
-                        <span>Action</span>
-                      </div>
-
-                      <div class="startup-card-i6 featured">
-                        <div class="startup-logo-box-i6">
-                          <img src="https://cdn.brandfetch.io/stripe.com?c=1idD5blp6f0v3UdGKX9" alt="Stripe logo" class="startup-logo-i6">
-                        </div>
-                        <div class="startup-info-i6">
-                          <div class="startup-header-row-i6">
-                            <span class="startup-name-i6">Stripe</span>
-                            <span class="startup-badge-i6 blue">Fintech</span>
-                            <span class="startup-badge-i6">Payments</span>
-                          </div>
-                          <div class="startup-desc-i6">Economic infrastructure for internet businesses and global commerce.</div>
-                          <div class="startup-founders-i6">Profile complete - verified traction - partner materials ready</div>
-                        </div>
-                        <div class="startup-stats-i6">
-                          <div class="stat-group-i6">
-                            <span class="stat-val-i6">Growth</span>
-                            <span class="stat-lbl-i6">Stage</span>
-                          </div>
-                          <div class="stat-group-i6">
-                            <span class="stat-val-i6">Global</span>
-                            <span class="stat-lbl-i6">Market</span>
-                          </div>
-                        </div>
-                        <div class="startup-team-views-i6">
-                          <div class="mini-avatar-stack-i6">
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=60&q=80" alt="Investor 1">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=60&q=80" alt="Investor 2">
-                          </div>
-                          <span class="view-count-i6 hot">18 views</span>
-                        </div>
-                        <div class="startup-action-i6">
-                          <a href="#" class="startup-link-btn-i6" aria-label="Open Stripe profile">
-                            <span>View</span>
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                          </a>
-                        </div>
-                      </div>
-
-                      <div class="startup-card-i6">
-                        <div class="startup-logo-box-i6">
-                          <img src="https://cdn.brandfetch.io/databricks.com?c=1idD5blp6f0v3UdGKX9" alt="Databricks logo" class="startup-logo-i6">
-                        </div>
-                        <div class="startup-info-i6">
-                          <div class="startup-header-row-i6">
-                            <span class="startup-name-i6">Databricks</span>
-                            <span class="startup-badge-i6">Data</span>
-                            <span class="startup-badge-i6 warm">AI infra</span>
-                          </div>
-                          <div class="startup-desc-i6">Lakehouse platform for data engineering, analytics, and machine learning.</div>
-                          <div class="startup-founders-i6">Enterprise traction - security docs - investor memo attached</div>
-                        </div>
-                        <div class="startup-stats-i6">
-                          <div class="stat-group-i6">
-                            <span class="stat-val-i6">Late</span>
-                            <span class="stat-lbl-i6">Stage</span>
-                          </div>
-                          <div class="stat-group-i6">
-                            <span class="stat-val-i6">B2B</span>
-                            <span class="stat-lbl-i6">Model</span>
-                          </div>
-                        </div>
-                        <div class="startup-team-views-i6">
-                          <div class="mini-avatar-stack-i6">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=60&q=80" alt="Investor 3">
-                          </div>
-                          <span class="view-count-i6">12 views</span>
-                        </div>
-                        <div class="startup-action-i6">
-                          <a href="#" class="startup-link-btn-i6" aria-label="Open Databricks profile">
-                            <span>View</span>
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                          </a>
-                        </div>
-                      </div>
-
-                      <div class="startup-card-i6">
-                        <div class="startup-logo-box-i6">
-                          <img src="https://cdn.brandfetch.io/rippling.com?c=1idD5blp6f0v3UdGKX9" alt="Rippling logo" class="startup-logo-i6">
-                        </div>
-                        <div class="startup-info-i6">
-                          <div class="startup-header-row-i6">
-                            <span class="startup-name-i6">Rippling</span>
-                            <span class="startup-badge-i6 green">SaaS</span>
-                            <span class="startup-badge-i6">Workforce</span>
-                          </div>
-                          <div class="startup-desc-i6">Unified workforce platform for HR, IT, payroll, and finance operations.</div>
-                          <div class="startup-founders-i6">Founder profile - customer proof - expansion narrative ready</div>
-                        </div>
-                        <div class="startup-stats-i6">
-                          <div class="stat-group-i6">
-                            <span class="stat-val-i6">Growth</span>
-                            <span class="stat-lbl-i6">Stage</span>
-                          </div>
-                          <div class="stat-group-i6">
-                            <span class="stat-val-i6">SaaS</span>
-                            <span class="stat-lbl-i6">Model</span>
-                          </div>
-                        </div>
-                        <div class="startup-team-views-i6">
-                          <div class="mini-avatar-stack-i6">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=60&q=80" alt="Investor 4">
-                          </div>
-                          <span class="view-count-i6 quiet">In review</span>
-                        </div>
-                        <div class="startup-action-i6">
-                          <a href="#" class="startup-link-btn-i6" aria-label="Open Rippling profile">
-                            <span>View</span>
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                          </a>
-                        </div>
-                      </div>
-
-                      <div class="startup-card-i6 compact">
-                        <div class="startup-logo-box-i6">
-                          <img src="https://cdn.brandfetch.io/perplexity.ai?c=1idD5blp6f0v3UdGKX9" alt="Perplexity logo" class="startup-logo-i6">
-                        </div>
-                        <div class="startup-info-i6">
-                          <div class="startup-header-row-i6">
-                            <span class="startup-name-i6">Perplexity</span>
-                            <span class="startup-badge-i6 warm">AI</span>
-                            <span class="startup-badge-i6">Search</span>
-                          </div>
-                          <div class="startup-desc-i6">Answer engine combining conversational search with cited web results.</div>
-                          <div class="startup-founders-i6">Product velocity - media signal - usage narrative highlighted</div>
-                        </div>
-                        <div class="startup-stats-i6">
-                          <div class="stat-group-i6">
-                            <span class="stat-val-i6">Series</span>
-                            <span class="stat-lbl-i6">Stage</span>
-                          </div>
-                          <div class="stat-group-i6">
-                            <span class="stat-val-i6">AI</span>
-                            <span class="stat-lbl-i6">Sector</span>
-                          </div>
-                        </div>
-                        <div class="startup-team-views-i6">
-                          <span class="view-count-i6">9 views</span>
-                        </div>
-                        <div class="startup-action-i6">
-                          <a href="#" class="startup-link-btn-i6" aria-label="Open Perplexity profile">
-                            <span>View</span>
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            <!-- Row 3: Coinbase -->
+            <div class="company-row">
+              <div class="company-logo-box">
+                <img src="https://cdn.brandfetch.io/coinbase.com?c=1idD5blp6f0v3UdGKX9" alt="Coinbase logo"
+                  class="company-logo">
+              </div>
+              <div class="company-content">
+                <div class="company-meta-top">
+                  <span class="company-name">Coinbase</span>
+                  <span class="meta-divider">•</span>
+                  <span class="company-founders">Brian Armstrong, Fred Ehrsam</span>
                 </div>
-
-                <!-- Collaborative Investor-Founder Comment Popover -->
-                <div class="mockup-comment-popover-i6" hidden aria-hidden="true">
-                  <div class="comment-header-i6">
-                    <div class="comment-author-i6">
-                      <img class="mockup-avatar-i6" style="margin-left: 0; width: 22px; height: 22px;" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=80&q=80" alt="Sarah Jenkins">
-                      <span class="author-name-i6">Sarah Jenkins (VC)</span>
-                    </div>
-                    <div class="comment-resolve-check-i6" title="Resolve comment">✓</div>
-                  </div>
-                  <div class="comment-body-i6">
-                    
-                  </div>
-                  <div class="comment-replies-i6">
-                    <div class="reply-row-i6">
-                      <img class="mockup-avatar-i6" style="margin-left: 0; width: 18px; height: 18px;" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=80&q=80" alt="Carlo Joerges">
-                      <div class="reply-content-i6">
-                        <span class="reply-author-i6">Carlo Joerges (Founder)</span>
-                        <span class="reply-text-i6"></span>
-                      </div>
-                    </div>
-                  </div>
+                <div class="company-desc">Buy, sell, and manage cryptocurrencies online.</div>
+                <div class="company-meta-bottom">
+                  <span>Public</span>
+                  <span class="meta-dot"></span>
+                  <span>Fintech</span>
+                  <span class="meta-dot"></span>
+                  <span>Banking and Exchange</span>
+                  <span class="meta-dot"></span>
+                  <span>San Francisco, CA, USA</span>
                 </div>
+              </div>
+              <div class="company-socials">
+                <a href="https://coinbase.com" target="_blank" rel="noopener noreferrer" class="social-link-btn"
+                  aria-label="Coinbase website" title="Website">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path
+                      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                    </path>
+                  </svg>
+                </a>
+                <a href="https://www.linkedin.com/company/coinbase/" target="_blank" rel="noopener noreferrer"
+                  class="social-link-btn" aria-label="Coinbase on LinkedIn" title="LinkedIn">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
 
-              </section>
+            <!-- Row 4: Groww -->
+            <div class="company-row">
+              <div class="company-logo-box">
+                <img src="https://cdn.brandfetch.io/groww.in?c=1idD5blp6f0v3UdGKX9" alt="Groww logo" class="company-logo">
+              </div>
+              <div class="company-content">
+                <div class="company-meta-top">
+                  <span class="company-name">Groww</span>
+                  <span class="meta-divider">•</span>
+                  <span class="company-founders">Lalit Keshre, Harsh Jain</span>
+                </div>
+                <div class="company-desc">Making financial services simple, transparent and delightful.</div>
+                <div class="company-meta-bottom">
+                  <span>Series E</span>
+                  <span class="meta-dot"></span>
+                  <span>Fintech</span>
+                  <span class="meta-dot"></span>
+                  <span>Investment</span>
+                  <span class="meta-dot"></span>
+                  <span>Bengaluru, KA, India</span>
+                </div>
+              </div>
+              <div class="company-socials">
+                <a href="https://groww.in" target="_blank" rel="noopener noreferrer" class="social-link-btn"
+                  aria-label="Groww website" title="Website">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path
+                      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                    </path>
+                  </svg>
+                </a>
+                <a href="https://www.linkedin.com/company/groww-in/" target="_blank" rel="noopener noreferrer"
+                  class="social-link-btn" aria-label="Groww on LinkedIn" title="LinkedIn">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
+          <p class="startup-search-status-i6" aria-live="polite"></p>
+        </section>
+
+        <a href="#" class="startup-directory-link-i6">
+          <span>Explore <strong>900+</strong> startups on Seedicon</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14"></path>
+            <path d="m13 6 6 6-6 6"></path>
+          </svg>
+        </a>
       </div>
     </main>
 
@@ -1118,10 +1070,12 @@
 
         .products-tabbed-section-i4 .products-tab-menu {
           display: flex;
-          gap: 32px;
-          border-bottom: 1px solid var(--slate-100);
-          padding-bottom: 12px;
+          gap: 8px;
+          border-bottom: 1px solid var(--slate-150, #e2e8f0);
           margin-bottom: 40px;
+          padding: 0;
+          border-radius: 0;
+          background: transparent;
         }
 
         .products-tabbed-section-i4 .products-tab-btn {
@@ -1132,16 +1086,21 @@
           color: var(--slate-500);
           cursor: pointer;
           position: relative;
-          transition: color 0.2s ease;
-          padding-bottom: 12px;
+          transition: all 0.25s ease;
+          padding: 12px 28px;
+          border-radius: 8px 8px 0 0;
+          margin-bottom: -1px;
         }
 
         .products-tabbed-section-i4 .products-tab-btn:hover {
           color: var(--slate-800);
+          background: rgba(145, 49, 117, 0.03);
         }
 
         .products-tabbed-section-i4 .products-tab-btn.active {
-          color: var(--slate-900);
+          color: var(--primary-purple);
+          background: linear-gradient(to top, rgba(145, 49, 117, 0.12) 0%, rgba(145, 49, 117, 0) 100%);
+          box-shadow: none;
         }
 
         .products-tabbed-section-i4 .products-tab-btn.active::after {
@@ -1149,10 +1108,10 @@
           position: absolute;
           left: 0;
           right: 0;
-          bottom: -13px;
+          bottom: 0;
           height: 3px;
           background-color: var(--primary-purple);
-          border-radius: 999px;
+          border-radius: 99px 99px 0 0;
         }
 
         .products-tabbed-section-i4 .products-showcase-container {
@@ -1247,8 +1206,7 @@
         }
 
         .products-tabbed-section-i4 .product-heading-i4 .active-highlight {
-          color: #10b981;
-          /* Premium green highlight matching mockup */
+          color: var(--primary-purple);
         }
 
         .products-tabbed-section-i4 .product-description-i4 {
@@ -1334,11 +1292,22 @@
           }
 
           .products-tabbed-section-i4 .products-tab-menu {
+            display: flex;
+            width: 100%;
+            max-width: 100%;
             gap: 16px;
             overflow-x: auto;
             white-space: nowrap;
             padding-bottom: 8px;
             margin-bottom: 28px;
+            border-bottom: 1px solid var(--slate-150, #e2e8f0);
+            border-radius: 0;
+            background: transparent;
+            scrollbar-width: none;
+          }
+
+          .products-tabbed-section-i4 .products-tab-menu::-webkit-scrollbar {
+            display: none;
           }
 
           .products-tabbed-section-i4 .products-tab-panel {
@@ -1415,7 +1384,8 @@
           <!-- Panel 2: Deckwale -->
           <div class="products-tab-panel" data-panel-index="1">
             <div class="panel-image-wrapper slideshow deckwale-slideshow">
-              <img src="Assets/Deckwale/Deckwale-1.png" alt="Deckwale presentation, pitch deck, and document builder" class="slide active">
+              <img src="Assets/Deckwale/Deckwale-1.png" alt="Deckwale presentation, pitch deck, and document builder"
+                class="slide active">
               <img src="Assets/Deckwale/Deckwale-3.png" alt="Deckwale AI pitch preparation workspace" class="slide">
               <img src="Assets/Deckwale/Deckwale-4.png" alt="Deckwale AI research and outline generation" class="slide">
               <img src="Assets/Deckwale/Deckwale-2.png" alt="Deckwale document builder preview" class="slide">
@@ -1969,108 +1939,171 @@
     <section class="who-section who-section-i4 who-hub-section-i4" id="who-seat-hub">
       <style>
         .who-section-i4.who-hub-section-i4 {
+          --who-primary: var(--primary-purple, #913175);
+          --who-primary-bright: #c26ca8;
+          --who-primary-dark: #4f173f;
+          --who-primary-deep: #2c0e23;
+          --who-primary-tint: #e1bad6;
+          --who-cyan: #72e8f5;
+          --who-mint: #7ee2bd;
+          --who-gold: #f4c56f;
           position: relative;
-          background-color: #0c040a;
-          background-image:
-            radial-gradient(circle at 50% 0%, rgba(145, 49, 117, 0.14) 0%, transparent 60%),
-            radial-gradient(circle at 80% 50%, rgba(232, 121, 249, 0.04) 0%, transparent 40%);
-          padding: 88px 24px;
+          isolation: isolate;
           overflow: hidden;
-          border-top: 1px solid rgba(145, 49, 117, 0.15);
-          border-bottom: 1px solid rgba(145, 49, 117, 0.15);
+          padding: 88px 24px;
+          background:
+            linear-gradient(118deg, rgba(114, 232, 245, 0.08) 0%, transparent 30%, rgba(126, 226, 189, 0.055) 68%, transparent 100%),
+            radial-gradient(ellipse 72% 42% at 50% 0%, rgba(194, 108, 168, 0.36) 0%, rgba(145, 49, 117, 0.16) 44%, transparent 78%),
+            radial-gradient(ellipse 42% 32% at 84% 30%, rgba(114, 232, 245, 0.12) 0%, transparent 70%),
+            radial-gradient(ellipse 44% 34% at 13% 52%, rgba(244, 197, 111, 0.08) 0%, transparent 72%),
+            linear-gradient(180deg, #100a11 0%, #09070b 58%, #0d080f 100%);
+          border-top: 1px solid rgba(194, 108, 168, 0.26);
+          border-bottom: 1px solid rgba(194, 108, 168, 0.22);
+          box-shadow:
+            inset 0 1px 0 rgba(255, 255, 255, 0.04),
+            inset 0 -1px 0 rgba(114, 232, 245, 0.045);
         }
 
         .who-section-i4.who-hub-section-i4::before {
-          content: none;
+          content: "";
+          position: absolute;
+          inset: 0;
+          z-index: -1;
+          pointer-events: none;
+          opacity: 0.38;
+          background-image:
+            radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.14) 1px, transparent 1.8px),
+            linear-gradient(rgba(255, 255, 255, 0.027) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.027) 1px, transparent 1px);
+          background-size: 28px 28px, 76px 76px, 76px 76px;
+          mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.86), transparent 88%);
+          -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.86), transparent 88%);
+        }
+
+        .who-section-i4.who-hub-section-i4::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          z-index: -1;
+          pointer-events: none;
+          opacity: 0.54;
+          background:
+            linear-gradient(90deg, transparent 0%, rgba(114, 232, 245, 0.14) 17%, transparent 34%, rgba(194, 108, 168, 0.22) 52%, transparent 70%, rgba(126, 226, 189, 0.11) 86%, transparent 100%);
+          filter: blur(76px);
+          transform: translateY(-12%);
         }
 
         .who-hub-section-i4 .who-container {
+          position: relative;
+          z-index: 2;
+          width: 100%;
           max-width: 1200px;
           margin: 0 auto;
-          width: 100%;
-          position: relative;
-          z-index: 5;
         }
 
         .who-hub-section-i4 .who-header {
+          max-width: 720px;
+          margin: 0 auto 46px;
           text-align: center;
-          max-width: 780px;
-          margin: 0 auto 52px;
         }
 
         .who-hub-section-i4 .who-eyebrow-i4 {
-          font-size: 13px;
-          font-weight: 800;
-          color: #e879f9;
-          text-transform: uppercase;
-          letter-spacing: 0.08em;
-          margin-bottom: 12px;
           display: block;
+          margin-bottom: 12px;
+          color: var(--who-primary-tint);
+          font-size: 12px;
+          font-weight: 800;
+          letter-spacing: 0;
+          text-transform: uppercase;
         }
 
         .who-hub-section-i4 .who-title {
-          font-size: 40px;
-          font-weight: 800;
-          line-height: 1.18;
-          color: #ffffff;
           margin: 0;
+          color: #ffffff;
+          font-size: 42px;
+          font-weight: 800;
+          line-height: 1.16;
+          letter-spacing: 0;
+          text-wrap: balance;
+        }
+
+        .who-hub-section-i4 .who-title span {
+          color: var(--who-primary-tint);
+          text-shadow:
+            0 0 24px rgba(194, 108, 168, 0.62),
+            0 0 54px rgba(114, 232, 245, 0.12);
         }
 
         .who-hub-section-i4 .who-subtitle {
-          font-size: 16px;
-          line-height: 1.65;
-          color: rgba(255, 255, 255, 0.7);
-          margin: 16px auto 0;
+          max-width: 520px;
+          margin: 14px auto 0;
+          color: rgba(255, 255, 255, 0.62);
+          font-size: 15px;
+          line-height: 1.5;
+          letter-spacing: 0;
         }
 
         .who-hub-section-i4 .who-immersive-grid {
           display: grid;
           grid-template-columns: minmax(250px, 1fr) minmax(400px, 520px) minmax(250px, 1fr);
           align-items: center;
-          gap: 28px;
+          gap: 30px;
         }
 
         .who-hub-section-i4 .who-side-column-i4 {
           display: grid;
-          gap: 18px;
+          gap: 16px;
         }
 
         .who-hub-section-i4 .who-role-card-i4 {
           position: relative;
-          min-height: 206px;
-          background: rgba(255, 255, 255, 0.03);
-          border: 1px solid rgba(255, 255, 255, 0.08);
-          border-radius: 8px;
-          padding: 22px;
+          min-height: 184px;
+          padding: 20px;
+          overflow: hidden;
           display: flex;
           flex-direction: column;
-          box-shadow: 0 14px 36px rgba(0, 0, 0, 0.3);
-          transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+          border: 1px solid rgba(145, 49, 117, 0.2);
+          border-radius: 8px;
+          background:
+            linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.035)),
+            rgba(255, 255, 255, 0.045);
+          box-shadow:
+            0 18px 42px rgba(0, 0, 0, 0.24),
+            0 0 28px rgba(194, 108, 168, 0.045),
+            inset 0 1px 0 rgba(255, 255, 255, 0.055);
+          backdrop-filter: blur(14px);
+          -webkit-backdrop-filter: blur(14px);
           cursor: pointer;
-          overflow: hidden;
+          transition: transform 0.28s ease, border-color 0.28s ease, background-color 0.28s ease, box-shadow 0.28s ease;
         }
 
         .who-hub-section-i4 .who-role-card-i4::before {
-          content: '';
+          content: "";
           position: absolute;
-          left: 0;
           top: 18px;
           bottom: 18px;
+          left: 0;
           width: 3px;
-          border-radius: 999px;
-          background-color: #e879f9;
-          transform: scaleY(0.2);
+          background: linear-gradient(180deg, var(--who-cyan), var(--who-primary-bright), var(--who-mint));
+          transform: scaleY(0.22);
           transform-origin: center;
-          opacity: 0.35;
-          transition: transform 0.35s ease, opacity 0.35s ease;
+          opacity: 0.52;
+          box-shadow: 0 0 18px rgba(114, 232, 245, 0.16);
+          transition: transform 0.28s ease, opacity 0.28s ease;
         }
 
         .who-hub-section-i4 .who-role-card-i4:hover,
         .who-hub-section-i4 .who-role-card-i4.active {
-          transform: translateY(-5px);
-          background: rgba(255, 255, 255, 0.06);
-          border-color: rgba(232, 121, 249, 0.35);
-          box-shadow: 0 24px 46px rgba(232, 121, 249, 0.08);
+          transform: translateY(-3px);
+          border-color: rgba(225, 186, 214, 0.48);
+          background:
+            linear-gradient(135deg, rgba(114, 232, 245, 0.075), rgba(194, 108, 168, 0.125)),
+            rgba(145, 49, 117, 0.11);
+          box-shadow:
+            0 22px 48px rgba(0, 0, 0, 0.3),
+            0 0 42px rgba(194, 108, 168, 0.18),
+            0 0 24px rgba(114, 232, 245, 0.08),
+            inset 0 1px 0 rgba(255, 255, 255, 0.09);
         }
 
         .who-hub-section-i4 .who-role-card-i4.active::before,
@@ -2079,108 +2112,117 @@
           opacity: 1;
         }
 
+        .who-hub-section-i4 .who-role-card-i4:focus-visible,
+        .who-hub-section-i4 .hub-node-i4:focus-visible,
+        .who-hub-section-i4 .card-link-i4:focus-visible {
+          outline: 3px solid rgba(216, 191, 209, 0.86);
+          outline-offset: 3px;
+        }
+
         .who-hub-section-i4 .who-card-top-i4 {
           display: flex;
           align-items: center;
-          gap: 14px;
-          margin-bottom: 16px;
+          gap: 13px;
+          margin-bottom: 13px;
         }
 
         .who-hub-section-i4 .who-avatar-frame-i4,
         .who-hub-section-i4 .hub-node-avatar-i4 {
-          width: 52px;
-          height: 52px;
-          border-radius: 50%;
-          background-color: rgba(255, 255, 255, 0.05);
-          border: 2px solid rgba(255, 255, 255, 0.1);
-          overflow: hidden;
+          width: 48px;
+          height: 48px;
           flex-shrink: 0;
+          overflow: hidden;
+          border: 2px solid rgba(225, 186, 214, 0.35);
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.055);
+          box-shadow:
+            0 0 18px rgba(194, 108, 168, 0.16),
+            0 0 12px rgba(114, 232, 245, 0.08);
         }
 
         .who-hub-section-i4 .who-avatar-frame-i4 img,
         .who-hub-section-i4 .hub-node-avatar-i4 img {
           width: 100%;
           height: 100%;
-          object-fit: cover;
           display: block;
-        }
-
-        .who-hub-section-i4 .card-icon-box-i4 {
-          width: 52px;
-          height: 52px;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-shrink: 0;
-          background-color: rgba(232, 121, 249, 0.1);
-          color: #e879f9;
-          border: 1px solid rgba(232, 121, 249, 0.2);
+          object-fit: cover;
         }
 
         .who-hub-section-i4 .card-title-i4 {
-          font-size: 20px;
-          font-weight: 800;
+          margin: 0 0 3px;
           color: #ffffff;
-          margin: 0 0 4px;
+          font-size: 18px;
+          font-weight: 800;
+          line-height: 1.2;
+          letter-spacing: 0;
         }
 
         .who-hub-section-i4 .card-tag-i4 {
-          font-size: 11px;
-          font-weight: 800;
-          color: #e879f9;
-          text-transform: uppercase;
-          letter-spacing: 0.06em;
           display: block;
           margin: 0;
+          color: var(--who-primary-tint);
+          text-shadow: 0 0 16px rgba(194, 108, 168, 0.28);
+          font-size: 10px;
+          font-weight: 800;
+          letter-spacing: 0;
+          text-transform: uppercase;
         }
 
         .who-hub-section-i4 .card-desc-i4 {
-          font-size: 13.5px;
-          line-height: 1.62;
-          color: rgba(255, 255, 255, 0.6);
-          margin: 0 0 20px;
           flex: 1;
+          margin: 0 0 16px;
+          color: rgba(255, 255, 255, 0.62);
+          font-size: 13px;
+          line-height: 1.5;
+          letter-spacing: 0;
         }
 
         .who-hub-section-i4 .card-link-i4 {
+          width: fit-content;
+          margin-top: auto;
+          padding: 0;
           display: inline-flex;
           align-items: center;
           gap: 6px;
-          font-size: 14px;
+          border: 0;
+          color: var(--who-primary-tint);
+          text-shadow: 0 0 16px rgba(194, 108, 168, 0.28);
+          font-size: 13px;
           font-weight: 800;
-          color: #e879f9;
+          letter-spacing: 0;
           text-decoration: none;
-          width: fit-content;
           transition: color 0.2s ease, transform 0.2s ease;
-          border-top: 0;
-          padding-top: 0;
-          margin-top: auto;
         }
 
         .who-hub-section-i4 .card-link-i4:hover {
-          color: #f472b6;
           transform: translateX(2px);
+          color: #ffffff;
         }
 
         .who-hub-section-i4 .who-network-stage-i4 {
           position: relative;
-          min-height: 520px;
+          min-height: 500px;
           display: flex;
           align-items: center;
           justify-content: center;
           perspective: 1000px;
+          background:
+            radial-gradient(circle at center, rgba(194, 108, 168, 0.2) 0%, rgba(145, 49, 117, 0.09) 30%, transparent 66%),
+            radial-gradient(circle at 50% 50%, rgba(114, 232, 245, 0.08) 0%, transparent 48%);
         }
 
         .who-hub-section-i4 .who-network-stage-i4::before,
         .who-hub-section-i4 .who-network-stage-i4::after {
-          content: '';
+          content: "";
           position: absolute;
-          left: 50%;
           top: 50%;
+          left: 50%;
+          border: 1px solid rgba(225, 186, 214, 0.36);
           border-radius: 50%;
-          border: 1px solid rgba(232, 121, 249, 0.35);
           pointer-events: none;
+          box-shadow:
+            0 0 24px rgba(194, 108, 168, 0.12),
+            inset 0 0 26px rgba(114, 232, 245, 0.035);
         }
 
         .who-hub-section-i4 .who-network-stage-i4::before {
@@ -2203,23 +2245,24 @@
           inset: 0;
           width: 100%;
           height: 100%;
-          pointer-events: none;
           overflow: visible;
+          pointer-events: none;
         }
 
         .who-hub-section-i4 .who-flow-path-i4 {
-          stroke: rgba(232, 121, 249, 0.45);
+          fill: none;
+          stroke: rgba(194, 108, 168, 0.58);
           stroke-width: 2;
           stroke-dasharray: 7 9;
-          fill: none;
+          opacity: 0.8;
           transition: stroke 0.28s ease, stroke-width 0.28s ease, opacity 0.28s ease;
-          opacity: 0.85;
         }
 
         .who-hub-section-i4 .who-flow-path-i4.active {
-          stroke: #e879f9;
+          stroke: var(--who-cyan);
           stroke-width: 3;
           opacity: 1;
+          filter: drop-shadow(0 0 7px rgba(114, 232, 245, 0.38));
           animation: who-flow-line-i4 1.1s linear infinite;
         }
 
@@ -2228,24 +2271,32 @@
           z-index: 8;
           width: 132px;
           height: 132px;
-          border-radius: 50%;
-          background-color: #120610;
-          border: 1px solid rgba(232, 121, 249, 0.3);
           display: flex;
           align-items: center;
           justify-content: center;
-          box-shadow: 0 22px 60px rgba(232, 121, 249, 0.1), inset 0 0 0 8px rgba(232, 121, 249, 0.03);
+          border: 1px solid rgba(225, 186, 214, 0.62);
+          border-radius: 50%;
+          background:
+            radial-gradient(circle at 50% 42%, rgba(194, 108, 168, 0.16) 0%, rgba(16, 10, 17, 0.94) 58%),
+            rgba(16, 10, 17, 0.94);
+          box-shadow:
+            0 0 72px rgba(194, 108, 168, 0.32),
+            0 0 32px rgba(114, 232, 245, 0.1),
+            0 22px 60px rgba(0, 0, 0, 0.34),
+            inset 0 0 0 8px rgba(145, 49, 117, 0.075),
+            inset 0 1px 0 rgba(255, 255, 255, 0.08);
         }
 
         .who-hub-section-i4 .hub-center-node-i4::before,
         .who-hub-section-i4 .hub-center-node-i4::after {
-          content: '';
+          content: "";
           position: absolute;
           inset: -16px;
+          border: 1px solid rgba(225, 186, 214, 0.34);
           border-radius: 50%;
-          border: 1px solid rgba(232, 121, 249, 0.2);
-          animation: who-pulse-ring-i4 2.7s cubic-bezier(0.16, 1, 0.3, 1) infinite;
           pointer-events: none;
+          box-shadow: 0 0 26px rgba(194, 108, 168, 0.14);
+          animation: who-pulse-ring-i4 2.7s cubic-bezier(0.16, 1, 0.3, 1) infinite;
         }
 
         .who-hub-section-i4 .hub-center-node-i4::after {
@@ -2257,31 +2308,35 @@
         .who-hub-section-i4 .hub-center-logo-i4 {
           width: 92px;
           max-height: 54px;
-          object-fit: contain;
           display: block;
-          filter: brightness(0) invert(1); /* Ensure seedicon logo is white in center of center node */
+          object-fit: contain;
+          filter: brightness(0) invert(1) drop-shadow(0 0 14px rgba(255, 255, 255, 0.18));
         }
 
         .who-hub-section-i4 .hub-node-i4 {
           --node-scale: 1;
           position: absolute;
-          left: var(--x);
           top: var(--y);
+          left: var(--x);
           z-index: 9;
           width: 64px;
           height: 64px;
-          border-radius: 50%;
-          border: 2px solid rgba(232, 121, 249, 0.2);
-          background-color: #120610;
-          box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+          padding: 0;
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 0;
+          border: 2px solid rgba(225, 186, 214, 0.28);
+          border-radius: 50%;
+          background:
+            linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
+            #120d13;
+          box-shadow:
+            0 12px 28px rgba(0, 0, 0, 0.46),
+            0 0 18px rgba(194, 108, 168, 0.1);
           font: inherit;
           cursor: pointer;
           transform: translate(-50%, -50%) scale(var(--node-scale));
-          transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease, box-shadow 0.28s ease;
+          transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
         }
 
         .who-hub-section-i4 .hub-node-i4::after {
@@ -2290,39 +2345,47 @@
           top: calc(100% + 8px);
           left: 50%;
           transform: translateX(-50%);
-          font-size: 10.5px;
+          color: rgba(255, 255, 255, 0.48);
+          font-size: 10px;
           font-weight: 800;
-          letter-spacing: 0.04em;
-          color: rgba(255, 255, 255, 0.5);
-          white-space: nowrap;
+          letter-spacing: 0;
           text-transform: uppercase;
+          white-space: nowrap;
         }
 
         .who-hub-section-i4 .hub-node-i4:hover,
         .who-hub-section-i4 .hub-node-i4.active {
-          --node-scale: 1.12;
-          border-color: #e879f9;
-          box-shadow: 0 18px 34px rgba(232, 121, 249, 0.35);
+          --node-scale: 1.1;
+          border-color: var(--who-cyan);
+          box-shadow:
+            0 0 34px rgba(114, 232, 245, 0.28),
+            0 0 42px rgba(194, 108, 168, 0.22),
+            0 18px 34px rgba(0, 0, 0, 0.42);
         }
 
         .who-hub-section-i4 .hub-node-i4.active::after {
-          color: #e879f9;
+          color: var(--who-primary-tint);
+          text-shadow:
+            0 0 14px rgba(194, 108, 168, 0.4),
+            0 0 18px rgba(114, 232, 245, 0.16);
         }
 
-        .who-hub-section-i4 .hub-node-avatar-i4 {
+        .who-hub-section-i4 .hub-node-avatar-i4,
+        .who-hub-section-i4 .hub-node-icon-i4 {
           width: 54px;
           height: 54px;
         }
 
         .who-hub-section-i4 .hub-node-icon-i4 {
-          width: 54px;
-          height: 54px;
-          border-radius: 50%;
-          background-color: rgba(232, 121, 249, 0.1);
-          color: #e879f9;
           display: flex;
           align-items: center;
           justify-content: center;
+          border-radius: 50%;
+          background:
+            radial-gradient(circle at 50% 42%, rgba(114, 232, 245, 0.16) 0%, rgba(145, 49, 117, 0.18) 70%),
+            rgba(145, 49, 117, 0.18);
+          color: var(--who-primary-tint);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07);
         }
 
         @keyframes who-ring-spin-i4 {
@@ -2358,25 +2421,31 @@
             grid-template-columns: repeat(2, minmax(0, 1fr));
           }
 
-          .who-hub-section-i4 .who-network-stage-i4 {
-            min-height: 480px;
-            order: -1;
+          .who-hub-section-i4 .who-role-card-i4 {
+            min-height: 164px;
           }
 
+          .who-hub-section-i4 .who-network-stage-i4 {
+            min-height: 470px;
+            order: -1;
+          }
         }
 
         @media (max-width: 680px) {
           .who-section-i4.who-hub-section-i4 {
-            padding: 56px 16px;
+            padding: 60px 16px;
           }
 
           .who-hub-section-i4 .who-header {
-            text-align: left;
-            margin-bottom: 36px;
+            margin-bottom: 34px;
           }
 
           .who-hub-section-i4 .who-title {
-            font-size: 30px;
+            font-size: 32px;
+          }
+
+          .who-hub-section-i4 .who-subtitle {
+            font-size: 14px;
           }
 
           .who-hub-section-i4 .who-side-column-i4 {
@@ -2385,7 +2454,11 @@
 
           .who-hub-section-i4 .who-network-stage-i4 {
             min-height: 360px;
-            margin: 8px 0;
+            margin: 6px 0;
+          }
+
+          .who-hub-section-i4 .who-role-card-i4 {
+            min-height: 0;
           }
 
           .who-hub-section-i4 .hub-center-node-i4 {
@@ -2413,8 +2486,17 @@
           }
         }
 
-        @media (prefers-reduced-motion: reduce) {
+        @media (max-width: 420px) {
+          .who-hub-section-i4 .who-title {
+            font-size: 29px;
+          }
 
+          .who-hub-section-i4 .who-network-stage-i4 {
+            min-height: 330px;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
           .who-hub-section-i4 *,
           .who-hub-section-i4 *::before,
           .who-hub-section-i4 *::after {
@@ -2427,9 +2509,8 @@
       <div class="who-container">
         <div class="who-header">
           <span class="who-eyebrow-i4">WHO IT'S FOR</span>
-          <h2 class="who-title">One platform. Every seat at the table.</h2>
-          <p class="who-subtitle">From the founder raising a first round to the team closing the deal &mdash; Seedicon
-            supports everyone who touches a startup's journey.</p>
+          <h2 class="who-title">One platform. <span>Every seat at the table.</span></h2>
+          <p class="who-subtitle">Built for every role that moves a startup forward.</p>
         </div>
 
         <div class="who-immersive-grid">
@@ -2444,9 +2525,8 @@
                   <span class="card-tag-i4">RAISE &amp; BUILD</span>
                 </div>
               </div>
-              <p class="card-desc-i4">Raise capital, build investor-ready pitch decks, explore grants, and share your
-                documents securely &mdash; everything a founder needs, in one place.</p>
-              <a href="#" class="card-link-i4">Start as a Founder &rarr;</a>
+              <p class="card-desc-i4">Raise capital, prepare your pitch, and share investor-ready documents securely.</p>
+              <a href="#" class="card-link-i4">Start as a founder &rarr;</a>
             </article>
 
             <article class="who-role-card-i4" data-role="partner" tabindex="0">
@@ -2459,10 +2539,8 @@
                   <span class="card-tag-i4">STRATEGIC ALLIANCE</span>
                 </div>
               </div>
-              <p class="card-desc-i4">Collaborate with Seedicon across funding, investment advisory, events, and
-                business
-                growth.</p>
-              <a href="#" class="card-link-i4">Partner With Us &rarr;</a>
+              <p class="card-desc-i4">Build funding, advisory, and growth partnerships across the startup ecosystem.</p>
+              <a href="#" class="card-link-i4">Partner with us &rarr;</a>
             </article>
           </div>
 
@@ -2558,10 +2636,8 @@
                   <span class="card-tag-i4">DEAL FLOW</span>
                 </div>
               </div>
-              <p class="card-desc-i4">Discover vetted startups, review investment opportunities, and access due
-                diligence
-                documents before anyone else does.</p>
-              <a href="#" class="card-link-i4">Start as an Investor &rarr;</a>
+              <p class="card-desc-i4">Discover vetted startups and review structured deal information faster.</p>
+              <a href="#" class="card-link-i4">Start investing &rarr;</a>
             </article>
 
             <article class="who-role-card-i4" data-role="ma" tabindex="0">
@@ -2574,9 +2650,8 @@
                   <span class="card-tag-i4">DEAL MANAGEMENT</span>
                 </div>
               </div>
-              <p class="card-desc-i4">Manage confidential deal documents, due diligence files, and secure data room
-                sharing for every transaction.</p>
-              <a href="#" class="card-link-i4">Talk to Us &rarr;</a>
+              <p class="card-desc-i4">Run secure diligence and manage confidential transaction documents.</p>
+              <a href="#" class="card-link-i4">Talk to our team &rarr;</a>
             </article>
           </div>
         </div>
@@ -2729,10 +2804,10 @@
         .do-section-i4 .do-card-i4 {
           background: #ffffff;
           border-radius: 16px;
-          border: 1px solid var(--slate-150);
+          border: 1px solid rgba(145, 49, 117, 0.09);
           display: flex;
           flex-direction: column;
-          box-shadow: none;
+          box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04), 0 2px 6px -1px rgba(15, 23, 42, 0.02);
           transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
           min-width: 310px;
           width: 310px;
@@ -2741,8 +2816,8 @@
         }
 
         .do-section-i4 .do-card-i4:hover {
-          border-color: var(--primary-purple);
-          box-shadow: none;
+          border-color: rgba(145, 49, 117, 0.3);
+          box-shadow: 0 12px 30px -4px rgba(145, 49, 117, 0.12), 0 4px 12px -2px rgba(145, 49, 117, 0.04);
           transform: translateY(-6px);
         }
 
@@ -3242,7 +3317,7 @@
             </div>
           </div>
         </div>
-        
+
         <!-- Carousel Dots -->
         <div class="carousel-dots-i6" id="do-carousel-dots">
           <button class="dot-btn-i6 active" data-index="0" aria-label="Go to slide 1"></button>
@@ -3652,7 +3727,7 @@
           <div class="timeline-step-i4">
             <div class="step-badge-i4"><span>01</span></div>
             <h3 class="step-title-i4">List Your Startup</h3>
-            <p class="step-desc-i4">Add your startup profile, traction metrics, and funding requirements on Seedicon Capital.</p>
+            <p class="step-desc-i4">Create your profile and add metrics.</p>
             <a href="#" class="step-link-i4"><span>List Your Startup</span> &rarr;</a>
           </div>
 
@@ -3660,7 +3735,7 @@
           <div class="timeline-step-i4">
             <div class="step-badge-i4"><span>02</span></div>
             <h3 class="step-title-i4">Startup Evaluation</h3>
-            <p class="step-desc-i4">Get your business model, market opportunity, and fundraising readiness evaluated by our experts.</p>
+            <p class="step-desc-i4">Get evaluated for fundraising readiness.</p>
             <a href="#" class="step-link-i4"><span>Get Evaluated</span> &rarr;</a>
           </div>
 
@@ -3668,7 +3743,7 @@
           <div class="timeline-step-i4">
             <div class="step-badge-i4"><span>03</span></div>
             <h3 class="step-title-i4">Pitch Preparation</h3>
-            <p class="step-desc-i4">Draft investor-ready pitch decks and business documents using custom evaluation metrics.</p>
+            <p class="step-desc-i4">Prepare outlines and pitch decks.</p>
             <a href="#" class="step-link-i4"><span>Build Your Deck</span> &rarr;</a>
           </div>
 
@@ -3676,24 +3751,24 @@
           <div class="timeline-step-i4">
             <div class="step-badge-i4"><span>04</span></div>
             <h3 class="step-title-i4">Investor Shortlisting</h3>
-            <p class="step-desc-i4">Filter and shortlist institutional investors matched to your sector and funding needs.</p>
+            <p class="step-desc-i4">Get shortlisted by matching VCs.</p>
             <a href="#" class="step-link-i4"><span>View Investor Matches</span> &rarr;</a>
           </div>
 
           <!-- Step 5 -->
           <div class="timeline-step-i4">
             <div class="step-badge-i4"><span>05</span></div>
-            <h3 class="step-title-i4">Due Diligence Sharing</h3>
-            <p class="step-desc-i4">Share confidential deal documents securely through secure Virtual Data Rooms (VDR).</p>
+            <h3 class="step-title-i4">Due Diligence</h3>
+            <p class="step-desc-i4">Securely share documents via VDRs.</p>
             <a href="#" class="step-link-i4"><span>Open Data Room</span> &rarr;</a>
           </div>
 
           <!-- Step 6 -->
           <div class="timeline-step-i4">
             <div class="step-badge-i4"><span>06</span></div>
-            <h3 class="step-title-i4">Term Sheet Support</h3>
-            <p class="step-desc-i4">Close the round with deal management workflows and expert term sheet support.</p>
-            <a href="#" class="step-link-i4"><span>Get Term Sheet Support</span> &rarr;</a>
+            <h3 class="step-title-i4">Term Sheet Signing</h3>
+            <p class="step-desc-i4">Finalize terms and close the round.</p>
+            <a href="#" class="step-link-i4"><span>Sign Term Sheet</span> &rarr;</a>
           </div>
         </div>
       </div>
@@ -3911,34 +3986,49 @@
         /* Premium Tabbed Resource UI Styles */
         .resources-tabs-i4 {
           display: flex;
-          gap: 12px;
-          margin-bottom: 20px;
-          border-bottom: 1px solid var(--slate-150);
-          padding-bottom: 1px;
+          gap: 8px;
+          border-bottom: 1px solid var(--slate-150, #e2e8f0);
+          margin-bottom: 32px;
+          padding: 0;
+          border-radius: 0;
+          background: transparent;
           flex-wrap: wrap;
         }
 
         .resources-tab-btn-i4 {
-          background: transparent;
           border: none;
-          color: var(--slate-500);
-          font-size: 16px;
+          background: transparent;
+          font-size: 15.5px;
           font-weight: 700;
-          padding: 12px 20px;
+          color: var(--slate-500);
           cursor: pointer;
           position: relative;
           transition: all 0.25s ease;
-          border-bottom: 3px solid transparent;
-          margin-bottom: -2px;
+          padding: 12px 28px;
+          border-radius: 8px 8px 0 0;
+          margin-bottom: -1px;
         }
 
         .resources-tab-btn-i4:hover {
-          color: var(--primary-purple);
+          color: var(--slate-800);
+          background: rgba(145, 49, 117, 0.03);
         }
 
         .resources-tab-btn-i4.active {
           color: var(--primary-purple);
-          border-bottom-color: var(--primary-purple);
+          background: linear-gradient(to top, rgba(145, 49, 117, 0.12) 0%, rgba(145, 49, 117, 0) 100%);
+          border-bottom: none;
+        }
+
+        .resources-tab-btn-i4.active::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 3px;
+          background-color: var(--primary-purple);
+          border-radius: 99px 99px 0 0;
         }
 
         .resources-tab-pane-i4 {
@@ -3955,6 +4045,7 @@
             opacity: 0;
             transform: translateY(12px);
           }
+
           to {
             opacity: 1;
             transform: translateY(0);
@@ -3990,7 +4081,8 @@
                     <span class="meta-separator">•</span>
                     <span class="resource-readtime">12 min read</span>
                   </div>
-                  <h3 class="featured-title">India Drops from 4th to 6th in Global GDP Rankings: The Real Story Behind the Headlines</h3>
+                  <h3 class="featured-title">India Drops from 4th to 6th in Global GDP Rankings: The Real Story Behind
+                    the Headlines</h3>
                   <a href="#" class="resource-link-btn">
                     <span>Read article</span>
                     <svg class="link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -4015,11 +4107,12 @@
                       <span class="meta-separator">•</span>
                       <span class="resource-readtime">8 min read</span>
                     </div>
-                    <h4 class="mini-title">The Professional Presenter's Playbook: AI Proposals & Board Presentations</h4>
+                    <h4 class="mini-title">The Professional Presenter's Playbook: AI Proposals & Board Presentations
+                    </h4>
                     <a href="#" class="resource-link-btn">
                       <span>Read article</span>
-                      <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                         <polyline points="12 5 19 12 12 19"></polyline>
                       </svg>
@@ -4041,8 +4134,8 @@
                     <h4 class="mini-title">Crafting Your Business Deck: A Comprehensive Guide to Capital Raising</h4>
                     <a href="#" class="resource-link-btn">
                       <span>Read article</span>
-                      <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                         <polyline points="12 5 19 12 12 19"></polyline>
                       </svg>
@@ -4067,7 +4160,8 @@
                     <span class="meta-separator">•</span>
                     <span class="resource-readtime">15 min read</span>
                   </div>
-                  <h3 class="featured-title">Navigating the Private Equity Landscape: Growth Capital vs. Buyouts in 2026</h3>
+                  <h3 class="featured-title">Navigating the Private Equity Landscape: Growth Capital vs. Buyouts in 2026
+                  </h3>
                   <a href="#" class="resource-link-btn">
                     <span>Read article</span>
                     <svg class="link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -4092,11 +4186,12 @@
                       <span class="meta-separator">•</span>
                       <span class="resource-readtime">12 min read</span>
                     </div>
-                    <h4 class="mini-title">Understanding Term Sheets: Key Valuation Metrics & Liquidation Preferences</h4>
+                    <h4 class="mini-title">Understanding Term Sheets: Key Valuation Metrics & Liquidation Preferences
+                    </h4>
                     <a href="#" class="resource-link-btn">
                       <span>Read article</span>
-                      <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                         <polyline points="12 5 19 12 12 19"></polyline>
                       </svg>
@@ -4118,8 +4213,8 @@
                     <h4 class="mini-title">Post-Investment Governance: Working with PE Board Members</h4>
                     <a href="#" class="resource-link-btn">
                       <span>Read article</span>
-                      <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                         <polyline points="12 5 19 12 12 19"></polyline>
                       </svg>
@@ -4144,7 +4239,8 @@
                     <span class="meta-separator">•</span>
                     <span class="resource-readtime">14 min read</span>
                   </div>
-                  <h3 class="featured-title">Securing the Deal: Best Practices for Preparing Your Virtual Data Room (VDR)</h3>
+                  <h3 class="featured-title">Securing the Deal: Best Practices for Preparing Your Virtual Data Room
+                    (VDR)</h3>
                   <a href="#" class="resource-link-btn">
                     <span>Read article</span>
                     <svg class="link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -4169,11 +4265,12 @@
                       <span class="meta-separator">•</span>
                       <span class="resource-readtime">11 min read</span>
                     </div>
-                    <h4 class="mini-title">VDR Security Standards: SOC 2, HIPAA, and End-to-End Encryption Explained</h4>
+                    <h4 class="mini-title">VDR Security Standards: SOC 2, HIPAA, and End-to-End Encryption Explained
+                    </h4>
                     <a href="#" class="resource-link-btn">
                       <span>Read article</span>
-                      <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                         <polyline points="12 5 19 12 12 19"></polyline>
                       </svg>
@@ -4195,8 +4292,8 @@
                     <h4 class="mini-title">Document Access Control Checklist: Managing Investor Permissions</h4>
                     <a href="#" class="resource-link-btn">
                       <span>Read article</span>
-                      <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <svg class="link-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                         <polyline points="12 5 19 12 12 19"></polyline>
                       </svg>
@@ -4214,13 +4311,18 @@
     <section class="app-install-banner-section">
       <style>
         .app-install-banner-section {
-          background-color: #ffffff;
+          background-color: #09050b;
           padding: 0 !important;
           width: 100% !important;
           overflow: hidden;
         }
 
         .app-install-banner-section .app-banner-wrap {
+          --app-primary: var(--primary-purple, #913175);
+          --app-primary-bright: #c26ca8;
+          --app-primary-tint: #e1bad6;
+          --app-primary-soft: #b783a8;
+          --app-warm: #f4c56f;
           position: relative;
           width: 100% !important;
           max-width: 100% !important;
@@ -4228,16 +4330,54 @@
           margin: 0 !important;
           padding: 0 !important;
           border-radius: 0 !important;
-          background: linear-gradient(135deg, #0f0714 0%, #150a1d 50%, #060408 100%);
+          overflow: hidden;
+          background:
+            radial-gradient(ellipse 56% 44% at 29% 33%, rgba(194, 108, 168, 0.31) 0%, rgba(145, 49, 117, 0.14) 44%, transparent 76%),
+            radial-gradient(ellipse 36% 30% at 16% 76%, rgba(244, 197, 111, 0.1) 0%, transparent 72%),
+            radial-gradient(ellipse 42% 32% at 78% 18%, rgba(225, 186, 214, 0.12) 0%, transparent 70%),
+            linear-gradient(135deg, #0f0714 0%, #150a1d 48%, #060408 100%);
           border-left: none !important;
           border-right: none !important;
-          border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+          border-top: 1px solid rgba(225, 186, 214, 0.14) !important;
+          border-bottom: 1px solid rgba(225, 186, 214, 0.14) !important;
           isolation: isolate;
           box-sizing: border-box;
+          box-shadow:
+            inset 0 1px 0 rgba(255, 255, 255, 0.04),
+            inset 0 -1px 0 rgba(194, 108, 168, 0.08);
+        }
+
+        .app-install-banner-section .app-banner-wrap::before,
+        .app-install-banner-section .app-banner-wrap::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          z-index: 0;
+          pointer-events: none;
+        }
+
+        .app-install-banner-section .app-banner-wrap::before {
+          opacity: 0.36;
+          background-image:
+            radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.13) 1px, transparent 1.8px),
+            linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+          background-size: 28px 28px, 76px 76px, 76px 76px;
+          mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.68) 50%, transparent 83%);
+          -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.68) 50%, transparent 83%);
+        }
+
+        .app-install-banner-section .app-banner-wrap::after {
+          opacity: 0.5;
+          background:
+            linear-gradient(90deg, transparent 0%, rgba(194, 108, 168, 0.22) 24%, transparent 50%, rgba(225, 186, 214, 0.08) 74%, transparent 100%);
+          filter: blur(72px);
+          transform: translateY(-16%);
         }
 
         .app-install-banner-section .app-banner-grid {
+          position: relative;
+          z-index: 1;
           width: 100%;
           max-width: 1600px;
           margin: 0 auto;
@@ -4248,6 +4388,8 @@
         }
 
         .app-install-banner-section .app-banner-content {
+          position: relative;
+          z-index: 2;
           padding: 64px 40px 64px 140px;
           display: flex;
           flex-direction: column;
@@ -4255,26 +4397,43 @@
           box-sizing: border-box;
         }
 
+        .app-install-banner-section .app-banner-content::before {
+          content: "";
+          position: absolute;
+          left: 104px;
+          top: 68px;
+          bottom: 68px;
+          width: 1px;
+          background: linear-gradient(180deg, transparent, rgba(225, 186, 214, 0.42), rgba(194, 108, 168, 0.32), transparent);
+          box-shadow: 0 0 22px rgba(194, 108, 168, 0.18);
+          pointer-events: none;
+        }
+
         .app-install-banner-section .app-banner-title {
           max-width: 650px;
           margin: 0;
           color: #ffffff;
-          font-size: clamp(34px, 3.8vw, 46px);
+          font-size: 46px;
           line-height: 1.15;
           font-weight: 800;
+          letter-spacing: 0;
+          text-wrap: balance;
         }
 
         .app-install-banner-section .app-banner-title span {
-          color: #e879f9;
-          text-shadow: 0 0 30px rgba(232, 121, 249, 0.25);
+          color: var(--app-primary-tint);
+          text-shadow:
+            0 0 26px rgba(194, 108, 168, 0.62),
+            0 0 46px rgba(244, 197, 111, 0.08);
         }
 
         .app-install-banner-section .app-banner-copy {
           max-width: 580px;
           margin: 20px 0 32px;
-          color: rgba(255, 255, 255, 0.72);
+          color: rgba(255, 255, 255, 0.75);
           font-size: 16.5px;
           line-height: 1.6;
+          letter-spacing: 0;
         }
 
         .app-install-banner-section .app-banner-actions {
@@ -4292,47 +4451,81 @@
           gap: 8px;
           height: 52px;
           padding: 0 24px;
-          border-radius: 12px;
-          background: #ffffff;
-          color: #150a1d;
+          border: 1px solid rgba(225, 186, 214, 0.36);
+          border-radius: 8px;
+          background: linear-gradient(135deg, var(--app-primary) 0%, var(--app-primary-bright) 100%);
+          color: #ffffff;
           font-size: 15px;
           font-weight: 800;
+          letter-spacing: 0;
           text-decoration: none;
-          box-shadow: 0 10px 25px rgba(255, 255, 255, 0.08);
+          box-shadow:
+            0 16px 36px rgba(194, 108, 168, 0.26),
+            0 0 28px rgba(225, 186, 214, 0.1),
+            inset 0 1px 0 rgba(255, 255, 255, 0.2);
           transition: all 0.22s ease;
         }
 
         .app-install-banner-section .app-primary-cta:hover {
           transform: translateY(-2px);
-          box-shadow: 0 15px 30px rgba(255, 255, 255, 0.16);
-          background: #fafafa;
+          background: linear-gradient(135deg, var(--primary-purple-hover, #7d2a65) 0%, #d985bd 100%);
+          box-shadow:
+            0 20px 44px rgba(194, 108, 168, 0.34),
+            0 0 34px rgba(225, 186, 214, 0.14),
+            inset 0 1px 0 rgba(255, 255, 255, 0.24);
         }
 
         .app-install-banner-section .app-qr-card-large {
+          position: relative;
+          isolation: isolate;
           display: flex;
           align-items: center;
           gap: 16px;
-          background: rgba(255, 255, 255, 0.05) !important;
-          padding: 12px 20px !important;
-          border-radius: 16px;
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
-          border: 1px solid rgba(255, 255, 255, 0.08) !important;
-          backdrop-filter: blur(10px);
-          -webkit-backdrop-filter: blur(10px);
+          max-width: 424px;
+          background:
+            linear-gradient(145deg, rgba(255, 255, 255, 0.095), rgba(255, 255, 255, 0.04)),
+            rgba(255, 255, 255, 0.055) !important;
+          padding: 14px 20px !important;
+          border-radius: 8px;
+          box-shadow:
+            0 22px 46px rgba(0, 0, 0, 0.42) !important,
+            0 0 36px rgba(194, 108, 168, 0.14) !important,
+            inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+          border: 1px solid rgba(225, 186, 214, 0.16) !important;
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
+        }
+
+        .app-install-banner-section .app-qr-card-large::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          z-index: 0;
+          border-radius: inherit;
+          pointer-events: none;
+          background: linear-gradient(90deg, rgba(244, 197, 111, 0.12), transparent 35%, rgba(225, 186, 214, 0.08));
+          opacity: 0.7;
         }
 
         .app-install-banner-section .app-qr-img-large {
           width: 90px;
           height: 90px;
-          border-radius: 12px;
+          position: relative;
+          z-index: 1;
+          flex: 0 0 auto;
+          border-radius: 8px;
           display: block;
           background-color: #ffffff !important;
           padding: 6px !important;
-          box-shadow: 0 0 16px rgba(232, 121, 249, 0.65) !important;
+          box-shadow:
+            0 0 24px rgba(194, 108, 168, 0.38) !important,
+            0 0 12px rgba(244, 197, 111, 0.14) !important;
           box-sizing: border-box;
         }
 
         .app-install-banner-section .app-qr-info {
+          position: relative;
+          z-index: 1;
           display: flex;
           flex-direction: column;
           gap: 4px;
@@ -4357,6 +4550,7 @@
 
         .app-install-banner-section .app-hand-visual {
           position: relative;
+          z-index: 1;
           height: 100%;
           width: 100%;
           min-height: 440px;
@@ -4364,15 +4558,49 @@
           align-items: stretch;
           justify-content: stretch;
           overflow: hidden;
-          background-color: #f7ebf4;
+          background:
+            radial-gradient(ellipse 72% 54% at 56% 48%, rgba(225, 186, 214, 0.34), transparent 72%),
+            #f2dfec;
+          border-left: 1px solid rgba(225, 186, 214, 0.16);
+          box-shadow: inset 26px 0 44px rgba(9, 5, 11, 0.26);
+        }
+
+        .app-install-banner-section .app-hand-visual::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          z-index: 1;
+          pointer-events: none;
+          background:
+            linear-gradient(90deg, rgba(9, 5, 11, 0.62) 0%, rgba(9, 5, 11, 0.2) 18%, transparent 42%),
+            radial-gradient(ellipse 42% 46% at 28% 48%, rgba(194, 108, 168, 0.22) 0%, transparent 72%);
+        }
+
+        .app-install-banner-section .app-hand-visual::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          z-index: 2;
+          pointer-events: none;
+          opacity: 0.18;
+          background-image:
+            linear-gradient(rgba(21, 10, 29, 0.14) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(21, 10, 29, 0.14) 1px, transparent 1px);
+          background-size: 70px 70px;
+          mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0.42), transparent 62%);
+          -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0.42), transparent 62%);
         }
 
         .app-install-banner-section .app-hand-visual img {
+          position: relative;
+          z-index: 0;
           width: 100%;
           height: 100%;
           object-fit: cover;
           object-position: center center;
           display: block;
+          filter: saturate(0.92) contrast(1.04);
+          transform: scale(1.015);
         }
 
         @media (max-width: 960px) {
@@ -4383,6 +4611,16 @@
           .app-install-banner-section .app-banner-content {
             padding: 48px 24px;
             text-align: center;
+            align-items: center;
+          }
+
+          .app-install-banner-section .app-banner-content::before {
+            display: none;
+          }
+
+          .app-install-banner-section .app-banner-title {
+            max-width: 680px;
+            font-size: 38px;
           }
 
           .app-install-banner-section .app-banner-copy {
@@ -4391,11 +4629,37 @@
           }
 
           .app-install-banner-section .app-banner-actions {
-            justify-content: start;
+            align-items: center;
+            justify-content: center;
           }
 
           .app-install-banner-section .app-hand-visual {
             min-height: 380px;
+          }
+        }
+
+        @media (max-width: 560px) {
+          .app-install-banner-section .app-banner-content {
+            padding: 42px 18px;
+          }
+
+          .app-install-banner-section .app-banner-title {
+            font-size: 32px;
+            line-height: 1.18;
+          }
+
+          .app-install-banner-section .app-banner-copy {
+            font-size: 15px;
+          }
+
+          .app-install-banner-section .app-primary-cta,
+          .app-install-banner-section .app-qr-card-large {
+            width: 100%;
+          }
+
+          .app-install-banner-section .app-qr-card-large {
+            align-items: center;
+            padding: 12px !important;
           }
         }
       </style>
@@ -4588,9 +4852,9 @@
                 </li>
               </ul>
               <a href="#" class="btn btn-ecosystem-action">Coffee Trade</a>
+            </div>
           </div>
         </div>
-      </div>
     </section>
 
     <!-- Government Grants Section -->
@@ -4600,7 +4864,6 @@
           background-color: #fff5fc;
           padding: 90px 24px;
           border-top: 1px solid rgba(145, 49, 117, 0.08);
-          border-bottom: 1px solid rgba(145, 49, 117, 0.08);
           position: relative;
           overflow: hidden;
         }
@@ -4812,7 +5075,8 @@
         }
 
         .grant-closes-row span.closes-badge.urgent {
-          color: #dc2626; /* red text for 'today' closes */
+          color: #dc2626;
+          /* red text for 'today' closes */
         }
 
         .grant-results-row {
@@ -4825,7 +5089,8 @@
 
         .grant-results-row span.results-badge {
           font-weight: 700;
-          color: #d97706; /* gold text for 'locked' results */
+          color: #d97706;
+          /* gold text for 'locked' results */
           display: inline-flex;
           align-items: center;
           gap: 3px;
@@ -5087,7 +5352,8 @@
         <div class="grants-header">
           <span class="grants-eyebrow">Funding Opportunities</span>
           <h2 class="grants-title">Government Grants for Startups</h2>
-          <p class="grants-subtitle">Apply for verified national, state, and departmental grant programs to scale your startup idea.</p>
+          <p class="grants-subtitle">Apply for verified national, state, and departmental grant programs to scale your
+            startup idea.</p>
         </div>
 
         <div class="grants-list" id="grants-list-container">
@@ -5097,11 +5363,16 @@
               <div class="grant-title-row">
                 <a href="#" class="grant-row-title">MSME Idea Hackathon 6.0</a>
                 <button class="grant-bookmark-btn" aria-label="Bookmark this grant">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                  </svg>
                 </button>
               </div>
-              <p class="grant-meta-sub">under <strong>MSME Idea Hackathon</strong> • by <strong>Ministry of MSME</strong></p>
-              <p class="grant-desc">National MSME innovation hackathon on frontier tech — renewable energy, Industry 4.0/5.0, robotics, automotive & more. Up to ₹15 lakh + incubation per approved idea.</p>
+              <p class="grant-meta-sub">under <strong>MSME Idea Hackathon</strong> • by <strong>Ministry of
+                  MSME</strong></p>
+              <p class="grant-desc">National MSME innovation hackathon on frontier tech — renewable energy, Industry
+                4.0/5.0, robotics, automotive & more. Up to ₹15 lakh + incubation per approved idea.</p>
               <div class="grant-tags">
                 <span class="grant-badge">Eligibility</span>
                 <span class="grant-badge no-star">Grant</span>
@@ -5118,19 +5389,37 @@
                 <span class="grant-amount-label">Up to</span>
                 <span class="grant-amount">₹15L</span>
                 <div class="grant-closes-row">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
                   <span>Closes: <span class="closes-badge">this month</span></span>
                 </div>
                 <div class="grant-results-row">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
                   <span>Results: <span class="results-badge">Locked</span></span>
                 </div>
               </div>
               <button class="grant-btn-doc" aria-label="View guidelines document">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
               </button>
               <a href="#" class="grant-btn-apply">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
                 Subscribe & Apply
               </a>
             </div>
@@ -5142,10 +5431,14 @@
               <div class="grant-title-row">
                 <a href="#" class="grant-row-title">ELEVATE 2026 — Startup Karnataka Grant-in-Aid Program</a>
                 <button class="grant-bookmark-btn" aria-label="Bookmark this grant">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                  </svg>
                 </button>
               </div>
-              <p class="grant-meta-sub">under <strong>ELEVATE Karnataka</strong> • by <strong>Startup Karnataka</strong></p>
+              <p class="grant-meta-sub">under <strong>ELEVATE Karnataka</strong> • by <strong>Startup Karnataka</strong>
+              </p>
               <p class="grant-desc">One-time grant up to ₹50L for any Karnataka startup to build a proof-of-concept.</p>
               <div class="grant-tags">
                 <span class="grant-badge">Eligibility</span>
@@ -5165,19 +5458,37 @@
                 <span class="grant-amount-label">Up to</span>
                 <span class="grant-amount">₹50L</span>
                 <div class="grant-closes-row">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
                   <span>Closes: <span class="closes-badge urgent">today!</span></span>
                 </div>
                 <div class="grant-results-row">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
                   <span>Results: <span class="results-badge">Locked</span></span>
                 </div>
               </div>
               <button class="grant-btn-doc" aria-label="View guidelines document">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
               </button>
               <a href="#" class="grant-btn-apply">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
                 Subscribe & Apply
               </a>
             </div>
@@ -5189,11 +5500,16 @@
               <div class="grant-title-row">
                 <a href="#" class="grant-row-title">NIDHI-PRAYAS Support Program</a>
                 <button class="grant-bookmark-btn" aria-label="Bookmark this grant">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                  </svg>
                 </button>
               </div>
-              <p class="grant-meta-sub">under <strong>DST NIDHI</strong> • by <strong>Department of Science & Technology</strong></p>
-              <p class="grant-desc">Grant support for early stage innovators to translate their innovative ideas into physical prototypes.</p>
+              <p class="grant-meta-sub">under <strong>DST NIDHI</strong> • by <strong>Department of Science &
+                  Technology</strong></p>
+              <p class="grant-desc">Grant support for early stage innovators to translate their innovative ideas into
+                physical prototypes.</p>
               <div class="grant-tags">
                 <span class="grant-badge">Eligibility</span>
                 <span class="grant-badge no-star">Grant</span>
@@ -5210,19 +5526,37 @@
                 <span class="grant-amount-label">Up to</span>
                 <span class="grant-amount">₹10L</span>
                 <div class="grant-closes-row">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
                   <span>Closes: <span class="closes-badge">in 15 days</span></span>
                 </div>
                 <div class="grant-results-row">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
                   <span>Results: <span class="results-badge">Locked</span></span>
                 </div>
               </div>
               <button class="grant-btn-doc" aria-label="View guidelines document">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
               </button>
               <a href="#" class="grant-btn-apply">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
                 Subscribe & Apply
               </a>
             </div>
@@ -5234,11 +5568,16 @@
               <div class="grant-title-row">
                 <a href="#" class="grant-row-title">BIRAC Biotech Ignition Grant (BIG)</a>
                 <button class="grant-bookmark-btn" aria-label="Bookmark this grant">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                  </svg>
                 </button>
               </div>
-              <p class="grant-meta-sub">under <strong>BIRAC Innovation Schemes</strong> • by <strong>Biotechnology Industry Research Assistance Council</strong></p>
-              <p class="grant-desc">Ignition grant support for biotech start-ups and entrepreneurs to establish proof of concept.</p>
+              <p class="grant-meta-sub">under <strong>BIRAC Innovation Schemes</strong> • by <strong>Biotechnology
+                  Industry Research Assistance Council</strong></p>
+              <p class="grant-desc">Ignition grant support for biotech start-ups and entrepreneurs to establish proof of
+                concept.</p>
               <div class="grant-tags">
                 <span class="grant-badge">Eligibility</span>
                 <span class="grant-badge no-star">Grant</span>
@@ -5255,19 +5594,37 @@
                 <span class="grant-amount-label">Up to</span>
                 <span class="grant-amount">₹50L</span>
                 <div class="grant-closes-row">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
                   <span>Closes: <span class="closes-badge">next month</span></span>
                 </div>
                 <div class="grant-results-row">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
                   <span>Results: <span class="results-badge">Locked</span></span>
                 </div>
               </div>
               <button class="grant-btn-doc" aria-label="View guidelines document">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
               </button>
               <a href="#" class="grant-btn-apply">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
                 Subscribe & Apply
               </a>
             </div>
@@ -5279,11 +5636,16 @@
               <div class="grant-title-row">
                 <a href="#" class="grant-row-title">SAMRIDH Acceleration Scheme</a>
                 <button class="grant-bookmark-btn" aria-label="Bookmark this grant">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                  </svg>
                 </button>
               </div>
-              <p class="grant-meta-sub">under <strong>SAMRIDH MeitY</strong> • by <strong>Ministry of Electronics & IT (MeitY)</strong></p>
-              <p class="grant-desc">Acceleration support for tech startups to scale product development, market access, and secure venture capital.</p>
+              <p class="grant-meta-sub">under <strong>SAMRIDH MeitY</strong> • by <strong>Ministry of Electronics & IT
+                  (MeitY)</strong></p>
+              <p class="grant-desc">Acceleration support for tech startups to scale product development, market access,
+                and secure venture capital.</p>
               <div class="grant-tags">
                 <span class="grant-badge">Eligibility</span>
                 <span class="grant-badge no-star">Grant</span>
@@ -5300,19 +5662,37 @@
                 <span class="grant-amount-label">Up to</span>
                 <span class="grant-amount">₹40L</span>
                 <div class="grant-closes-row">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
                   <span>Closes: <span class="closes-badge">in 3 weeks</span></span>
                 </div>
                 <div class="grant-results-row">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
                   <span>Results: <span class="results-badge">Locked</span></span>
                 </div>
               </div>
               <button class="grant-btn-doc" aria-label="View guidelines document">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
               </button>
               <a href="#" class="grant-btn-apply">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
                 Subscribe & Apply
               </a>
             </div>
@@ -5324,11 +5704,16 @@
               <div class="grant-title-row">
                 <a href="#" class="grant-row-title">TIDE 2.0 (Technology Incubation & Development of Entrepreneurs)</a>
                 <button class="grant-bookmark-btn" aria-label="Bookmark this grant">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                  </svg>
                 </button>
               </div>
-              <p class="grant-meta-sub">under <strong>MeitY Incubation Support</strong> • by <strong>Ministry of Electronics & IT</strong></p>
-              <p class="grant-desc">Grant-in-aid to tech startups focusing on emerging technologies like IoT, AI, Blockchain, and Robotics.</p>
+              <p class="grant-meta-sub">under <strong>MeitY Incubation Support</strong> • by <strong>Ministry of
+                  Electronics & IT</strong></p>
+              <p class="grant-desc">Grant-in-aid to tech startups focusing on emerging technologies like IoT, AI,
+                Blockchain, and Robotics.</p>
               <div class="grant-tags">
                 <span class="grant-badge">Eligibility</span>
                 <span class="grant-badge no-star">Grant</span>
@@ -5342,19 +5727,37 @@
                 <span class="grant-amount-label">Up to</span>
                 <span class="grant-amount">₹7L</span>
                 <div class="grant-closes-row">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
                   <span>Closes: <span class="closes-badge">next month</span></span>
                 </div>
                 <div class="grant-results-row">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
                   <span>Results: <span class="results-badge">Locked</span></span>
                 </div>
               </div>
               <button class="grant-btn-doc" aria-label="View guidelines document">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
               </button>
               <a href="#" class="grant-btn-apply">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
                 Subscribe & Apply
               </a>
             </div>
@@ -5366,11 +5769,16 @@
               <div class="grant-title-row">
                 <a href="#" class="grant-row-title">Startup India Seed Fund Scheme (SISFS)</a>
                 <button class="grant-bookmark-btn" aria-label="Bookmark this grant">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                  </svg>
                 </button>
               </div>
-              <p class="grant-meta-sub">under <strong>Startup India Initiative</strong> • by <strong>DPIIT (Ministry of Commerce)</strong></p>
-              <p class="grant-desc">Financial assistance to early-stage startups for proof of concept, prototype development, product trials, and market entry.</p>
+              <p class="grant-meta-sub">under <strong>Startup India Initiative</strong> • by <strong>DPIIT (Ministry of
+                  Commerce)</strong></p>
+              <p class="grant-desc">Financial assistance to early-stage startups for proof of concept, prototype
+                development, product trials, and market entry.</p>
               <div class="grant-tags">
                 <span class="grant-badge">Eligibility</span>
                 <span class="grant-badge no-star">Grant</span>
@@ -5385,19 +5793,37 @@
                 <span class="grant-amount-label">Up to</span>
                 <span class="grant-amount">₹20L</span>
                 <div class="grant-closes-row">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
                   <span>Closes: <span class="closes-badge">ongoing</span></span>
                 </div>
                 <div class="grant-results-row">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
                   <span>Results: <span class="results-badge">Locked</span></span>
                 </div>
               </div>
               <button class="grant-btn-doc" aria-label="View guidelines document">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
               </button>
               <a href="#" class="grant-btn-apply">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
                 Subscribe & Apply
               </a>
             </div>
@@ -5407,7 +5833,10 @@
         <div class="grants-footer">
           <button class="btn-show-grants" id="btn-toggle-grants">
             <span>Show All Grants</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
           </button>
         </div>
 
@@ -5417,9 +5846,11 @@
             <button class="login-modal-close" id="closeLoginModal">&times;</button>
             <div class="login-modal-header">
               <h3 class="login-modal-title">Access Premium Grants</h3>
-              <p class="login-modal-subtitle">Login or create an account to view and subscribe to all government grant opportunities.</p>
+              <p class="login-modal-subtitle">Login or create an account to view and subscribe to all government grant
+                opportunities.</p>
             </div>
-            <form class="login-modal-form" onsubmit="event.preventDefault(); alert('Login successful!'); document.getElementById('loginModal').classList.remove('active');">
+            <form class="login-modal-form"
+              onsubmit="event.preventDefault(); alert('Login successful!'); document.getElementById('loginModal').classList.remove('active');">
               <div class="form-group">
                 <label for="modal-email">Email Address</label>
                 <input type="email" id="modal-email" required placeholder="name@company.com">
@@ -5540,7 +5971,9 @@
         <!-- Bottom Copyright & Socials Bar -->
         <div class="footer-bottom-row">
           <div class="footer-bottom-left" style="display: flex; flex-direction: column; gap: 8px; text-align: left;">
-            <p class="copyright-text" style="font-size: 14px; color: var(--dark-text-muted); margin: 0; font-weight: 500;">Copyright 2026 &copy; by Seedicon. Secured by FWC</p>
+            <p class="copyright-text"
+              style="font-size: 14px; color: var(--dark-text-muted); margin: 0; font-weight: 500;">Copyright 2026 &copy;
+              by Seedicon. Secured by FWC</p>
           </div>
           <div class="footer-social-icons">
             <!-- Facebook -->
@@ -5709,7 +6142,7 @@
 
           if (dotsContainer) {
             const dots = dotsContainer.querySelectorAll('.dot-btn-i6');
-            
+
             // Click dot to scroll to card
             dots.forEach(dot => {
               dot.addEventListener('click', () => {
